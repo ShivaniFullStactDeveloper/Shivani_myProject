@@ -1,10 +1,121 @@
 <!DOCTYPE html>
+<html>
+
+<head>
+    <!--title  -->
+    <title>RESUME</title>
+    <link rel="icon" type="image/icon" href="my_images/smile image.png" />
+
+    <!-- style -->
+    <style>
+        body {
+            background-color: #F0EDCF;
+        }
+    </style>
+
+    <!-- link -->
+    <link href="Styles.css" rel="stylesheet" />
+
+</head>
+
 <body>
-    <h1>MY COLLECTION</h1>
-    <ol>
-        <li><a href="sec2page.html">Top 3 Heros</a></li>
-        <li>Top 3 Movies</li>
-        <li>Top 3 places</li>
-    </ol>
+    <!-- heading or title -->
+    <h1 class="style-1"><u> RESUME</u></h1>
     <hr />
+    <!-- Session one -->
+    <h2 class="style-2">Shivani Kharpuriya</h2>
+    <h3 class="style-3">
+        <img src="data:image/png;base64,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" width="20" height="15" /> : Katol , Nagpur , Maharashtra , India <br />
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSkCjliXDMqNFwyYMNrLDBbArz1kw8zLVOTEg&usqp=CAU" width="15" height="15" /> : 9529442290 &emsp;&emsp;&emsp;&emsp;&emsp; &#x2709; : shivanikhauriya123@gmail.com
+    </h3>
+    <hr />
+    <!-- Links-->
+    <div class="hyperlinktext">
+        <p></p>Linkd In <br />
+        Github Id<br />
+        Skype Id <br />
+        Stack Overflow</p>
+    </div>
+    <hr />
+    <!-- Skills -->
+    <h3 class="style-2">SKILLS</h3>
+    <h4>1. Web development : </h4>
+    <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>Javascript</li>
+        <li>Web Disign</li>
+        <li>Web Testing</li>
+        <li>Standard</li>
+        <li>React</li>
+    </ul>
+    <hr />
+    <h4>2. Mobile development : </h4>
+    <ul>
+        <li>Native Android Developer</li>
+        <li>Native Web Developer</li>
+        <li>React</li>
+        <li>Native Mobile Design</li>
+        <li>Mobile Testing</li>
+        <li>Standard</li>
+    </ul>
+    <hr />
+    <h4>3. Middle Layer : </h4>
+    <ul>
+        <li>Node js</li>
+        <li>Express js</li>
+        <li>API Testing</li>
+    </ul>
+    <hr />
+    <h4>4. Data Base : </h4>
+    <ul>
+        <li>sql</li>
+        <li>pl sql</li>
+        <li>Database Testing</li>
+        <li>Post Testing</li>
+        <li>Database Design</li>
+    </ul>
+    <hr />
+    <h4>5. Automation : </h4>
+    <ul>
+        <li>Sareen</li>
+        <li>Cypress</li>
+    </ul>
+    <hr />
+    <h4>6. Language Known : </h4>
+    <ul>
+        <li>C</li>
+        <li>Java</li>
+        <li>Swift</li>
+        <li>Javascript</li>
+        <li>Python</li>
+    </ul>
+    <hr />
+    <h4>7. Tool Use For development :</h4>
+    <ul>
+        <li>JIRA</li>
+        <li>Github</li>
+        <li>Source tree</li>
+        <li>Postman</li>
+        <li>Figma</li>
+    </ul>
+    <hr />
+    <h4>8. IDE : </h4>
+    <ul>
+        <li>Visual Stdio Code</li>
+        <li>X Code</li>
+        <li>Android Studio</li>
+    </ul>
+    <hr />
+    <h4>9. Helpers Known : </h4>
+    <ul>
+        <li>Colour hunt</li>
+        <li>Google font</li>
+    </ul>
+    <hr />
+
+
+
 </body>
+
+</html>
