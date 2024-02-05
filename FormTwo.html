@@ -16,7 +16,7 @@
 
 <body>
     <!-- form -->
-    <form style="background-color: #4F6F52; padding: 10px;" action="./3rdPage.html"> 
+    <form style="background-color: #4F6F52; padding: 10px;" action="FormThird.html"> 
         <!-- fieldset -->
         <fieldset>
             <!--legend  -->
@@ -35,10 +35,10 @@
             <input class="two" type="datetime-local" id="birthday" name="birthday"><br /><br />
             <!-- email -->
             <label class="one" for="email">Email Id : </label>&emsp;&emsp;&emsp;
-            <input class="two" type="url" id="email" name="email" required> <br /><br />
+            <input class="two" style="width: 220px;" type="url" id="email" name="email"> <br /><br />
             <!-- cont no. -->
             <label class="one" for="phone">Contact No. : </label>&emsp;&emsp;&emsp;
-            <input class="two" type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br /><br />
+            <input class="two" type="number" id="phone" name="phone" pattern="[0-9]{10}" required><br /><br />
             <!-- skill -->
             <label class="one" for="skill">Communication skill(out of 10) : </label>&emsp;&emsp;
             <input class="two" type="range" id="skill" name="skill"><br /><br />
@@ -65,7 +65,7 @@
                 placeholder="Write about yourself"></textarea><br /><br />
             <br/>
             <!-- button -->
-            <button style="background-color: blueviolet; width: 100px; height: 30px; margin-left: 100px; color: white;" type="submit"><a href="3rdPage.html">Submit</a></button>
+            <input style="background-color: blueviolet; width: 100px; height: 30px; margin-left: 100px; color: white;" type="submit" value="Submit">
         </fieldset>
     </form>
 </body>

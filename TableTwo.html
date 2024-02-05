@@ -5,16 +5,30 @@
             table,th,td{
                 border-style: dashed;
                 border-collapse: collapse;
-                padding: 10px;
+                padding: 20px;
 
             }
             .OneCaption{
                 font-size: 44px;
-                color: blue;
+                color: #910A67;
             }
             .resultStyle{
                 text-align: center;
                 font-size: 18px; 
+                background-color: blue;
+                font: bold;
+            }
+            .styleOne{
+                color: green;
+                font-size: 17px;
+            }
+            .styleTwo{
+                background-color: palevioletred;
+                font-size: 16px;
+            } 
+            .styleThree{
+                background-color: greenyellow;
+                font-size: 17px;
             }
         </style>
     </head>
@@ -23,14 +37,14 @@
             <caption class="OneCaption">My Table</caption>
             <thead>
                 <tr>
-                    <th rowspan="2">Student Name</th>
-                    <th rowspan="2">Roll No.</th>
-                    <th colspan="3">Marks</th>
+                    <th class="styleTwo" rowspan="2">Student Name</th>
+                    <th class="styleTwo" rowspan="2">Roll No.</th>
+                    <th class="styleThree" colspan="3">Marks</th>
                 </tr>
                 <tr>
-                    <th>Science</th>
-                    <th>History</th>
-                    <th>Computer</th>
+                    <th class="styleTwo">Science</th>
+                    <th class="styleTwo">History</th>
+                    <th class="styleTwo">Computer</th>
                 </tr>
             </thead>
             <tbody>
@@ -42,7 +56,7 @@
                     <td>96</td>
                 </tr>
                 <tr>
-                    <td>Shivani</td>
+                    <td>Shubham</td>
                     <td>001</td>
                     <td>89</td>
                     <td>94</td>
@@ -73,9 +87,9 @@
             <tfoot>
                 <tr>
                     <td colspan="2" class="resultStyle">Result</td>
-                    <td>Pass</td>
-                    <td>Pass</td>
-                    <td>Pass</td>
+                    <td class="styleOne">Pass</td>
+                    <td class="styleOne">Pass</td>
+                    <td class="styleOne">Pass</td>
 
                 </tr>
             </tfoot>
