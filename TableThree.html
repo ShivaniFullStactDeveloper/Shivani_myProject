@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Create</title>
+        <!-- styling -->
+        <style>
+            table,th,tr{
+                border-style: solid;
+                border-collapse: collapse;
+            }
+            .TanleOne{
+                background-color: blueviolet;
+
+            }
+            .TanleTwo{
+                background-color: aquamarine;
+                width: 50px;
+            }
+            .head{
+                height: 200px;
+
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <legend>Create Video Table</legend>
+            <!-- table one -->
+            <tr>
+                <th style="width: 500px;">videos</th>
+                <th style="width: 200px;">Vision</th>
+            </tr>
+            <tr>
+                <td class="TanleOne" rowspan="4"><video controls src="my_images/vid1.mp4" type="video/mp4" width="500px" ></video> </td>
+            </tr>
+            <tr>
+            <td class="TanleTwo"><video controls src="my_images/vid1.mp4" type="video/mp4" width="200px"></video></td>
+        </tr>
+        <tr>
+            <td class="TanleTwo"><video controls src="my_images/vid1.mp4" type="video/mp4" width="200px"></video></td>
+        </tr>
+        <tr>
+            <td class="TanleTwo"><video controls src="my_images/vid1.mp4" type="video/mp4" width="200px"></video></td>
+        </tr>
+        <tfoot>
+            <tf>
+                <td>follow as : </td>
+                <td><a href="https://sample-videos.com/">Chrome </a></td>
+            </tf>
+        </tfoot>
+        </table>
+    </body>
+</html>
