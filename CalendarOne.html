@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calander</title>
+        <style>
+            Table,th,td{
+                border-style: solid;
+                border-collapse: collapse;
+                padding: 20px;
+            }
+            .Week{
+                background-color: #910A67;
+                font-size: 25px;
+            }
+            .Days{
+                background-color: #85586F;
+                font-size: 20px;
+            }
+            .CountWeek{
+                background-color: #CAA6A6;
+                font-size: 25px;
+                
+            }
+            .DateStyle{
+                background-color: #F3D7CA;
+                font-size: 30px;
+                font: bold;
+            }
+            .DateStyleOne{
+                background-color: #F3D7CA;
+                font-size: 30px;
+                font: bold;
+                color: red;
+            }
+            .BlankBox{
+                background-color: #9DBC98;
+
+            }
+            .CaptionStyle{
+                font-size: 30px;
+                color: #3C0753;
+                margin-top: 50px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <!-- creat table -->
+        <table>  
+            <p>                                                                                                      
+            <caption class="CaptionStyle">Jan 2024</caption>
+            <button style="float: left;  " type="button"><a href="Calendar.html"> < </a> </button>
+            &emsp;<button style="float: left;  " type="button"><a href="Calendar.html"> > </a>  </button>
+        </p> 
+            <tr>
+                <th class="Week">WK</th>
+                <th class="Days">Mon</th>
+                <th class="Days"> Tue</th>
+                <th class="Days">Wed</th>
+                <th class="Days">Thu</th>
+                <th class="Days">Fri</th>
+                <th class="Days">Sat</th>
+                <th class="Days">Sun</th>
+            </tr>
+            <tr>
+                <td  class="CountWeek">1</td>
+                <td class="DateStyle">1</td>
+                <td class="DateStyle">2</td>
+                <td class="DateStyle">3</td>
+                <td class="DateStyle">4</td>
+                <td class="DateStyle">5</td>
+                <td class="DateStyle">6</td>
+                <td class="DateStyle DateStyleOne">7</td>
+            </tr>
+            <tr>
+                <td class="CountWeek">2</td>
+                <td class="DateStyle">8</td>
+                <td class="DateStyle">9</td>
+                <td class="DateStyle">10</td>
+                <td class="DateStyle">11</td>
+                <td class="DateStyle">12</td>
+                <td class="DateStyle">13</td>
+                <td class="DateStyle DateStyleOne">14</td>
+            </tr>
+            <tr>
+                <td class="CountWeek">3</td>
+                <td class="DateStyle">15</td>
+                <td class="DateStyle"> 16</td>
+                <td class="DateStyle">17</td>
+                <td class="DateStyle">18</td>
+                <td class="DateStyle">19</td>
+                <td class="DateStyle" >20</td>
+                <td class="DateStyle DateStyleOne">21</td>
+            </tr>
+            <tr>
+                <td class="CountWeek">4</td>
+                <td class="DateStyle">22</td>
+                <td class="DateStyle"> 23</td>
+                <td class="DateStyle">24</td>
+                <td class="DateStyle">25</td>
+                <td class="DateStyle">26</td>
+                <td class="DateStyle">27</td>
+                <td class="DateStyle DateStyleOne">28</td>
+            </tr>  
+            <tr>
+                <td class="CountWeek">5</td>
+                <td class="DateStyle">29</td>
+                <td class="DateStyle">30</td>
+                <td class="DateStyle">31</td>
+                <td class="BlankBox" ></td>
+                <td class="BlankBox" ></td>
+                <td class="BlankBox" ></td>
+                <td class="BlankBox" ></td>
+               
+            </tr>
+        </table>
+    </body>
+</html>
