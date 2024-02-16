@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .main-container {
+            display: grid;
+            background-color: aquamarine;
+            grid-template-columns: 3fr 1fr;
+
+            height: 100vh;
+            width: 100vw;
+            gap: 10px;
+        }
+
+        .first-column {
+            background-color: blue;
+        }
+
+        .sec-column {
+            background-color: blueviolet;
+        }
+
+        .third-column {
+            background-color: brown;
+        }
+
+        .forth-column {
+            background-color: yellow;
+        }
+
+        .fifth-column {
+            background-color: green;
+        }
+
+        .sisth-column {
+            background-color: red;
+        }
+
+        .first-container {
+            background-color: black;
+        }
+
+        .sec-container {
+            background-color: chartreuse;
+            display: grid;
+            grid-template-rows: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <header style="background-color: cornflowerblue; height: 50px; width: 100vw;"></header>
+    <div class="main-container">
+        <div class="first-container"></div>
+        <div class="sec-container">
+            <div class="first-column"></div>
+            <div class="sec-column"></div>
+            <div class="third-column"></div>
+        </div>
+    </div>
+    <footer style="background-color: coral; grid-template-rows: 10px; height: 50px; width: 100vw;"></footer>
+</body>
+
+</html>
