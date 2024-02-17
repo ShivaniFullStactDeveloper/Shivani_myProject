@@ -1,55 +1,82 @@
 <!DOCTYPE html>
 <html>
-    <!-- styling -->
-    <style>
-        .One{
-            font-family:'Protest Strike', sans-serif;
-            font-size: 20px;
-            
-        }
-    </style>
-    <!-- linking -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
-<body style="font-family:'Protest Strike', sans-serif;">
-    <div style="background-image: url(https://www.schudio.com/wp-content/uploads/2016/08/welcome-page-blog-header.jpg); height: 1000px; background-repeat: no-repeat;background-position: center;background-size: cover; padding: 20px;">
-        <button style="background-color: #7E6363; height: 35px; width:90px; border-radius: 10%; font-family:'Protest Strike', sans-serif; float: right; " type="button"><a href="https://github.com/ShivaniFullStactDeveloper/Shivani_myProject">Github Id</a></button>
-        <h1 style="text-align: center; color: #9A031E; font-size: 40px; margin-top: 5px;">My assignment Projects</h1>
-        <div style="margin-left: 30px;">
-        <p class="One">1] Resume</p>
-        <a href="indexOne.html">Click here to see</a>
-        <br/>
-        <p class="One">2] Form Project</p>
-        <a href="IndexTwo.html">Click here to see</a>
-        <br/>
-        <p class="One">3] Fixed format Project</p>
-        <a href="DivTagUse.html">Click here to see</a>
-        <br/>
-        <p class="One">4] Table Projects</p>
-        <a href="TableOne.html">1. Click here to see</a>
-        <br/>
-        <a href="TableTwo.html">2. Click here to see</a>
-        <br/>
-        <p class="One">5] India Flag Project</p>
-        <a href="IndiaFlag.html">Click here to see</a>
-        <br/>
-        <p class="One">6] YouTube Page Project</p>
-        <a href="TableThree.html">Click here to see</a>
-        <br/>
-        <p class="One">7] Mobile Screen Project</p>
-        <a href="dynamicone.html">Click here to see</a>
-        <br/>
-        <p class="One">8] YouTube page with using flex</p>
-        <a href="flexone.html">Click here to see</a>
-        <br/>
-        <p class="One">9] Chess box using flex</p>
-        <a href="chessboxflex.html">1. Click here to see</a><br/>
-       <a href="ckeckboxflexone.html">2. Click here to see</a><br/>
-       <a href="checkboxflextwo.html">3. Click here to see</a>
-    </div>
-    </div>
-</body>
+    <head>
+        <style>
+            .main-container{
+                background-color: rgb(150, 200, 200);
+                display: grid;
+                width: 100vw;
+                height: 100vh;
+                grid-template-rows: 1fr 1fr;
+                margin: 0px;
+            }
+            /* top container */
+            .top-container{
+                background-color: gray;
+                margin: 10px;
+                display: grid;
+                grid-template-rows: 1fr 1fr;
+            }
+            /* first row  */
+            .first-row{
+                background-color: #B4B4B8;
+                margin: 10px;
+            }
+             /* sec row */
+             .sec-row{
+                background-color: none;
+                margin: 10px;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+             }
 
-
+            /* bottom container */
+            .bottom-container{
+                background-color: lightgray;
+                margin: 10px;
+            }
+            /* columns */
+            .column{
+                background-color: #CAA6A6;
+                padding: 10px;
+                margin-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- main container -->
+        <div class="main-container">
+            <!-- top container -->
+            <div class="top-container">
+                <!-- first row -->
+                <div class="first-row"></div>
+                <!-- sec row -->
+                <div class="sec-row">
+                    <!-- columns -->
+                    <div class="column"></div>
+                    <div class="column"></div>
+                    <div class="column"></div>
+                </div>
+            </div>
+            <!-- bottom container -->
+            <div class="bottom-container">
+                <!-- first box -->
+                <div></div>
+                <!-- sec box -->
+                <div></div>
+                <!-- third box -->
+                <div></div>
+                <!-- fourth box -->
+                <div></div>
+                <!-- fifth box -->
+                <div></div>
+                <!-- sixth box -->
+                <div></div>
+                <!-- seventh box -->
+                <div></div>
+                <!-- eigth box -->
+                <div></div>
+            </div>
+        </div>
+    </body>
 </html>
