@@ -1,82 +1,172 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <style>
-            .main-container{
-                background-color: rgb(150, 200, 200);
-                display: grid;
-                width: 100vw;
-                height: 100vh;
-                grid-template-rows: 1fr 1fr;
-                margin: 0px;
-            }
-            /* top container */
-            .top-container{
-                background-color: gray;
-                margin: 10px;
-                display: grid;
-                grid-template-rows: 1fr 1fr;
-            }
-            /* first row  */
-            .first-row{
-                background-color: #B4B4B8;
-                margin: 10px;
-            }
-             /* sec row */
-             .sec-row{
-                background-color: none;
-                margin: 10px;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-             }
 
-            /* bottom container */
-            .bottom-container{
-                background-color: lightgray;
-                margin: 10px;
-            }
-            /* columns */
-            .column{
-                background-color: #CAA6A6;
-                padding: 10px;
-                margin-right: 10px;
-            }
-        </style>
-    </head>
-    <body>
-        <!-- main container -->
-        <div class="main-container">
-            <!-- top container -->
-            <div class="top-container">
-                <!-- first row -->
-                <div class="first-row"></div>
-                <!-- sec row -->
-                <div class="sec-row">
-                    <!-- columns -->
-                    <div class="column"></div>
-                    <div class="column"></div>
-                    <div class="column"></div>
+<head>
+    <style>
+        .main-container {
+            background-color: white;
+            display: grid;
+            width: 100vw;
+            height: 1000px;
+            grid-template-rows: 45% 5% 50%;
+            margin: 0px;
+            padding: 0px;
+            border-style: solid;
+        }
+
+        /* top container */
+        .top-container {
+            background-color: gray;
+            margin: 10px;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+
+        }
+
+        /* first row  */
+        .first-row {
+            background-color: #B4B4B8;
+            margin: 5px;
+        }
+
+        /* sec row */
+        .sec-row {
+            background-color: none;
+            margin: 5px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        /* columns */
+        .column {
+            background-color: #CAA6A6;
+            margin: 10px;
+        }
+
+        /* middle */
+        .middle-container {
+            background-color: none;
+        }
+
+        /* bottom container */
+        .bottom-container {
+            background-color: #BEADFA;
+            margin-left: 10px;
+            margin-right: 10px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+        }
+
+        .box {
+            background-color: #D0BFFF;
+            margin-right: 5px;
+            margin-left: 5px;
+            padding: 10px;
+            margin: 5px;
+        }
+        .box-one{
+          
+           margin-bottom: 10px;
+
+        }
+
+        .main-image {
+            background-size: cover;
+            width: 1335px;
+            height: 220px;
+        }
+        .h1{
+            text-align: center;
+            font-size: 50px;
+            font-weight: bold;
+            margin-top: 1px;
+        }
+        .p{
+            text-align: right;
+            font-size: 30px;
+            margin: 5px;
+        }
+        .project-name{
+            text-align: center;
+            font-size: 25px;
+        }
+        .button{
+            width: 100px;
+            height: 30px;
+            float: right;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 5px;
+            border-radius: 20px;
+            background-color: #9BB8CD;
+        }
+    </style>
+    <!-- link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Strike&display=swap" rel="stylesheet">
+</head>
+
+<body style="font-family:'Protest Strike', sans-serif;">
+    <!-- main container -->
+    <div class="main-container">
+        <!-- top container -->
+        <div class="top-container">
+            <!-- first row -->
+            <div class="first-row">
+                <button class="button" type="button">Github Id</button>
+                <h1 class="h1">Assignment Project</h1>
+                <p class="p"><br/>Shivani Kharpuriya <br/>Full Stack Developer</p>
+            </div>
+            <!-- sec row -->
+            <div class="sec-row">
+                <!-- columns -->
+                <div class="column project-name">
+                    <p>Resume Project</p>
+                    <a href="indexOne.html">Click here</a>
+                </div>
+                <div class="column project-name">
+                    <p>Form Project</p>
+                    <a href="IndexTwo.html">Click here</a>
+                </div>
+                <div class="column project-name">
+                    <div ><img src="https://img.freepik.com/free-photo/flag-india_1401-132.jpg?size=626&ext=jpg" width="100px" height="100px" style="border-radius: 50%; float: right;"/> </div>
+                    <p>India Flag Prpject</p>
+                    <a href="IndiaFlag.html">Click here</a>
                 </div>
             </div>
-            <!-- bottom container -->
-            <div class="bottom-container">
-                <!-- first box -->
-                <div></div>
-                <!-- sec box -->
-                <div></div>
-                <!-- third box -->
-                <div></div>
-                <!-- fourth box -->
-                <div></div>
-                <!-- fifth box -->
-                <div></div>
-                <!-- sixth box -->
-                <div></div>
-                <!-- seventh box -->
-                <div></div>
-                <!-- eigth box -->
-                <div></div>
-            </div>
         </div>
-    </body>
+        <div class="middle-container"></div>
+        <!-- bottom container -->
+        <div class="bottom-container">
+            <!-- first box -->
+            <div class="box project-name">
+                <p>Fixed Formate Project </p>
+            </div>
+            <div class="box project-name ">
+                <p>Table Project</p>
+            </div>
+            <div class="box project-name">
+                <p>Calander Project</p>
+            </div>
+            <div class="box project-name">
+                <p>Mobile Screen Project</p>
+            </div>
+            <div class="box project-name" >
+                <p>Using Flex Project</p>
+            </div>
+            <div class="box project-name">
+                <p>Using Grid Project</p>
+                <ol>
+                <li ><a href="chessboardgrid.html">Chessbox</a></li><br/>
+                <li><a href="checkboxgrid.html">2. Layouting page</a></li><br/>
+                <li><a href="checkboxgridone.html">3. Youtub page</a></li>
+            </ol>
+            </div>
+
+        </div>
+    </div>
+</body>
+
 </html>
