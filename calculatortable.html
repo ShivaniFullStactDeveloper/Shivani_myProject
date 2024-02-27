@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator Using Table</title>
+    <style>
+        table,
+        th,
+        td {
+            border-style: solid;
+            border-color: black;
+            border-collapse: collapse;
+        }
+
+        button {
+
+            height: 100%;
+            width: 100%;
+            font-size: 30px;
+            color: white;
+
+        }
+
+        .length {
+            height: 70vh;
+            width: 40vw;
+
+
+        }
+
+        .gray-color {
+            background-color: gray;
+        }
+
+        .yellow-color {
+            background-color: #FBA834;
+        }
+
+        .darkgray-color {
+            background-color: rgb(49, 45, 45);
+        }
+
+        #display {
+            height: 20vh;
+            width: 100%;
+            background-color: black;
+        }
+
+        td {
+            height: 20%;
+            width: 20%;
+        }
+    </style>
+
+</script> 
+
+</head>
+
+<body>
+    <table class="length">
+        <!-- display -->
+        <tr >
+            <th id="display" colspan="4" style="color: white;">0</th>
+        </tr>
+        <!-- first row -->
+        <tr>
+            <td><button class="darkgray-color" >AC</button></td>
+            <td><button class="darkgray-color">+/-</button></td>
+            <td><button class="darkgray-color">%</button></td>
+            <td><button class="yellow-color">/</button></td>
+        </tr>
+        <!-- sec row -->
+        <tr>
+            <td><button class="gray-color">7</button></td>
+            <td><button class="gray-color">8</button></td>
+            <td><button class="gray-color">9</button></td>
+            <td><button class="yellow-color">*</button></td>
+        </tr>
+        <!-- third row -->
+        <tr>
+            <td><button class="gray-color">4</button></td>
+            <td><button class="gray-color">5</button></td>
+            <td><button class="gray-color">6</button></td>
+            <td><button class="yellow-color">-</button></td>
+        </tr>
+        <!-- forth row -->
+        <tr>
+            <td><button class="gray-color">1</button></td>
+            <td><button class="gray-color">2</button></td>
+            <td><button class="gray-color">3</button></td>
+            <td><button class="yellow-color">+</button></td>
+        </tr>
+        <!-- fifth row -->
+        <tr>
+            <td colspan="2"><button class="gray-color">0</button></td>
+            <td><button class="gray-color">.</button></td>
+            <td><button class="yellow-color">=</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>

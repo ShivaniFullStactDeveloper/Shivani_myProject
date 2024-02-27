@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Create</title>
+        <!-- styling -->
+        <style>
+            table,th,tr{
+                border-style: solid;
+                border-collapse: collapse;
+                padding: 20px;
+                margin-left: 200px;
+            }
+            .TableOne{
+                background-color: blueviolet;
+
+            }
+            .TableTwo{
+                background-color: aquamarine;
+                width: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <legend style="font-size: 25px; color: #030637; text-align: center;" >My YouTube Page</legend>
+            <!-- table one -->
+            <tr>
+                <th style="width: 500px; background-color: rgb(230, 28, 169); font-size: 20px;">videos</th>
+                <th style="width: 200px; background-color: brown; font-size: 20px;">Vision</th>
+            </tr>
+            <tr>
+                <td class="TableOne" rowspan="4"><video controls src="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4" width="550px" ></video> </td>
+            </tr>
+            <tr>
+            <td class="TableTwo"><video controls src="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4" width="250px"></video></td>
+        </tr>
+        <tr>
+            <td class="TableTwo"><video controls src="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4" width="250px"></video></td>
+        </tr>
+        <tr>
+            <td class="TableTwo"><video controls src="https://sample-videos.com/video321/mp4/720/big_buck_bunny_720p_1mb.mp4" type="video/mp4" width="250px"></video></td>
+        </tr>
+        <tfoot style="padding: 15px;">
+            <tf>
+                <td style="background-color: yellow; font-size: 20px;">follow as : </td>
+                <td style="background-color: yellow; font-size: 20px;"><a href="https://sample-videos.com/">Chrome </a></td>
+            </tf>
+        </tfoot>
+        </table>
+    </body>
+</html>

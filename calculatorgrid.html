@@ -1,91 +1,166 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>CALCULATOR</title>
-        <style>
-            .main{
-                background-color: gray;
-                height: 80vh;
-                width: 40vw;
-                display: grid;
-                grid-template-columns: 1fr;
-                grid-template-rows: 1fr 3fr;
-                border: 1px solid black;
-                border-radius: 10px;
-                padding: 10px;
-                margin-left: 30vw;
-            }
-            /* display */
-            .display{
-                background-color: black;
-                height: 20vh;
-                width: 100%;
-                 border: 1px solid black;
 
-                margin-right: 5px;
-            }
-            .keyword{
-                background-color: cadetblue;
-                height: 48vh;
-                width: 100%;
-                border: 1px solid black;
-                margin-right: 5px;
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr 1fr;
-                grid-template-rows: 1fr 1fr 1fr 1fr ;
+<head>
+    <title>CALCULATOR</title>
+    <style>
+        .main {
+            background-color: gray;
+            height: 80vh;
+            width: 40vw;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 3fr;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin-left: 30vw;
+        }
 
-            }
-            .button{
-                background-color: #3f3d3c;
-                color: white;
-                font-size: 25px;
-            }
-            .last-row{
-                display: grid;
-                grid-template-columns: 2fr 1fr 1fr;
-                height: 12vh;
-                width: 100%;
-                border:1px solid black;
-               
-            }
-            .yellow{
-                background-color: #FF8911;
-            }
-            .darkgray{
-                background-color: rgb(26, 25, 25);
-            }
-        </style>
-    </head>
-    <body>
-        <!--main container  -->
-        <div class="main">
-            <!-- display -->
-            <div class="display"></div>
-            <!-- kyes -->
-            <div class="keyword">
-               <button class="button darkgray">AC</button> 
-               <button class="button darkgray">+/-</button>
-               <button class="button darkgray">%</button>
-               <button class="button yellow">/</button>
-               <button class="button">7</button>
-               <button class="button">8</button>
-               <button class="button">9</button>
-               <button class="button yellow">X</button>
-               <button class="button">4</button>
-               <button class="button">5</button>
-               <button class="button">6</button>
-               <button class="button yellow">-</button>
-               <button class="button">1</button>
-               <button class="button">2</button>
-               <button class="button">3</button>
-               <button class="button yellow">+</button>
-               </div>
-               <div class="last-row">
-                <button class="button ">0</button>
-                <button class="button">1</button>
-                <button class="button yellow">=</button>
-               </div>
-            
+        /* display */
+        #display {
+            background-color: black;
+            height: 20vh;
+            width: 100%;
+            border: 1px solid black;
+            color: white;
+            margin-right: 5px;
+            border-radius: 10px;
+            display: grid;
+            justify-content: end;
+            align-items: end;
+            font-size: 50px;
+            margin-bottom: 2px;
+
+        }
+
+        .keyword {
+            background-color: cadetblue;
+            height: 48vh;
+            width: 100%;
+            border: 1px solid black;
+            margin-right: 5px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        }
+
+        .button {
+            background-color: #3f3d3c;
+            color: white;
+            font-size: 25px;
+            border-radius: 20px;
+        }
+
+        .last-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            height: 12vh;
+            width: 100%;
+            border: 1px solid black;
+
+        }
+
+        .yellow {
+            background-color: #FF8911;
+        }
+
+        .darkgray {
+            background-color: rgb(26, 25, 25);
+        }
+    </style>
+    <script>
+        // 1
+        function displayFunction1(number) {
+            document.getElementById("display").innerHTML = "1";
+        }
+        // // 2
+        function displayFunction2(number) {
+            document.getElementById("display").innerHTML = "2"
+        }
+        // // 3
+        function displayFunction3(number) {
+            document.getElementById("display").innerHTML = "3"
+        }
+        // // 4 
+        function displayFunction4(number) {
+            document.getElementById("display").innerHTML = "4"
+        }
+        // // 5
+        function displayFunction5(number) {
+            document.getElementById("display").innerHTML = "5"
+        }
+        // 6 
+        function displayFunction6(number) {
+            document.getElementById("display").innerHTML = "6"
+        }
+        // 7
+        function displayFunction7(number) {
+            document.getElementById("display").innerHTML = "7"
+        }
+        // 8
+        function displayFunction8(number) {
+            document.getElementById("display").innerHTML = "8"
+        }
+        // 9
+        function displayFunction9(number) {
+            document.getElementById("display").innerHTML = "9"
+        }
+        clear
+        function clearFunction() {
+            document.getElementById("display").innerHTML = ""
+        }
+        function displayFunctionplus(){
+            document.getElementById("display").innerHTML = "+"
+        }
+        function displayFunctionminus(){
+            document.getElementById("display").innerHTML = "-"
+        }
+        function displayFunctioninto(){
+            document.getElementById("display").innerHTML = "*"
+        }
+        function displayFunctiondiv(){
+            document.getElementById("display").innerHTML = "/"
+        }
+        function displayFunctionzero(){
+            document.getElementById("display").innerHTML = "0"
+        }
+
+    </script>
+</head>
+
+<body>
+    <!--main container  -->
+    <div class="main">
+        <!-- display -->
+        <div id="display">0</div>
+        <!-- kyes -->
+        <div class="keyword">
+            <button class="button darkgray" onclick="clearFunction()">AC</button>
+            <button class="button darkgray">+/-</button>
+            <button class="button darkgray">%</button>
+            <button class="button yellow" onclick="displayFunctiondiv()">/</button>
+            <button class="button" onclick="displayFunction7(7)">7</button>
+            <button class="button" onclick="displayFunction8(8)">8</button>
+            <button class="button" onclick="displayFunction9(9)">9</button>
+            <button class="button yellow" onclick="displayFunctioninto()">X</button>
+            <button class="button" onclick="displayFunction4(4)">4</button>
+            <button class="button" onclick="displayFunction5(5)">5</button>
+            <button class="button" onclick="displayFunction6(6)">6</button>
+            <button class="button yellow" onclick="displayFunctionminus()">-</button>
+            <button class="button" onclick="displayFunction1(1)">1</button>
+            <button class="button" onclick="displayFunction2(2)">2</button>
+            <button class="button" onclick="displayFunction3(3)">3</button>
+            <button class="button yellow" onclick="displayFunctionplus()">+</button>
         </div>
-    </body>
+        <div class="last-row">
+            <button class="button ">0</button>
+            <button class="button">.</button>
+            <button class="button yellow">=</button>
+        </div>
+
+    </div>
+</body>
+
 </html>
