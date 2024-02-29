@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .main{
+                background-color: aquamarine;
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+                width: 100vw;
+                height: 100vh;
+                margin: 0%;
+            }
+            /* left */
+            .left-container{
+                background-color: blueviolet;
+            }
+            /* right */
+            .right-container{
+                background-color: brown;
+                display: grid;
+                grid-template-rows: 1fr 1fr 1fr;
+            }
+            /* top */
+            .top-box{
+                background-color: #12372A;
+            }
+            /* middle */
+            .middle-box{
+                background-color: #0D9276;
+                display: grid;
+                grid-template-columns: 1fr 3fr;
+            }
+            /* inner left */
+            .inner-left{
+                background-color: none;
+            }
+            /* inner right */
+            .inner-right{
+                background-color: none;
+                display: grid;
+                grid-template-rows: 2fr 2fr;
+            }
+            /* inner  top */
+            .inner-hyper-top{
+                background-color: #85586F;
+            }
+            /* inner hyper bottom */
+            .inner-hyper-bottom{
+                background-color: #561C24;
+            }
+            /* bottom-box */
+            .bottom-box{
+                background-color: #436850;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- main container -->
+        <div class="main">
+            <!-- left -->
+            <div class="left-container"></div>
+            <!-- right -->
+            <div class="right-container">
+                <!-- top -->
+                <div class="top-box"></div>
+                <!-- middle -->
+                <div class="middle-box">
+                    <!-- col one -->
+                    <div class="inner-left"></div>
+                    <!-- col two -->
+                    <div class="inner-right">
+                        <!-- inner hyper top -->
+                        <div class="inner-hyper-top"></div>
+                        <!-- inner hyper bottom  -->
+                        <div class="inner-hyper-bottom"></div>
+                    </div>
+                </div>
+                <!-- bottom -->
+                <div class="bottom-box"></div>
+            </div>
+        </div>
+    </body>
+</html>
