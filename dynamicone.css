@@ -1,0 +1,123 @@
+.container{
+    height: 800px;
+    width: 100%;
+   }
+
+/* box one */
+.block {
+    background-color: #910A67;
+    height: 120px;
+    width: 100%;
+}
+
+/* bax two */
+.blocktwo {
+    background-color: #59B4C3;
+    height: 560px;
+    width: 250px;
+    float: right;
+  }
+
+/* box three */
+.blockone {
+    background-color: #59B4C3;
+    height: 40px;
+    width: 250px;
+    display: block;
+    margin: 10px;
+    margin-left: 1px;
+}
+
+/* box four */
+.blockthree {
+    background-color: #6895D2;
+    height: 100px;
+    width: 100%;
+    margin-top: 380px;
+    margin-bottom: 10px;
+}
+
+/* desktop */
+@media (min-width: 1200px){
+    .container{
+        height: 800px;
+        width: 100%;
+       
+    }
+    
+    .block {
+        background-color: #910A67;
+        height: 120px;
+        width: 100%;
+    }
+    
+    .blockone {
+        background-color: #59B4C3;
+        height: 40px;
+        width: 250px;
+        display: block;
+        margin: 10px;
+        margin-left: 1px;
+    }
+    
+    .blocktwo {
+        background-color: #59B4C3;
+        height: 560px;
+        width: 250px;
+        float: right;
+      }
+    
+    .blockthree {
+        background-color: #6895D2;
+        height: 100px;
+        width: 100%;
+        margin-top: 380px;
+        margin-bottom: 10px;
+    }
+    
+}
+ 
+/* iphone 14 pro max */
+@media (min-width: 430px) and (max-width: 932px){
+    .container{
+        height: 800px;
+        width: 100%;
+       
+    }
+    
+    .block {
+        background-color: #910A67;
+        height: 100px;
+        width: 100%;
+    }
+    
+    .blockone {
+        background-color: #59B4C3;
+        height: 40px;
+        width: 430px;
+        display: block;
+        margin: 10px;
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    
+    .blocktwo {
+        background-color: #59B4C3;
+        height: 150px;
+        width: 430px;
+        display: block;
+        margin: 10px;
+        margin-top: 430px;
+        margin-right: 10px;
+        margin-left: 10px;
+               
+      }
+       
+    .blockthree {
+        background-color: #6895D2;
+        height: 100px;
+        width: 100%;
+        margin-bottom: 5px;
+        margin-top: 400px;
+    }   
+}

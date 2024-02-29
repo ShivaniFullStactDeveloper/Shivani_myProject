@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>javasript</title>
+    <style>
+        .main{
+            height: 300px;
+            width: 500px;
+            background-color: blue;
+        }
+        #display{
+            width: 500px;
+            height: 100px;
+            background-color: blueviolet;
+            text-align: center;
+        }
+        .submit{
+            height: 40px;
+            width: 100px;
+            background-color: chocolate;
+            border-radius: 20PX;
+        }
+    </style>
+    <script>
+        function displayfunction(shagunone , shaguntwo){
+            // let collectedvalue=div(shagunone , shaguntwo);
+            document.getElementById("display").innerHTML="The total amount of program:" + div(shagunone ,shaguntwo) ,+ sub(shagunone,shaguntwo);
+            
+        }
+        function div(numberone, numbertwo){
+            let total=numberone / numbertwo;
+            return total;
+        }
+        function sub(numberone, numbertwo){
+            let total=numberone - numbertwo;
+            return total;
+        }
+
+        function clearfunction(){
+            document.getElementById("display").innerHTML="";
+        }
+
+    </script>
+</head>
+<body>
+    <div class="main">
+        <h1 id="display">0</h1>
+        <button class="submit" onclick="displayfunction(101,111)">Click here</button>
+        <button class="submit" onclick="clearfunction()">Clear</button>
+    </div>
+</body>
+</html>

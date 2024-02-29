@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>CALCULATOR</title>
+    <style>
+        .main {
+            background-color: gray;
+            height: 80vh;
+            width: 40vw;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 3fr;
+            border: 1px solid black;
+            border-radius: 10px;
+            padding: 10px;
+            margin-left: 30vw;
+        }
+
+        /* display */
+        #display {
+            background-color: black;
+            height: 20vh;
+            width: 100%;
+            border: 1px solid black;
+            color: white;
+            margin-right: 5px;
+            border-radius: 10px;
+            display: grid;
+            justify-content: end;
+            align-items: end;
+            font-size: 50px;
+            margin-bottom: 2px;
+
+        }
+
+        .keyword {
+            background-color: cadetblue;
+            height: 48vh;
+            width: 100%;
+            border: 1px solid black;
+            margin-right: 5px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr;
+
+        }
+
+        .button {
+            background-color: #3f3d3c;
+            color: white;
+            font-size: 25px;
+            border-radius: 20px;
+        }
+
+        .last-row {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            height: 12vh;
+            width: 100%;
+            border: 1px solid black;
+
+        }
+
+        .yellow {
+            background-color: #FF8911;
+        }
+
+        .darkgray {
+            background-color: rgb(26, 25, 25);
+        }
+    </style>
+    <script>
+
+
+        let total = 0;
+        let displayString = "";
+        let action= 0;
+
+        // numbers
+        function numberType(passednumber) {
+            displayString = displayString + passednumber.toString();
+            document.getElementById("display").innerHTML = displayString;
+
+            if (passednumber == 7) {
+                document.getElementById("display").style.backgroundColor = "#AD88C6";
+            } else if (passednumber == 8) {
+                document.getElementById("display").style.backgroundColor = "#FF3EA5";
+            } else if (passednumber == 9) {
+                document.getElementById("display").style.backgroundColor = "#5E1675";
+            } else{
+                document.getElementById("display").style.backgroundColor = "black";
+            }
+        }
+
+
+        // add
+        function add() {
+            total = Number(displayString);
+            action = 1;
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+        }
+        // minus
+        function sub() {
+            total = Number(displayString);
+            action = 2;
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+        }
+        // multi
+        function multiplication() {
+            total = Number(displayString);
+            action = 3;
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+        }
+        // div
+        function div() {
+            total = Number(displayString);
+            action = 4;
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+        }
+        // percentage
+        function percentage() {
+            total = Number(displayString);
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+        }
+        // result show
+        function showresult() {
+            
+            if(action == 1){ //addition
+                total = total + Number(displayString);
+            } else if(action == 2){ //Minus
+                total = total - Number(displayString);
+            } else if(action == 3){ //MUTI
+                total = total * Number(displayString);
+            } else if(action == 4){ //DIV
+                total = total / Number(displayString);
+            }  
+            displayString = total;
+            document.getElementById("display").innerHTML = displayString;
+
+        }
+
+        function backspace() {
+            displayString = displayString.substring(0, displayString.length - 1);
+            document.getElementById("display").innerHTML = displayString;
+        }
+
+        function clearFunction() {
+            total = 0;
+            displayString = "";
+            document.getElementById("display").innerHTML = "";
+        }
+    </script>
+</head>
+
+<body>
+    <!--main container  -->
+    <div class="main">
+        <!-- display -->
+        <div id="display">0</div>
+        <!-- kyes -->
+        <div class="keyword">
+            <button class="button darkgray" onclick="clearFunction()">AC</button>
+            <button class="button darkgray" onclick="backspace()">🔙</button>
+            <button class="button darkgray" onclick="percentage">%</button>
+            <button class="button yellow" onclick="div()">/</button>
+            <button class="button" onclick="numberType(7)">7</button>
+            <button class="button" onclick="numberType(8)">8</button>
+            <button class="button" onclick="numberType(9)">9</button>
+            <button class="button yellow" onclick="multiplication()">X</button>
+            <button class="button" onclick="numberType(4)">4</button>
+            <button class="button" onclick="numberType(5)">5</button>
+            <button class="button" onclick="numberType(6)">6</button>
+            <button class="button yellow" onclick="sub()">-</button>
+            <button class="button" onclick="numberType(1)">1</button>
+            <button class="button" onclick="numberType(2)">2</button>
+            <button class="button" onclick="numberType(3)">3</button>
+            <button class="button yellow" onclick="add()">+</button>
+        </div>
+        <!-- last row -->
+        <div class="last-row">
+            <button class="button " onclick="numberType(0)">0</button>
+            <button class="button" onclick="numberType('.')">.</button>
+            <button class="button yellow" onclick="showresult()">=</button>
+        </div>
+
+    </div>
+</body>
+
+</html>

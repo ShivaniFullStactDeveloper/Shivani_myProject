@@ -1,0 +1,94 @@
+.container{
+    background-color: rgb(76, 48, 171);
+    height: 1000px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* three box */
+.Button-One{
+  background-color: aqua;
+  width: 150px;
+  height: 20px;
+  margin: 10px;
+  display: inline-block;
+  margin-left: 100px;
+  justify-self: center;
+
+}
+/* header */
+header{
+    background-color: brown;
+    height: 40px;
+    width: 100%;
+}
+/* footer */
+footer{
+    background-color: chocolate;
+    height: 40px;
+    width: 100%;
+}
+
+/* aside */
+aside{
+    background-color: gold;
+    height: 1000px;
+    width: 100px;
+    
+  
+/* nav */
+
+
+}
+
+.right{
+    float: right;
+    background-color: violet;
+    height: 1000px;
+    width: 100px;
+    align-self: flex-end;
+    justify-self: flex-start;
+
+
+}
+@media (min-width: 900px) {
+    .container{
+        background-color:yellow;
+        height: 1000px;
+        width: 100%;
+
+    }
+    
+}
+
+@media (min-width: 400px) and (max-width: 899px){
+    .container{
+        background-color: green;
+        height: 1040px;
+        width: 100%;
+
+    }
+}
+
+@media (min-width: 100px) and (max-width: 399px){
+    .container{
+        background-color: red;
+        height: 1000px;
+        width: 100%;   
+
+    }
+    .Button-One{
+        background-color: aqua;
+        width: 150px;
+        height: 20px;
+        margin: 10px;
+        display: block;
+
+      }
+}
+
+nav{
+    background-color: blue;
+    height: 1000px;
+    width: 100px;
+}

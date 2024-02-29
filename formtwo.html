@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .two {
+            background-color: #D2E3C8;
+            height: 20px;
+            width: 150px;
+        }
+        .one{
+            font-size: 18px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- form -->
+    <form style="background-color: #4F6F52; padding: 10px;" action="FormThird.html"> 
+        <!-- fieldset -->
+        <fieldset>
+            <!--legend  -->
+            <legend style="color: #11009E; font-size: 30px;">Enjoy Programming personal Details</legend>
+            <br />
+            <!-- Details timing -->
+            <label class="one" for="time">Preferred Timing : </label> &emsp;
+            <input class="two" type="time" id="time" name="time">&emsp; to&emsp; <input class="two" type="time"
+                id="time" name="time"><br /><br />
+            <!-- select batch -->
+            <label class="one" for="batch">Preferred Batch Date : </label>
+            <input class="two" type="date" id="batch" name="batch">&emsp; to&emsp; <input class="two" type="date"
+                id="batch"><br /><br>
+            <!-- DOB -->
+            <label class="one" for="birthday">Date of Birthday</label>&emsp;&emsp;
+            <input class="two" type="datetime-local" id="birthday" name="birthday"><br /><br />
+            <!-- email -->
+            <label class="one" for="email">Email Id : </label>&emsp;&emsp;&emsp;
+            <input class="two" style="width: 220px;" type="url" id="email" name="email"> <br /><br />
+            <!-- cont no. -->
+            <label class="one" for="phone">Contact No. : </label>&emsp;&emsp;&emsp;
+            <input class="two" type="number" id="phone" name="phone" pattern="[0-9]{10}" required><br /><br />
+            <!-- skill -->
+            <label class="one" for="skill">Communication skill(out of 10) : </label>&emsp;&emsp;
+            <input class="two" type="range" id="skill" name="skill"><br /><br />
+            <!-- age -->
+            <label class="one" for="age">Age : </label>&emsp;&emsp;&emsp;&emsp;
+            <input class="two" style="width: 50px;" type="number" id="age" name="age" min="21" max="50" required /><br /><br />
+            <!-- pick batch -->
+            <label class="one" for="Proficiect">Pick Appropriate Batch :</label>&emsp;&emsp;
+            <select class="two" id="Proficiect">
+                <!-- senior group -->
+                <optgroup label="senior">
+                    <option value="Proficiect">Proficient</option>
+                    <option value="Ambitious">Ambitious</option>
+                </optgroup>
+                <!-- junior group -->
+                <optgroup label="Junior">
+                    <option value="Scholar">Scholar</option>
+                    <option value="visionary">visionary</option>
+                </optgroup>
+            </select><br /><br />
+            <!-- self intro -->
+            <label class="one" for="about">Tell something about yourself : </label>
+            <textarea class="two" style="height: 50px; width: 300px;" id="about"
+                placeholder="Write about yourself"></textarea><br /><br />
+            <br/>
+            <!-- button -->
+            <input style="background-color: blueviolet; width: 100px; height: 30px; margin-left: 100px; color: white;" type="submit" value="Submit">
+        </fieldset>
+    </form>
+</body>
+
+</html>

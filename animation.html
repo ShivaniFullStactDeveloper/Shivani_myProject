@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            .animate-header{
+                color: brown;
+                text-align: center;
+                animation-name: myAnimation;
+                animation-duration: 2s;
+                animation-timing-function: ease-in-out;
+                animation-iteration-count: 2;
+
+            }
+            @keyframes myAnimation {
+                0%{
+                    opacity: 30%;
+                    transform: translateY(-400px)
+                }
+                50%{
+                    opacity: 10%; 
+                    transform: translateY(300px);
+                    color: goldenrod;
+                    font-size: 50px;
+                }
+                100%{
+                    opacity: 100%;
+                    transform: translate(0%);
+                    color: blueviolet;
+                    font-size: 100px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="animate-header"> SHIVANI</h1>
+    </body>
+</html>
