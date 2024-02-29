@@ -12,6 +12,7 @@
             border-style: solid;
             border-color: black;
             border-collapse: collapse;
+            border-radius: 10px;
         }
 
         button {
@@ -20,6 +21,7 @@
             width: 100%;
             font-size: 30px;
             color: white;
+            border-radius: 10px;
 
         }
 
@@ -46,6 +48,7 @@
             height: 20vh;
             width: 100%;
             background-color: black;
+            font-size: 40px;
         }
 
         td {
@@ -53,50 +56,120 @@
             width: 20%;
         }
     </style>
+    <script>
+        total = 0;
+        displayString = "";
+        action = 0;
 
-</script> 
+        function displayFunction(passednumber) {
+            displayString = displayString + passednumber.toString();
+            document.getElementById("display").innerHTML = displayString;
+        }
+
+        function add(){
+            total = Number(displayString);
+            action = 1;
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+        }
+
+        function sub(){
+            total = Number(displayString);
+            action = 2;
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+        }
+
+        function multiplication(){
+            total = Number(displayString);
+            action = 3;
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+        }
+
+        function div(){
+            total = Number(displayString);
+            action = 4;
+            displayString = "";
+            document.getElementById("display").innerHTML = displayString;
+        }
+
+        // function percentage(){
+        //    total = Number(displayString);
+        //     action = 5;
+        //     displayString = "";
+        //     document.getElementById("display").innerHTML = displayString;
+        // }
+
+        function showresult(){
+           
+            if(action == 1){
+                total = total + Number(displayString);
+            }else if(action == 2){
+                total = total - Number(displayString);
+            }else if(action == 3){
+                total = total * Number(displayString);
+            }else if(action == 4){
+                total = total / Number(displayString);
+            }
+            displayString = "";
+            displayString = total;
+            document.getElementById("display").innerHTML = displayString;
+        }
+
+        function clearFunction() {
+        
+            displayString = "";
+            document.getElementById("display").innerHTML = "";
+        }
+
+        function backspace() {
+            displayString = displayString.substring(0, displayString.length -1); 
+            document.getElementById("display").innerHTML = displayString;
+        }
+    </script>
 
 </head>
 
 <body>
     <table class="length">
         <!-- display -->
-        <tr >
-            <th id="display" colspan="4" style="color: white;">0</th>
+        <tr>
+            <th id="display" colspan="4" style="color: white;"></th>
         </tr>
         <!-- first row -->
         <tr>
-            <td><button class="darkgray-color" >AC</button></td>
-            <td><button class="darkgray-color">+/-</button></td>
-            <td><button class="darkgray-color">%</button></td>
-            <td><button class="yellow-color">/</button></td>
+            <td><button class="darkgray-color" onclick="clearFunction()">AC</button></td>
+            <td><button class="darkgray-color" onclick="backspace()">+/-</button></td>
+            <td><button class="darkgray-color" onclick="percentage()">%</button></td>
+            <td><button class="yellow-color" onclick="div()">/</button></td>
         </tr>
         <!-- sec row -->
         <tr>
-            <td><button class="gray-color">7</button></td>
-            <td><button class="gray-color">8</button></td>
-            <td><button class="gray-color">9</button></td>
-            <td><button class="yellow-color">*</button></td>
+            <td><button class="gray-color" onclick="displayFunction(7)">7</button></td>
+            <td><button class="gray-color" onclick="displayFunction(8)">8</button></td>
+            <td><button class="gray-color" onclick="displayFunction(9)">9</button></td>
+            <td><button class="yellow-color" onclick="multiplication()">*</button></td>
         </tr>
         <!-- third row -->
         <tr>
-            <td><button class="gray-color">4</button></td>
-            <td><button class="gray-color">5</button></td>
-            <td><button class="gray-color">6</button></td>
-            <td><button class="yellow-color">-</button></td>
+            <td><button class="gray-color" onclick="displayFunction(4)">4</button></td>
+            <td><button class="gray-color" onclick="displayFunction(5)">5</button></td>
+            <td><button class="gray-color" onclick="displayFunction(6)">6</button></td>
+            <td><button class="yellow-color" onclick="sub()">-</button></td>
         </tr>
         <!-- forth row -->
         <tr>
-            <td><button class="gray-color">1</button></td>
-            <td><button class="gray-color">2</button></td>
-            <td><button class="gray-color">3</button></td>
-            <td><button class="yellow-color">+</button></td>
+            <td><button class="gray-color" onclick="displayFunction(1)">1</button></td>
+            <td><button class="gray-color" onclick="displayFunction(2)">2</button></td>
+            <td><button class="gray-color" onclick="displayFunction(3)">3</button></td>
+            <td><button class="yellow-color" onclick="add()">+</button></td>
         </tr>
         <!-- fifth row -->
         <tr>
-            <td colspan="2"><button class="gray-color">0</button></td>
-            <td><button class="gray-color">.</button></td>
-            <td><button class="yellow-color">=</button></td>
+            <td colspan="2"><button class="gray-color" onclick="displayFunction(0)">0</button></td>
+            <td><button class="gray-color" onclick="displayFunction('.')">.</button></td>
+            <td><button class="yellow-color" onclick="showresult()">=</button></td>
         </tr>
     </table>
 </body>
