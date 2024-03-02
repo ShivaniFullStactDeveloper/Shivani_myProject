@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Even or Odd</title>
+    <style>
+        .main {
+            background-color: gray;
+            height: 500px;
+            width: 90vw;
+            border-radius: 20px;
+            padding: 10px;
+        }
+
+        /* display */
+        #display {
+            height: 200px;
+            background-color: rgb(230, 212, 212);
+            width: 80vw;
+            border-radius: 20px;
+            margin-left: 5vw;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            border-style: solid;
+         }
+
+        input {
+            height: 50px;
+            width: 150px;
+            background-color: darkgoldenrod;
+            margin: 10px;
+            font-size: 20px;
+            font-weight: bold;
+           
+        }
+
+        .center{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            margin: 10px;
+            
+        }
+
+        button {
+            height: 50px;
+            width: 200px;
+            background-color: cadetblue;
+            margin: 10px;
+            font-size: 18px;
+            font-weight: bold;
+           
+        }
+    </style>
+    <script>
+
+        // evev or odd
+        let number;
+
+        function showresult() {
+            number = document.getElementById("first").value;
+
+            if (number % 2 == 0) {
+                document.getElementById("display").innerHTML = "The no is even";
+            } else {
+                document.getElementById("display").innerHTML = "The no is odd";
+            }
+        }
+        // vote
+        let vote;
+        function votercheck() {
+            vote = document.getElementById("first").value;
+
+            if (vote >=18) {
+                document.getElementById("display").innerHTML = "Eligible for vote.";
+            } else {
+                document.getElementById("display").innerHTML = "Not eligible for vote.";
+            }
+        }
+
+        // Equal
+    
+        function equalnum() {
+            x =Number(document.getElementById("first").value);
+            y = Number(document.getElementById("second").value);
+
+            if (x == y) {
+                document.getElementById("display").innerHTML = "No is equal.";
+            } else {
+                document.getElementById("display").innerHTML = "No is not equal.";
+            }
+        }
+
+         // clear
+         function clearFunction(){
+            document.getElementById("display").innerHTML=""
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="main">
+        <!-- display -->
+                <h1 id="display"></h1>
+        <!-- input -->
+        <div class="center">
+        <input type="number" id="first" value="" />
+        <input type="number" id="second" value="" />
+        <br />
+        </div>
+        
+        <!-- buttons -->
+        <div class="center">
+        <button type="button" onclick="showresult()">Check<br>Even or Odd </button>
+        <button type="button" onclick="votercheck()">Check<br> Vote </button>
+        <button type="button" onclick="equalnum()">Check<br>Equal or Not</button>
+        </div>
+        <div class="center">
+        <button class="button" onclick="clearFunction()">Clear</button>
+    </div>
+    </div>
+</body>
+
+</html>
