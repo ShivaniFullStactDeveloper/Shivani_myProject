@@ -39,7 +39,7 @@
         .text-display {
             font-size: 50px;
             color: white;
-           
+
         }
 
         .button {
@@ -196,7 +196,7 @@
         // question
         function question(question) {
             document.getElementById("container").style.backgroundColor = "#030637";
-          
+            resetcolor();
 
             if (question == 1) {
                 questionNumber = 1;
@@ -207,28 +207,28 @@
             } else if (question == 3) {
                 questionNumber = 3;
                 questionThree();
-            }  else if (question == 4) {
+            } else if (question == 4) {
                 questionNumber = 4;
                 questionFour();
-            }  else if (question == 5) {
+            } else if (question == 5) {
                 questionNumber = 5;
                 questionFive();
-            }  else if (question == 6) {
+            } else if (question == 6) {
                 questionNumber = 6;
                 questionSix();
-            }  else if (question == 7) {
+            } else if (question == 7) {
                 questionNumber = 7;
                 questionSeven();
-            }  else if (question == 8) {
+            } else if (question == 8) {
                 questionNumber = 8;
                 questionEight();
             } else if (question == 9) {
                 questionNumber = 9;
                 questionNine();
-            }  else if (question == 10) {
+            } else if (question == 10) {
                 questionNumber = 10;
                 questionTen();
-            }  else if (question == 11) {
+            } else if (question == 11) {
                 questionNumber = 11;
                 questionEleven();
             } else if (question == 12) {
@@ -246,141 +246,179 @@
             }
             else {
                 document.getElementById("text-display").innerHTML =
-                    "MUBARAKHO AAP JIT CHUKE HAI PURE 5 CRORE RUPEES...";
+                    "MUBARAKHO AAP JIT CHUKE HAI PURE 7 CRORE RUPEES...";
+                let audio = new Audio("./my_images/7-c.mp3");
+                audio.play();
             }
-        }   
-
+        }
         // correct ans
         function answer(givenAnswer) {
+            resetcolor()
             if (questionNumber == 1) {
                 if (givenAnswer == 4) {
-                    answerOne(true, 2);
+                    answerOne(true, 2 , givenAnswer, 4);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0, givenAnswer, 4);
                 }
             } else if (questionNumber == 2) {
                 if (givenAnswer == 2) {
-                    answerOne(true, 3);
+                    answerOne(true, 3, givenAnswer, 2);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0, givenAnswer, 2);
                 }
             } else if (questionNumber == 3) {
                 if (givenAnswer == 2) {
-                    answerOne(true, 4);
+                    answerOne(true, 4, givenAnswer, 2);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0, givenAnswer, 2);
                 }
             } else if (questionNumber == 4) {
                 if (givenAnswer == 3) {
-                    answerOne(true, 5);
+                    answerOne(true, 5, givenAnswer, 3);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0, givenAnswer, 3);
                 }
             } else if (questionNumber == 5) {
                 if (givenAnswer == 2) {
-                    answerOne(true, 6);
+                    answerOne(true, 6, givenAnswer, 2);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0, givenAnswer, 2);
                 }
             } else if (questionNumber == 6) {
                 if (givenAnswer == 1) {
-                    answerOne(true, 7);
+                    answerOne(true, 7, givenAnswer, 1);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0,  givenAnswer, 1);
                 }
-            }  else if (questionNumber == 7) {
+            } else if (questionNumber == 7) {
                 if (givenAnswer == 4) {
-                    answerOne(true, 8);
+                    answerOne(true, 8, givenAnswer, 4);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0, givenAnswer, 4);
                 }
-            }  else if (questionNumber == 8) {
+            } else if (questionNumber == 8) {
                 if (givenAnswer == 3) {
-                    answerOne(true, 9);
+                    answerOne(true, 9, givenAnswer, 3);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0, givenAnswer, 3);
                 }
-            }   else if (questionNumber == 9) {
+            } else if (questionNumber == 9) {
                 if (givenAnswer == 1) {
-                    answerOne(true, 10);
+                    answerOne(true, 10, givenAnswer, 1);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0, givenAnswer, 1);
                 }
-            }  else if (questionNumber == 10) {
+            } else if (questionNumber == 10) {
                 if (givenAnswer == 2) {
-                    answerOne(true, 11);
+                    answerOne(true, 11, givenAnswer, 2);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0, givenAnswer, 2);
                 }
-            }    else if (questionNumber == 11) {
+            } else if (questionNumber == 11) {
                 if (givenAnswer == 4) {
-                    answerOne(true, 12);
+                    answerOne(true, 12, givenAnswer, 4);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0, givenAnswer, 4);
                 }
-            }  else if (questionNumber == 12) {
+            } else if (questionNumber == 12) {
                 if (givenAnswer == 4) {
-                    answerOne(true, 13);
+                    answerOne(true, 13, givenAnswer, 4);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0, givenAnswer, 4);
                 }
             } else if (questionNumber == 13) {
                 if (givenAnswer == 3) {
-                    answerOne(true, 14);
+                    answerOne(true, 14, givenAnswer, 3);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0, givenAnswer, 3);
                 }
-            }   else if (questionNumber == 14) {
+            } else if (questionNumber == 14) {
                 if (givenAnswer == 2) {
-                    answerOne(true, 15);
+                    answerOne(true, 15, givenAnswer, 2);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0, givenAnswer, 2);
                 }
-            }   else if (questionNumber == 15) {
+            } else if (questionNumber == 15) {
                 if (givenAnswer == 2) {
-                    answerOne(true, 16);
+                    answerOne(true, 16, givenAnswer, 2);
                 } else {
-                    answerOne(false, 0);
+                    answerOne(false, 0, givenAnswer, 2);
                 }
-            }                
+            }
         }
         // correct or not
-        function answerOne(correctAnswer, nextQuestion) {
+        function answerOne(correctAnswer, nextQuestion, correctAnswwerbutton, buttonClick) {
             if (correctAnswer) {
                 document.getElementById("text-display").innerHTML =
                     "Bilkul Sahi Jawab";
                 document.getElementById("container").style.backgroundColor =
                     "#004225";
-                   
+                colorButton(correctAnswwerbutton , buttonClick);
+
                 setTimeout(() => {
                     question(nextQuestion);
                 }, 3000);
-            } else{
+            } else {
                 document.getElementById("text-display").innerHTML =
                     " Galat Jawab.";
                 document.getElementById("container").style.backgroundColor =
                     "#FF0000";
+                    colorButton(correctAnswwerbutton , buttonClick);
                 setTimeout(() => {
                     startScreen();
                 }, 2000);
             }
         }
+        // correct button color
+        function colorButton(correctbuttoncolor, wrongbuttoncolor) {
+            // if(correctbuttoncolor){
+            if (correctbuttoncolor == 1) {
+                document.getElementById("answer-one").style.backgroundColor = "#87A922";
+            } else if (correctbuttoncolor == 2) {
+                document.getElementById("answer-two").style.backgroundColor = "#87A922";
+            } else if (correctbuttoncolor == 3) {
+                document.getElementById("answer-three").style.backgroundColor = "#87A922";
+            } else if (correctbuttoncolor == 4) {
+                document.getElementById("answer-four").style.backgroundColor = "#87A922";
+            }
+            if (wrongbuttoncolor == 1) {
+                document.getElementById("answer-one").style.backgroundColor = "#D04848";
+            } else if (wrongbuttoncolor == 2) {
+                document.getElementById("answer-two").style.backgroundColor = "#D04848";
+            } else if (wrongbuttoncolor == 3) {
+                document.getElementById("answer-three").style.backgroundColor = "#D04848";
+            } else if (wrongbuttoncolor == 4) {
+                document.getElementById("answer-four").style.backgroundColor = "#D04848";
+            }
+
+        }
+        // resetcolor
+        function resetcolor(){
+            document.getElementById("answer-one").style.backgroundColor = "#0B60B0";
+            document.getElementById("answer-two").style.backgroundColor = "#0B60B0";
+            document.getElementById("answer-three").style.backgroundColor = "#0B60B0";
+            document.getElementById("answer-four").style.backgroundColor = "#0B60B0";
+         }
+
         // hidden 
         function dostart() {
             document.getElementById("main-body").hidden = false;
             document.getElementById("play-button").hidden = true;
             question(1);
+            resetcolor();
         }
 
         function startScreen() {
             document.getElementById("main-body").hidden = true;
             document.getElementById("play-button").hidden = false;
-            
+            resetcolor();
+
         }
     </script>
 </head>
 
-<body  style="background-image: url(https://images.livemint.com/img/2022/07/12/1600x900/Kaun-Banega-Crorepati-1_1657603983822_1657604025637_1657604025637.webp); height: 100%; width: 100vw; background-repeat: no-repeat;">
+<body
+    style="background-image: url(https://images.livemint.com/img/2022/07/12/1600x900/Kaun-Banega-Crorepati-1_1657603983822_1657604025637_1657604025637.webp); height: 100%; width: 100vw; background-repeat: no-repeat;">
     <!-- start button -->
     <button class="start-button" id="play-button" onclick="dostart()">LET"S START</button>
     <!-- display -->
