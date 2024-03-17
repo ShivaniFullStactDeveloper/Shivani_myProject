@@ -9,6 +9,8 @@
             width: 100%;
             padding: 10px;
             margin: 10px;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
         }
 
         /* start button */
@@ -24,7 +26,7 @@
 
         /* display */
         .display {
-            width: 90%;
+            width: 94%;
             height: 200px;
             background-color: #030637;
             margin-left: 5%;
@@ -44,7 +46,7 @@
 
         .button {
             height: 70px;
-            width: 550px;
+            width: 450px;
             border-radius: 250px;
             margin: 10px;
             margin-left: 6%;
@@ -55,10 +57,31 @@
             font-weight: bold;
 
         }
+
+        .right-button {
+            height: 100px;
+            width: 400px;
+            background-color: aqua;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: flex-end;
+        }
+
+        .abcd {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .efgh {
+            display: flex;
+            flex-direction: column;
+
+        }
     </style>
     <script>
         let questionNumber = 0;
-
+        // one
         function questionOne() {
             document.getElementById("text-display").innerHTML =
                 "Among the following, which is a network?";
@@ -67,7 +90,7 @@
             document.getElementById("answer-three").innerHTML = "C) LAN";
             document.getElementById("answer-four").innerHTML = "D) All of these";
         }
-
+        // two
         function questionTwo() {
             document.getElementById("text-display").innerHTML =
                 "What does Fn mean in Fn key of the computer keyboard?";
@@ -76,7 +99,7 @@
             document.getElementById("answer-three").innerHTML = "C) Final";
             document.getElementById("answer-four").innerHTML = "D) Fun";
         }
-
+        // three
         function questionThree() {
             document.getElementById("text-display").innerHTML =
                 "CPU is also referred to as?";
@@ -85,7 +108,7 @@
             document.getElementById("answer-three").innerHTML = "C) Decoder";
             document.getElementById("answer-four").innerHTML = "D) Coder";
         }
-
+        // four
         function questionFour() {
             document.getElementById("text-display").innerHTML =
                 "Current Railway Minister of India is?";
@@ -97,7 +120,7 @@
         // five
         function questionFive() {
             document.getElementById("text-display").innerHTML =
-                "Which Indian currency note doesn’t have a picture of Mahatma Gandhi?";
+                "Which Indian currency note doesn't have a picture of Mahatma Gandhi?";
             document.getElementById("answer-one").innerHTML = "A) 50 Rupee";
             document.getElementById("answer-two").innerHTML = "B) 1 Rupee ";
             document.getElementById("answer-three").innerHTML = "C) 5 Rupee";
@@ -196,7 +219,7 @@
         // question
         function question(question) {
             document.getElementById("container").style.backgroundColor = "#030637";
-            resetcolor();
+
 
             if (question == 1) {
                 questionNumber = 1;
@@ -251,109 +274,112 @@
                 audio.play();
             }
         }
+
         // correct ans
         function answer(givenAnswer) {
-            resetcolor()
-            if (questionNumber == 1) {
+
+            if (questionNumber == 1) {   //first
                 if (givenAnswer == 4) {
-                    answerOne(true, 2 , givenAnswer, 4);
+                    answerOne(true, 2);
                 } else {
-                    answerOne(false, 0, givenAnswer, 4);
+                    answerOne(false, 0);
                 }
-            } else if (questionNumber == 2) {
+            } else if (questionNumber == 2) {    //sec
                 if (givenAnswer == 2) {
-                    answerOne(true, 3, givenAnswer, 2);
+                    answerOne(true, 3);
                 } else {
-                    answerOne(false, 0, givenAnswer, 2);
+                    answerOne(false, 0);
                 }
-            } else if (questionNumber == 3) {
+            } else if (questionNumber == 3) {    //third
                 if (givenAnswer == 2) {
-                    answerOne(true, 4, givenAnswer, 2);
+                    answerOne(true, 4);
                 } else {
-                    answerOne(false, 0, givenAnswer, 2);
+                    answerOne(false, 0);
                 }
-            } else if (questionNumber == 4) {
+            } else if (questionNumber == 4) {     //fourth
                 if (givenAnswer == 3) {
-                    answerOne(true, 5, givenAnswer, 3);
+                    answerOne(true, 5);
                 } else {
-                    answerOne(false, 0, givenAnswer, 3);
+                    answerOne(false, 0);
                 }
-            } else if (questionNumber == 5) {
+            } else if (questionNumber == 5) {  //fifth
                 if (givenAnswer == 2) {
-                    answerOne(true, 6, givenAnswer, 2);
+                    answerOne(true, 6);
                 } else {
-                    answerOne(false, 0, givenAnswer, 2);
+                    answerOne(false, 0);
                 }
-            } else if (questionNumber == 6) {
+            } else if (questionNumber == 6) {   //sixth
                 if (givenAnswer == 1) {
-                    answerOne(true, 7, givenAnswer, 1);
+                    answerOne(true, 7);
                 } else {
-                    answerOne(false, 0,  givenAnswer, 1);
+                    answerOne(false, 0);
                 }
-            } else if (questionNumber == 7) {
+            } else if (questionNumber == 7) {   //seven
                 if (givenAnswer == 4) {
-                    answerOne(true, 8, givenAnswer, 4);
+                    answerOne(true, 8);
                 } else {
-                    answerOne(false, 0, givenAnswer, 4);
+                    answerOne(false, 0);
                 }
-            } else if (questionNumber == 8) {
+            } else if (questionNumber == 8) {   //eighth
                 if (givenAnswer == 3) {
-                    answerOne(true, 9, givenAnswer, 3);
+                    answerOne(true, 9);
                 } else {
-                    answerOne(false, 0, givenAnswer, 3);
+                    answerOne(false, 0);
                 }
-            } else if (questionNumber == 9) {
+            } else if (questionNumber == 9) {  //nineth
                 if (givenAnswer == 1) {
-                    answerOne(true, 10, givenAnswer, 1);
+                    answerOne(true, 10);
                 } else {
-                    answerOne(false, 0, givenAnswer, 1);
+                    answerOne(false, 0);
                 }
-            } else if (questionNumber == 10) {
+            } else if (questionNumber == 10) {  //tenth
                 if (givenAnswer == 2) {
-                    answerOne(true, 11, givenAnswer, 2);
+                    answerOne(true, 11);
                 } else {
-                    answerOne(false, 0, givenAnswer, 2);
+                    answerOne(false, 0);
                 }
-            } else if (questionNumber == 11) {
+            } else if (questionNumber == 11) {  //eleven
                 if (givenAnswer == 4) {
-                    answerOne(true, 12, givenAnswer, 4);
+                    answerOne(true, 12);
                 } else {
-                    answerOne(false, 0, givenAnswer, 4);
+                    answerOne(false, 0);
                 }
-            } else if (questionNumber == 12) {
+            } else if (questionNumber == 12) {  //twelve
                 if (givenAnswer == 4) {
-                    answerOne(true, 13, givenAnswer, 4);
+                    answerOne(true, 13);
                 } else {
-                    answerOne(false, 0, givenAnswer, 4);
+                    answerOne(false, 0);
                 }
-            } else if (questionNumber == 13) {
+            } else if (questionNumber == 13) {   //thirteen
                 if (givenAnswer == 3) {
-                    answerOne(true, 14, givenAnswer, 3);
+                    answerOne(true, 14);
                 } else {
-                    answerOne(false, 0, givenAnswer, 3);
+                    answerOne(false, 0);
                 }
-            } else if (questionNumber == 14) {
+            } else if (questionNumber == 14) {   //fourteen
                 if (givenAnswer == 2) {
-                    answerOne(true, 15, givenAnswer, 2);
+                    answerOne(true, 15);
                 } else {
-                    answerOne(false, 0, givenAnswer, 2);
+                    answerOne(false, 0);
                 }
-            } else if (questionNumber == 15) {
+            } else if (questionNumber == 15) {    //fifteen
                 if (givenAnswer == 2) {
-                    answerOne(true, 16, givenAnswer, 2);
+                    answerOne(true, 16);
                 } else {
-                    answerOne(false, 0, givenAnswer, 2);
+                    answerOne(false, 0);
                 }
             }
         }
         // correct or not
-        function answerOne(correctAnswer, nextQuestion, correctAnswwerbutton, buttonClick) {
+        function answerOne(correctAnswer, nextQuestion) {
+
+
             if (correctAnswer) {
                 document.getElementById("text-display").innerHTML =
                     "Bilkul Sahi Jawab";
                 document.getElementById("container").style.backgroundColor =
                     "#004225";
-                colorButton(correctAnswwerbutton , buttonClick);
+
 
                 setTimeout(() => {
                     question(nextQuestion);
@@ -363,55 +389,23 @@
                     " Galat Jawab.";
                 document.getElementById("container").style.backgroundColor =
                     "#FF0000";
-                    colorButton(correctAnswwerbutton , buttonClick);
                 setTimeout(() => {
                     startScreen();
                 }, 2000);
             }
         }
-        // correct button color
-        function colorButton(correctbuttoncolor, wrongbuttoncolor) {
-            // if(correctbuttoncolor){
-            if (correctbuttoncolor == 1) {
-                document.getElementById("answer-one").style.backgroundColor = "#87A922";
-            } else if (correctbuttoncolor == 2) {
-                document.getElementById("answer-two").style.backgroundColor = "#87A922";
-            } else if (correctbuttoncolor == 3) {
-                document.getElementById("answer-three").style.backgroundColor = "#87A922";
-            } else if (correctbuttoncolor == 4) {
-                document.getElementById("answer-four").style.backgroundColor = "#87A922";
-            }
-            if (wrongbuttoncolor == 1) {
-                document.getElementById("answer-one").style.backgroundColor = "#D04848";
-            } else if (wrongbuttoncolor == 2) {
-                document.getElementById("answer-two").style.backgroundColor = "#D04848";
-            } else if (wrongbuttoncolor == 3) {
-                document.getElementById("answer-three").style.backgroundColor = "#D04848";
-            } else if (wrongbuttoncolor == 4) {
-                document.getElementById("answer-four").style.backgroundColor = "#D04848";
-            }
-
-        }
-        // resetcolor
-        function resetcolor(){
-            document.getElementById("answer-one").style.backgroundColor = "#0B60B0";
-            document.getElementById("answer-two").style.backgroundColor = "#0B60B0";
-            document.getElementById("answer-three").style.backgroundColor = "#0B60B0";
-            document.getElementById("answer-four").style.backgroundColor = "#0B60B0";
-         }
-
         // hidden 
         function dostart() {
             document.getElementById("main-body").hidden = false;
             document.getElementById("play-button").hidden = true;
+            document.getElementById("right").hidden = true;
             question(1);
-            resetcolor();
         }
 
         function startScreen() {
             document.getElementById("main-body").hidden = true;
             document.getElementById("play-button").hidden = false;
-            resetcolor();
+            document.getElementById("right").hidden = false;
 
         }
     </script>
@@ -422,16 +416,26 @@
     <!-- start button -->
     <button class="start-button" id="play-button" onclick="dostart()">LET"S START</button>
     <!-- display -->
-    <div class="main-container" id="main-body" hidden="true">
-        <div class="display" id="container">
-            <h1 id="text-display" class="text-display"></h1>
+    <div class="main-container">
+        <div id="main-body" hidden="true">
+            <div class="abcd">
+
+                <div class="efgh">
+                    <div class="display" id="container">
+                        <h1 id="text-display" class="text-display"></h1>
+                    </div>
+                    <!-- buttons -->
+                    <div>
+                        <button class="button" id="answer-one" onclick="answer(1)"></button>
+                        <button class="button" id="answer-two" onclick="answer(2)"></button>
+                        <button class="button" id="answer-three" onclick="answer(3)"></button>
+                        <button class="button" id="answer-four" onclick="answer(4)"></button>
+                    </div>
+                </div>
+                <div id="right" hidden="true" class="right-button"></div>
+            </div>
         </div>
-        <!-- buttons -->
-        <button class="button" id="answer-one" onclick="answer(1)"></button>
-        <button class="button" id="answer-two" onclick="answer(2)"></button>
-        <button class="button" id="answer-three" onclick="answer(3)"></button>
-        <button class="button" id="answer-four" onclick="answer(4)"></button>
-    </div>
+
     </div>
 </body>
 
