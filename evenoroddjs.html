@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>EVEN OR ODD</title>
+    <style>
+        /* main container */
+        .main-Container {
+            background-color: #824D74;
+            background-color: rgba(118, 38, 155, 0.7);
+            box-shadow: 0px 0px 44px red;
+            height: 550px;
+            width: 550px;
+            margin-left: 25%;
+            padding: 10px;
+            border-radius: 20%;
+        }
+
+        /* display */
+        .display-Text {
+            background-color: #3d27b6;
+            height: 200px;
+            width: 500px;
+            border-radius: 20px;
+            margin: 25px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
+            font-weight: bold;
+
+        }
+
+        /* center */
+        .center-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* input */
+        input {
+            background-color: #AD88C6;
+            height: 50px;
+            width: 400px;
+            font-size: 30px;
+            margin: 10px;
+            margin-top: 40px;
+        }
+
+        /* button */
+
+        button {
+            background-color: #6420AA;
+            height: 60px;
+            width: 400px;
+            margin: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            border-radius: 20px;
+        }
+    </style>
+    <script>
+        function displayText() {
+            // input
+            let x = document.getElementById("inputOne").value;
+            // condision
+            if (x % 2 == 0) {
+                document.getElementById("display").innerHTML = "The No Is Even.";
+            } else {
+                document.getElementById("display").innerHTML = "The No Is Odd.";
+            }
+        }
+        // clear function
+        function clearFunction() {
+            document.getElementById("display").innerHTML = "";
+        }
+    </script>
+</head>
+
+<body>
+    <!-- main container -->
+    <div class="main-Container">
+        <!-- display -->
+        <div class="display-Text" id="display"></div>
+        <!-- input button -->
+        <div class="center-box">
+            <input id="inputOne" type="number" value="" />
+            <!-- click button -->
+            <button onclick="displayText()">Click Button</button>
+            <!-- clear button -->
+            <button onclick="clearFunction()">Clear Button</button>
+        </div>
+    </div>
+</body>
+
+</html>
