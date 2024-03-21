@@ -20,7 +20,7 @@
         h1 {
             text-align: center;
             font-size: 40px;
-            color: #9CAFAA;
+            color: #7dbead;
         }
 
         /* input button */
@@ -33,11 +33,12 @@
 
         /* button */
         button {
-            height: 40px;
-            width: 100px;
+            height: 30px;
+            width: 150px;
             background-color: rgb(61, 97, 98);
             font-size: 20px;
             border-radius: 30px;
+
         }
 
         /* display-Text */
@@ -52,6 +53,8 @@
             justify-content: center;
             align-items: center;
             border-style: groove;
+            font-size: 30px;
+            color: aquamarine;
         }
 
         /* center */
@@ -75,13 +78,14 @@
         td {
             border-style: solid;
             border-collapse: collapse;
-            height: 40px;
+            height: 30px;
             width: 80vw;
             font-size: 20px;
             text-align: center;
             font-weight: bold;
             border-color: #195bce;
             color: white;
+            background-color: rgba(33, 54, 49, 0.3);
         }
 
         legend {
@@ -89,25 +93,83 @@
             font-weight: bold;
             color: #124076;
         }
+
+        /* text bold */
+        .text {
+            font-size: 25px;
+            font-weight: bold;
+            color: white;
+        }
     </style>
     <script>
 
         function displayUnit() {
+            // inputs
             let unit = Number(document.getElementById("inputOne").value);
             let y = Number(document.getElementById("inputTwo").value);
-            let output =0;
-            if(unit <= 50){
+            let output = 0;
+            // conditions
+            if (unit <= 50) {
                 output = unit * 0.5;
                 document.getElementById("display").innerHTML = "The total bill is Rs " + output;
-            } else if(unit >=51 && unit <=150){
-                output = ((50 * 0.5)+ (unit -50) * 0.75);
+                if ((y > 10) && (y < 20)) {
+                    document.getElementById("display").innerHTML = output + 30 ;
+                }
+                else if ((y > 20) && (y < 25)) {
+                    document.getElementById("display").innerHTML = output + 60 + "(Additional late fees aplicable)";
+                }
+                else if ((y > 25) && (y < 180)) {
+                    document.getElementById("display").innerHTML = output + 100 + "(Additional late fees aplicable)";
+                }
+                else if (y >= 180) {
+                    document.getElementById("display").innerHTML = output + 1000 + "(You have been fined with rs 20000 and your Supply has been CUT)";
+                }
+
+            } else if (unit >= 51 && unit <= 150) {
+                output = ((50 * 0.5) + (unit - 50) * 0.75);
                 document.getElementById("display").innerHTML = "The total bill is Rs " + output;
-            }  else if(unit >150 && unit <=250){
-                output = ((50 * 0.5)+ (100 * 0.75) + (unit - 150) * 1.25);
+                if ((y > 10)&&(y<20)) {
+                    document.getElementById("display").innerHTML = output + 30 + "(Additional late fees aplicable)";
+                }
+               else if ((y > 20) && (y<25)) {
+                    document.getElementById("display").innerHTML = output + 60 + "(Additional late fees aplicable)";
+                }
+                else if ((y > 25)&&(y<180)) {
+                    document.getElementById("display").innerHTML = output + 100 + "(Additional late fees aplicable)";
+                }
+                else if (y >= 180) {
+                    document.getElementById("display").innerHTML =  output + 1000 + "(You have been fined with rs 20000 and your Supply has been CUT)" ;
+                }
+            } else if (unit > 150 && unit <= 250) {
+                output = ((50 * 0.5) + (100 * 0.75) + (unit - 150) * 1.25);
                 document.getElementById("display").innerHTML = "The total bill is Rs " + output;
-            } else if(unit > 250){
-                output = (50 * 0.5)+ (100 * 0.75) + (100)*1.25 + ((unit - 250) * 1.50);
+                if ((y > 10)&&(y<20)) {
+                    document.getElementById("display").innerHTML = output + 30 + "(Additional late fees aplicable)";
+                }
+               else if ((y > 20) && (y<25)) {
+                    document.getElementById("display").innerHTML = output + 60 + "(Additional late fees aplicable)";
+                }
+                else if ((y > 25)&&(y<180)) {
+                    document.getElementById("display").innerHTML = output + 100 + "(Additional late fees aplicable)";
+                }
+                else if (y >= 180) {
+                    document.getElementById("display").innerHTML =  output + 1000 + "(You have been fined with rs 20000 and your Supply has been CUT)" ;
+                }
+            } else if (unit > 250) {
+                output = (50 * 0.5) + (100 * 0.75) + (100) * 1.25 + ((unit - 250) * 1.50);
                 document.getElementById("display").innerHTML = "The total bill is Rs " + output;
+                if ((y > 10)&&(y<20)) {
+                    document.getElementById("display").innerHTML = output + 30 + "(Additional late fees aplicable)";
+                }
+               else if ((y > 20) && (y<25)) {
+                    document.getElementById("display").innerHTML = output + 60 + "(Additional late fees aplicable)";
+                }
+                else if ((y > 25)&&(y<180)) {
+                    document.getElementById("display").innerHTML = output + 100 + "(Additional late fees aplicable)";
+                }
+                else if (y >= 180) {
+                    document.getElementById("display").innerHTML =  output + 1000 + "(You have been fined with rs 20000 and your Supply has been CUT)" ;
+                }
             }
         }
 
@@ -120,52 +182,60 @@
 </head>
 
 <body>
+    <!-- main container -->
     <div class="main-container">
+        <!-- heading -->
         <h1>ELECTRIC BILL</h1>
         <br>
+        <!-- display -->
         <div class="display-Text" id="display"></div>
         <br>
-        Enter Consumed x :
-        <input id="inputOne" type="number" value="" placeholder="Enter Units" />
-        late Fees
-        <input id="inputTwo" type="number" value=""  />
+        <!-- label -->
+        <label class="text">Enter Consumed Unit :</label>
+        <!-- input button -->
+        <input id="inputOne" type="number" value="" placeholder="Enter Units" />&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        <!-- label -->
+        <label class="text">Late Payment Days : </label>
+        <!--input butto  -->
+        <input id="inputTwo" type="number" value="" placeholder="Enter days" />
         <br>
         <br>
-        <button onclick="displayUnit()">Click</button>
-        <br><br>
+        <!-- button -->
+        <button onclick="displayUnit()">calculate bill</button>
+        <!-- table start -->
         <table>
             <legend>Charge Instruction</legend>
 
             <tr>
-                <th>Range in xs</th>
-                <th>Rate per x</th>
-                <th>Surpuls Usage Charge (In Percentage)</th>
-                <th>Late Fees</th>
+                <th style="color:rgb(190, 235, 29);">Range in xs</th>
+                <th style="color: rgb(190, 235, 29);">Rate per x</th>
+                <th style="color:rgb(190, 235, 29);">Surpuls Usage Charge (In Percentage)</th>
+                <th style="color:rgb(190, 235, 29);">Late Fees</th>
             </tr>
             <tr>
                 <td>0 - 50</td>
                 <td>0.5</td>
                 <td>5%</td>
-                <td>After 10 days = 10rs</td>
+                <td>After 10 days = 30rs</td>
 
             </tr>
             <tr>
                 <td>51 - 150</td>
                 <td>0.75</td>
                 <td>10%</td>
-                <td>After 15 days = 20rs</td>
+                <td>After 20 days = 60rs</td>
             </tr>
             <tr>
                 <td>151 - 250</td>
                 <td>1.25</td>
                 <td>15%</td>
-                <td>After 20 days = 30rs</td>
+                <td>After 25 days = 100rs</td>
             </tr>
             <tr>
                 <td>251</td>
                 <td>2.0</td>
                 <td>20%</td>
-                <td>After 26 days = 50rs</td>
+                <td>After 60 days = 1000rs </td>
             </tr>
 
         </table>
