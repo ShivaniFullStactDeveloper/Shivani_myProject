@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELECTRIC BILL</title>
+    <style>
+        .main-container {
+            background-image: url(https://media.gettyimages.com/id/1316185179/photo/high-voltage-towers-at-sunset-background-power-lines-against-the-sky.jpg?s=1024x1024&w=gi&k=20&c=ffDlXoyUXWdbmD5SxBeadmv7elUiwZd58VOEHAKXJE8=);
+
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 90vh;
+            width: 90vw;
+            padding: 10px;
+        }
+
+        /* HEADING */
+        h1 {
+            text-align: center;
+            font-size: 40px;
+            color: #9CAFAA;
+        }
+
+        /* input button */
+        input {
+            height: 20px;
+            font-size: 20px;
+            background-color: rgb(184, 178, 178);
+
+        }
+
+        /* button */
+        button {
+            height: 40px;
+            width: 100px;
+            background-color: rgb(61, 97, 98);
+            font-size: 20px;
+            border-radius: 30px;
+        }
+
+        /* display-Text */
+        .display-Text {
+            height: 80px;
+            width: 70vw;
+            margin-left: 10vw;
+            background-color: rgba(7, 28, 36, 0.4);
+            font-size: 30px;
+            color: rgb(3, 2, 2);
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            border-style: groove;
+        }
+
+        /* center */
+        .center {
+            display: grid;
+            grid-template-rows: 1fr;
+            justify-content: center;
+
+        }
+
+        /* text */
+        .all-Text {
+            font-size: 20px;
+            font-weight: bold;
+            color: white;
+        }
+
+        /* table */
+        table,
+        th,
+        td {
+            border-style: solid;
+            border-collapse: collapse;
+            height: 40px;
+            width: 80vw;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            border-color: #195bce;
+            color: white;
+        }
+
+        legend {
+            font-size: 25px;
+            font-weight: bold;
+            color: #124076;
+        }
+    </style>
+    <script>
+
+        function displayUnit() {
+            let unit = Number(document.getElementById("inputOne").value);
+            let y = Number(document.getElementById("inputTwo").value);
+            let output =0;
+            if(unit <= 50){
+                output = unit * 0.5;
+                document.getElementById("display").innerHTML = "The total bill is Rs " + output;
+            } else if(unit >=51 && unit <=150){
+                output = ((50 * 0.5)+ (unit -50) * 0.75);
+                document.getElementById("display").innerHTML = "The total bill is Rs " + output;
+            }  else if(unit >150 && unit <=250){
+                output = ((50 * 0.5)+ (100 * 0.75) + (unit - 150) * 1.25);
+                document.getElementById("display").innerHTML = "The total bill is Rs " + output;
+            } else if(unit > 250){
+                output = (50 * 0.5)+ (100 * 0.75) + (100)*1.25 + ((unit - 250) * 1.50);
+                document.getElementById("display").innerHTML = "The total bill is Rs " + output;
+            }
+        }
+
+
+        // clear function
+        function clearFunction() {
+            document.getElementById("display").innerHTML = "";
+        }
+    </script>
+</head>
+
+<body>
+    <div class="main-container">
+        <h1>ELECTRIC BILL</h1>
+        <br>
+        <div class="display-Text" id="display"></div>
+        <br>
+        Enter Consumed x :
+        <input id="inputOne" type="number" value="" placeholder="Enter Units" />
+        late Fees
+        <input id="inputTwo" type="number" value=""  />
+        <br>
+        <br>
+        <button onclick="displayUnit()">Click</button>
+        <br><br>
+        <table>
+            <legend>Charge Instruction</legend>
+
+            <tr>
+                <th>Range in xs</th>
+                <th>Rate per x</th>
+                <th>Surpuls Usage Charge (In Percentage)</th>
+                <th>Late Fees</th>
+            </tr>
+            <tr>
+                <td>0 - 50</td>
+                <td>0.5</td>
+                <td>5%</td>
+                <td>After 10 days = 10rs</td>
+
+            </tr>
+            <tr>
+                <td>51 - 150</td>
+                <td>0.75</td>
+                <td>10%</td>
+                <td>After 15 days = 20rs</td>
+            </tr>
+            <tr>
+                <td>151 - 250</td>
+                <td>1.25</td>
+                <td>15%</td>
+                <td>After 20 days = 30rs</td>
+            </tr>
+            <tr>
+                <td>251</td>
+                <td>2.0</td>
+                <td>20%</td>
+                <td>After 26 days = 50rs</td>
+            </tr>
+
+        </table>
+
+
+    </div>
+
+</body>
+
+</html>

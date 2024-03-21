@@ -14,6 +14,7 @@
             height: 550px;
             width: 600px;
             background-repeat: no-repeat;
+            display: grid;
         }
 
         /* display */
@@ -25,7 +26,7 @@
             border-image-slice: 30;
             border-image-width: 10px;
             margin-left: 25px;
-            font-size: 40px;
+            font-size: 50px;
             color: white;
             display: grid;
             justify-content: center;
@@ -82,6 +83,7 @@
         function displayDay() {
             // input
             let x = document.getElementById("inputOne").value;
+            reset();
             // condisions
             if (x == 1) {
                 document.getElementById("display").innerHTML = "MONDAY";
@@ -103,6 +105,10 @@
             }
             // document.getElementById("display").innerHTML= output;
             // console.log("OUTPUT", output);
+        }
+
+        function reset(){
+            document.getElementById("display").style.color = "white";
         }
         // clear function
         function clearFunction() {
