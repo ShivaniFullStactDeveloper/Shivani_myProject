@@ -9,7 +9,7 @@
             background-color: #824D74;
             background-color: rgba(118, 38, 155, 0.7);
             box-shadow: 0px 0px 44px red;
-            height: 550px;
+            height: 600px;
             width: 550px;
             margin-left: 25%;
             padding: 10px;
@@ -28,6 +28,8 @@
             align-items: center;
             font-size: 40px;
             font-weight: bold;
+            margin-top: 40PX;
+
 
         }
 
@@ -46,7 +48,7 @@
             width: 400px;
             font-size: 30px;
             margin: 10px;
-            margin-top: 40px;
+            margin-top: 20px;
         }
 
         /* button */
@@ -59,6 +61,12 @@
             font-size: 20px;
             font-weight: bold;
             border-radius: 20px;
+        }
+
+        p{
+            font-size: 30px;
+            font-weight: bold;
+            text-align: center;
         }
     </style>
     <script>
@@ -82,13 +90,15 @@
 <body>
     <!-- main container -->
     <div class="main-Container">
+        <!-- HEADING -->
+        <P>Even Or Odd</P>
         <!-- display -->
         <div class="display-Text" id="display"></div>
         <!-- input button -->
         <div class="center-box">
             <input id="inputOne" type="number" value="" />
             <!-- click button -->
-            <button onclick="displayText()">Click Button</button>
+            <button onclick="displayText()">Even Or Odd</button>
             <!-- clear button -->
             <button onclick="clearFunction()">Clear Button</button>
         </div>

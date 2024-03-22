@@ -17,12 +17,17 @@
             background-color: blue;
             width: 90vw;
             border-radius: 20px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
 
         }
 
         input {
             height: 50px;
             background-color: darkgoldenrod;
+            margin: 10px;
+            
         }
 
         button {
@@ -30,28 +35,19 @@
             width: 150px;
             background-color: cadetblue;
         }
+
+        p{
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+        }
     </style>
     <script>
-
-        //    let total = 0;
-        // let x = document.getElementById("numberone").value;
-
-        //    function showresult(Number){
-        //         if(result == 0){
-        //             result = result % Number(even);
-        //         } else if(result == 1){
-        //             result = result % Number(odd);
-        //         }
-        //         document.getElementById("display").innerHTML= "the no is";
-        //  
-        // }
-
         // evev or odd
-        let number;
-
         function showresult() {
-            number = document.getElementById("first").value;
-
+            // input
+           let number = document.getElementById("first").value;
+            // condition
             if (number % 2 == 0) {
                 document.getElementById("display").innerHTML = "The no is even";
             } else {
@@ -59,10 +55,11 @@
             }
         }
         // vote
-        let vote;
+        
         function votercheck() {
-            vote = document.getElementById("first").value;
-
+            // input
+           let vote = document.getElementById("first").value;
+            // condition
             if (vote >=18) {
                 document.getElementById("display").innerHTML = "Eligible for vote.";
             } else {
@@ -71,12 +68,12 @@
         }
 
         // Equal
-        let equal;
+       
         function equalnum() {
-            equal =Number(document.getElementById("first").value);
-            equal = Number(document.getElementById("second").value);
+           let x =Number(document.getElementById("first").value);
+           let y = Number(document.getElementById("second").value);
 
-            if (equal == 0) {
+            if (x == y) {
                 document.getElementById("display").innerHTML = "No is equal.";
             } else {
                 document.getElementById("display").innerHTML = "No is not equal.";
@@ -87,8 +84,10 @@
 
 <body>
     <div class="main">
+        <!-- heading -->
+        <p>Eligible Or Not And Equal Or Not</p>
         <!-- display -->
-        <h1 id="display">0</h1>
+        <h1 id="display"></h1>
         <!-- input -->
         <input type="number" id="first" value="" />
         <input type="number" id="second" value="" />

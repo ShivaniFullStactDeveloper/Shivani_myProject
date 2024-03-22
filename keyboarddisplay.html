@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Keyboard</title>
+    <style>
+        .main {
+            background-color: gray;
+            display: grid;
+            grid-template-rows: 1fr 1fr;
+            /* grid-template-columns: 3fr 1fr; */
+            height: 85vh;
+            width: 90vw;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 10px;
+
+        }
+
+        .display {
+            height: 24vh;
+            width: 90vw;
+            background-color: #121e5f;
+            border-radius: 10px;
+
+
+        }
+
+        .text {
+            font-size: 50px;
+            color: white;
+            display: grid;
+            justify-content: end;
+            align-items: end;
+            margin-bottom: 6px;
+        }
+
+        .container {
+            height: 60vh;
+            width: 90vw;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+
+        .left {
+            background-color: #25262c;
+            grid-template-columns: 1fr;
+            width: 70vw;
+            /* height: 32vh; */
+            margin-right: 1px;
+            padding: 5px;
+            border-radius: 10px;
+
+        }
+
+        /* first row */
+        .first {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            /* margin: 5px; */
+            background-color: none;
+            width: 100%;
+            height: 12%;
+        }
+
+        /* sec row */
+        .sec {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            background-color: none;
+            width: 100%;
+            height: 18%;
+            /* margin: 5px; */
+        }
+
+        /* third */
+        .third {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.2fr;
+            grid-template-rows: 1fr;
+            /* margin: 5px; */
+            background-color: none;
+            width: 100%;
+            height: 18%;
+        }
+
+        /* forth */
+        .forth-row {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.6fr;
+            grid-template-rows: 1fr;
+            background-color: none;
+            width: 100%;
+            height: 18%;
+            /* margin: 5px; */
+        }
+
+        /* fifth */
+        .fifth-row {
+            display: grid;
+            grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1.8fr;
+            grid-template-rows: 1fr;
+            background-color: none;
+            width: 100%;
+            height: 18%;
+            /* margin: 5px; */
+        }
+
+        /* sisth */
+        .sixth-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr 7fr 1fr 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            background-color: none;
+            width: 100%;
+            height: 18%;
+            color: white;
+            /* margin: 5px; */
+        }
+
+        .color {
+            background-color: black;
+            margin: 5px;
+            border-radius: 10px;
+            display: grid;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            /* font-size: 0px; */
+            font-weight: bold;
+
+        }
+
+        .right {
+            background-color: #25262c;
+            border-radius: 10px;
+            width: 18vw;
+            padding: 9px;
+        }
+
+        /* right side */
+        /* r one */
+        .rone-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr;
+            /* margin: 5px; */
+            background-color: none;
+            width: 100%;
+            height: 12%;
+            color: white;
+        }
+
+        /* rtwo-row */
+        .rtwo-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+            background-color: none;
+            width: 100%;
+            height: 90%;
+            color: white;
+            /* margin: 5px; */
+        }
+
+        /* row span right */
+        .item {
+            display: grid;
+            grid-row: span 2;
+        }
+
+        .two-button {
+            width: 100%;
+            height: 40%;
+            margin-right: 5px;
+        }
+    </style>
+    <script>
+        let total = 0;
+        let displayString = "";
+        action = 0;
+        // displat no
+        function displayNumber(passednumber) {
+            displayString = displayString + passednumber.toString();
+            document.getElementById("display-text").innerHTML = displayString;
+        }
+
+        function displayText(passedtext) {
+            displayString = displayString + passednumber.toString();
+            document.getElementById("display-text").innerHTML = displayString;
+        }
+        // add
+        function add() {
+            total = Number(displayString);
+            action = 1;
+            displayString = "";
+            document.getElementById("display-text").innerHTML = displayString;
+        }
+        // sub
+        function sub() {
+            total = Number(displayString);
+            action = 2;
+            displayString = "";
+            document.getElementById("display-text").innerHTML = displayString;
+        }
+        // multi
+        function multiplication() {
+            total = Number(displayString);
+            action = 3;
+            displayString = "";
+            document.getElementById("display-text").innerHTML = displayString;
+        }
+        // DIV
+        function div() {
+            total = Number(displayString);
+            action = 4;
+            displayString = "";
+            document.getElementById("display-text").innerHTML = displayString;
+        }
+        // Show result
+        function showResult(){
+            
+            if(action==1){
+                total = total + Number(displayString);
+            } else if(action==2){
+                total = total - Number(displayString);
+            } else if(action==3){
+                total = total * Number(displayString);
+            } else if(action==4){
+                total = total / Number(displayString);
+            }
+            displayString = total;
+            document.getElementById("display-text").innerHTML = displayString;
+        }
+
+        // clear
+        function clearFunction() {
+            total = 0;
+            displayString = "";
+            document.getElementById("display-text").innerHTML = "";
+        }
+        // backspace
+        function backSpace() {
+            displayString = displayString.substring(0, displayString.length - 1);
+            document.getElementById("display-text").innerHTML = displayString;
+        }
+
+        function spaceButton() {
+            var a = 'something' + '        ' + 'something'
+            document.getElementById("display-text").innerHTML = displayString;
+        }
+    </script>
+
+</head>
+
+<body>
+    <!-- main -->
+    <div class="main">
+        <div class="display text">
+            <h1 id="display-text"></h1>
+        </div>
+        <!-- left -->
+        <div class="container">
+            <div class="left">
+                <!-- row one -->
+                <div class="first">
+                    <button class="color">esc</button>
+                    <button class="color">f1</button>
+                    <button class="color">f2</button>
+                    <button class="color">f3</button>
+                    <button class="color">f4</button>
+                    <button class="color">f5</button>
+                    <button class="color">f6</button>
+                    <button class="color">f7</button>
+                    <button class="color">f8</button>
+                    <button class="color">f9</button>
+                    <button class="color">f10</button>
+                    <button class="color">f11</button>
+                    <button class="color">f12</button>
+                    <button class="color">ins</button>
+                    <button class="color" onclick="clearFunction()">delet</button>
+                </div>
+                <!-- row two -->
+                <div class="sec">
+                    <button class="color">~ <br> `</button>
+                    <button class="color">! <br>1</button>
+                    <button class="color">@ <br> 2</button>
+                    <button class="color"># <br>3</button>
+                    <button class="color">$ <br> 4</button>
+                    <button class="color">% <br> 5</button>
+                    <button class="color">^ <br> 6</button>
+                    <button class="color">& <br> 7</button>
+                    <button class="color">* <br> 8</button>
+                    <button class="color">( <br> 9</button>
+                    <button class="color">) <br> 0</button>
+                    <button class="color">_ <br> -</button>
+                    <button class="color">+ <br> =</button>
+                    <button class="color" onclick="backSpace()">backspace</button>
+                </div>
+                <!-- row three -->
+                <div class="third">
+                    <button class="color">tab</button>
+                    <button class="color" onclick="displayText()">Q</button>
+                    <button class="color">W</button>
+                    <button class="color">E</button>
+                    <button class="color">R</button>
+                    <button class="color">T</button>
+                    <button class="color">Y</button>
+                    <button class="color">U</button>
+                    <button class="color">I</button>
+                    <button class="color">O</button>
+                    <button class="color">P</button>
+                    <button class="color">{ <br> [</button>
+                    <button class="color">} <br> ]</button>
+                    <button class="color">| <br> \</button>
+                </div>
+                <!-- row four -->
+                <div class="forth-row">
+                    <button class="color">caps lock</button>
+                    <button class="color">A</button>
+                    <button class="color">S</button>
+                    <button class="color">D</button>
+                    <button class="color">F</button>
+                    <button class="color">G</button>
+                    <button class="color">H</button>
+                    <button class="color">J</button>
+                    <button class="color">K</button>
+                    <button class="color">L</button>
+                    <button class="color">: <br> ;</button>
+                    <button class="color">" <br> '</button>
+                    <button class="color"> ↩ enter</button>
+                </div>
+                <!-- row five -->
+                <div class="fifth-row">
+                    <button class="color">shift</button>
+                    <button class="color">Z</button>
+                    <button class="color">X</button>
+                    <button class="color">C</button>
+                    <button class="color">V</button>
+                    <button class="color">B</button>
+                    <button class="color">N</button>
+                    <button class="color">M</button>
+                    <button class="color">
+                        < <br> ,
+                    </button>
+                    <button class="color">> <br> .</button>
+                    <button class="color">?<br> /</button>
+                    <button class="color">pause <br> shift</button>
+                </div>
+                <!--row six  -->
+                <div class="sixth-row">
+                    <button class="color">ctrl</button>
+                    <button class="color">fn</button>
+                    <button class="color"><b>⌘</b></button>
+                    <button class="color">alt</button>
+                    <button class="color" onclick="spaceButton()">space</button>
+                    <button class="color">alt</button>
+                    <button class="color">ctrl</button>
+                    <button class="color">◄</button>
+                    <!-- <button class="color">up
+                    <hr />dn
+                </button> -->
+                    <div style="margin-right: 7px;">
+                        <button class="color two-button">▲</button>
+                        <button class="color two-button">▼</button>
+                    </div>
+                    <button class="color">►</button>
+                </div>
+
+
+
+
+            </div>
+            <!-- right  -->
+            <div class="right">
+                <!-- row one -->
+                <div class="rone-row">
+                    <button class="color">home</button>
+                    <button class="color">end</button>
+                    <button class="color"><small>pg up</small></button>
+                    <button class="color"><small>pg dn</small></button>
+                </div>
+                <!-- row two -->
+                <div class="rtwo-row">
+                    <button class="color">num <br> lock</button>
+                    <button class="color" onclick="div()">/</button>
+                    <button class="color" onclick="multiplication()">*</button>
+                    <button class="color" onclick="sub()">-</button>
+                    <!-- </div> -->
+                    <!-- row three -->
+                    <!-- <div class="rtwo-row"> -->
+                    <button class="color" onclick="displayNumber(7)">7<sup>home</sup></button>
+                    <button class="color" onclick="displayNumber(8)">8 <br> ↑ </button>
+                    <button class="color" onclick="displayNumber(9)">9<sup>pg pu</sup></button>
+                    <button class="color item" onclick="add()">+</button>
+                    <!-- </div> -->
+                    <!-- row four -->
+                    <!-- <div class="rtwo-row"> -->
+                    <button class="color" onclick="displayNumber(4)">4 <br>←</button>
+                    <button class="color" onclick="displayNumber(5)">5</button>
+                    <button class="color" onclick="displayNumber(6)">6 <br>→</button>
+                    <!-- </div>
+            <div class="rtwo-row"> -->
+                    <button class="color" onclick="displayNumber(1)">1<sup>end</sup></button>
+                    <button class="color" onclick="displayNumber(2)">2<br> ↓</button>
+                    <button class="color" onclick="displayNumber(3)">3<sup>pg dn</sup></button>
+                    <button class="color item" onclick="showResult()">enter</button>
+                    <!-- </div>
+            <div class="rtwo-row"> -->
+                    <button class="color" style="display: grid; grid-column: span 2;"
+                        onclick="displayNumber(0)">0</button>
+                    <button class="color" onclick="displayNumber('.')">.</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

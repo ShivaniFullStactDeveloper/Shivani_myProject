@@ -29,6 +29,7 @@
         border-image-source: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtNtDtlheDYgPIbgzVDBHBW4AZgDh1C_jQBw&usqp=CAU);
         border-image-slice: 30;
         border-image-width: 10px;
+        margin-top: 20px;
     }
 
     /* input button */
@@ -56,6 +57,11 @@
         box-shadow: 10px;
         transform: scale(0.9);
     }
+    p{
+        font-size: 20px;
+        color: white;
+        text-align: center;
+    }
 </style>
 <script>
 
@@ -77,6 +83,7 @@
 <body>
     <!-- main container -->
     <div class="main-container">
+        <p>Largest Number</p>
         <!-- display -->
         <div class="display" id="display"></div>
         <!-- input -->
@@ -84,7 +91,7 @@
         <input id="inputTwo" type="number" value="" placeholder="enter number"/>
         <input id="inputThree" type="number" value="" placeholder="enter number"/>
         <!-- button -->
-        <button onclick="greatestno()" class="button">CLICK</button>
+        <button onclick="greatestno()" class="button">Check Largest No</button>
     </div>
 
 </body>

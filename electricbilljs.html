@@ -110,7 +110,7 @@
             let output = 0;
             // conditions
             if (unit <= 50) {
-                output = unit * 0.5;
+                output = (unit * 0.5);
                 document.getElementById("display").innerHTML = "The total bill is Rs " + output;
                 if ((y > 10) && (y < 20)) {
                     document.getElementById("display").innerHTML = output + 30 ;
@@ -126,7 +126,7 @@
                 }
 
             } else if (unit >= 51 && unit <= 150) {
-                output = ((50 * 0.5) + (unit - 50) * 0.75);
+                output = (50 * 0.5) + (unit - 50) * 0.75;
                 document.getElementById("display").innerHTML = "The total bill is Rs " + output;
                 if ((y > 10)&&(y<20)) {
                     document.getElementById("display").innerHTML = output + 30 + "(Additional late fees aplicable)";
@@ -202,11 +202,13 @@
         <br>
         <!-- button -->
         <button onclick="displayUnit()">calculate bill</button>
+        <br><br><br><br>
         <!-- table start -->
+        <div style="margin-left: 55px;">
         <table>
             <legend>Charge Instruction</legend>
-
-            <tr>
+            
+                <tr>
                 <th style="color:rgb(190, 235, 29);">Range in xs</th>
                 <th style="color: rgb(190, 235, 29);">Rate per x</th>
                 <th style="color:rgb(190, 235, 29);">Surpuls Usage Charge (In Percentage)</th>
@@ -237,7 +239,7 @@
                 <td>20%</td>
                 <td>After 60 days = 1000rs </td>
             </tr>
-
+        </div>
         </table>
 
 
