@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: cornflowerblue;
+        }
+
+        button {
+            height: 50px;
+            width: 200px;
+        }
+
+        .display {
+            height: 200px;
+            width: 100vw;
+            background-color: rgba(255, 0, 0, 0.3);
+        }
+    </style>
+    <script>
+
+        //***** ONE *****
+        // function iterate(){
+        //     // inputs
+        //     let inputs = [11 , 22 , 33];
+        //     // output
+        //     console.log("the inputs are", inputs[0], inputs[1] , inputs[2]);
+        // }
+
+        // ***** TWO *******
+        // function iterate(){
+        //     // initialize
+        //     let inputs = [];
+        //     // assign
+        //     inputs = [11 , 22 , 33];
+        //     // output
+        //     console.log("the inputs are", inputs[0], inputs[1] , inputs[2]);
+        // }
+
+        // // ***** THREE ****** 
+        // function iterate(){
+        //     // initialize
+        //     let inputs = [];
+        //     // assign
+        //     inputs = [11 , 22 , 33,44,55,66,77,88,99];
+
+        //     let index = 0;
+
+        //     while(index < inputs.length){
+        //         // PROCESS
+        //         let output = "ARRAY AT"+ index + "IS=" +inputs[index];
+        //           // output
+        //           document.getElementById("display").innerHTML= output;
+        //         console.log(output);
+
+        //         index++;
+        //     }
+        //   }
+
+        // // ***** THREE ****** 
+        // function iterate(){
+        //     // initialize
+        //     let inputs = [];
+        //     // input
+        //     for(let i=0; i<5; i++){
+        //         let enter = prompt("enter no");
+        //         inputs.push(enter);
+        //     }
+        //     // output
+        //     let index = 0;
+
+        //     while(index < inputs.length){
+        //         // PROCESS
+        //         let output = "ARRAY AT"+ index + "IS=" +inputs[index];
+
+        //         //   document.getElementById("display").innerHTML= output;
+        //         console.log(output);
+
+        //         index++;
+        //     }
+        //   }
+
+        // ***** THREE ****** 
+        function iterate() {
+            // initialize
+            let inputs = [];
+            // input
+            for (let i = 0; i < 5; i++) {
+                let enter =Number(prompt("enter no"));
+                inputs.push(enter);
+            }
+            // output
+            let index = 0;
+            let sum = 0;
+            while (index < inputs.length) {
+                // PROCESS
+                let output = "ARRAY AT" + index + "IS=" + inputs[index];
+                sum += inputs[index];
+
+                //   document.getElementById("display").innerHTML= output;
+                console.log(output);
+                index++;
+            }
+            console.log("total",sum);
+        }
+        
+    </script>
+</head>
+
+<body>
+    <h1 class="display" id="display"></h1>
+    <button onclick="iterate()">click</button>
+</body>
+
+</html>
