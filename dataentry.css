@@ -1,12 +1,41 @@
 body{
     background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-solid-color-background-beautiful-simple-wind-bannerpsd-image_183026.jpg);
+    font-family: "Mate SC", serif;
 }
 
 button{
-    height: 70px;
+    height: 60px;
     width: 260px;
-    background-color: #222831;
+    background-color: #414449;
     font-size: 25px;
     margin-left: 300px;
+    color: white;
 
 }
+
+label{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.hOne{
+    font-size: 30PX;
+    font-weight: bold;
+    font-family: "Rubik Doodle Shadow", system-ui;
+}
+
+.text{
+    font-size: 23px;
+    font-weight: bold;
+}
+
+legend{
+    font-size: 28px;
+    font-weight: bold;
+}
+
+table,th,td{
+    border-style: solid;
+    border-collapse: collapse;
+}
+
