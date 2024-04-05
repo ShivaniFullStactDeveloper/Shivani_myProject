@@ -1,164 +1,171 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <!-- tittle -->
-        <title>Student informartion</title>
-        <!-- external style -->
-        <link href="dataentry.css" rel="stylesheet" />
-        <!-- font link -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Mate+SC&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div>
-            <h1 class="hOne">ENJOY PROGRAMMING</h1>
-            <div >
-                <!-- buttons -->
-                <button id="page-One" onclick="formDisplay()">Student Data Entry</button>
-                <button>List Data Information</button>
-            </div>
-            <!-- form -->
-            <form>
-                <!-- fieldset -->
-                <fieldset>
-                    <!-- legend -->
-                    <legend>ENTER STUDENT DETAILS</legend>
-                    <!-- first name -->
-                    <label for="student">FIRST NAME :</label>
-                    <input type="text" name="student" placeholder="Enter First Name"/>
-                    <br><br>
-                    <!-- last name -->
-                    <label for="student">LAST NAME :</label>
-                    <input type="text" name="student" placeholder="Enter Last Name">
-                    <br><br>
-                    <!-- dob -->
-                    <label for="birthdate">DOB :</label>
-                    <input type="date" name="birthdate" placeholder="Date Of Birth">
-                    <br><br>
-                    <!-- contact -->
-                    <label for="cont">CONTACT NO. :</label>
-                    <input type="number" name="cont" pattern="[0,9]{10}">
-                    <!-- education -->
-                    <label for="education">EDUCATION : </label>
-                    <input class="" type="radio" name="education">
-                    <label> Graduate </label>
-                    <input class="text" class="text" type="radio" name="education">
-                    <label> Graduate</label>
-                    <input class="text" type="radio" name="education">
-                    <label>Post Graduate.</label> 
-                    <br><br>
-                    <!-- address -->
-                    <label for="address">ADDRESS :</label>
-                    <!-- city -->
-                    <label for="city">City :</label>
-                    <input type="text" name="address" >
-                    <!-- dist -->
-                    <label for="dist">Dist :</label>
-                    <select>
-                        <option value="dist">Nagpur</option>
-                        <option value="dist">Amravati</option>
-                        <option value="dist">Gondia</option>
-                    </select>
-                    <br>
-                    <!-- state -->
-                    <label>State :</label>
-                    <select>
-                        <option value="state">Maharashtra</option>
-                        <option value="state">Pune</option>
-                        <option value="state">Nashik</option>
-                    </select>
-                    <br><br>
-                    <!-- email -->
-                    <label for="email">EMAIL ID :</label>
-                    <input type="email" name="email" placeholder="Enter Email id">
-                    <br><br>
-                    <!-- password -->
-                    <label for="password">PASSWORD :</label>
-                    <input type="password" name="password" placeholder="Enter Password">
-                    <br><br>
-                    <input type="submit">
-                </fieldset>
-            </form>
-        </div>
-        <div   hidden="true" >
-            <div>
-                <!-- buttons -->
-                <!-- <button >Student Data Entry</button> -->
-                <button id="Page-Two"  onclick="listDispaly()">List Data Information</button>
-            </div>
-            <div>
-                <table>
-                    <!-- heading row -->
-                    <tr>
-                        <th>Sr No</th>
-                        <th>Roll No</th>
-                        <th>Student Name</th>
-                        <th>Contact No</th>
-                        <th>DOB</th>
-                        <th>Email </th>
-                        <th>Education Details</th>
-                        <th>Address</th>
 
-                    </tr>
-                    <!-- first row -->
-                    <tr>
-                        <td>1</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <!-- sec row -->
-                    <tr>
-                        <td>1</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <!-- third row -->
-                    <tr>
-                        <td>1</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <!-- forth row -->
-                    <tr>
-                        <td>1</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                    <!-- fifth row -->
-                    <tr>
-                        <td>1</td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                    </tr>
-                </table>
-            </div>
+<head>
+    <!-- tittle -->
+    <title>Student informartion</title>
+    <!-- external style -->
+    <link href="dataentry.css" rel="stylesheet" />
+    <!-- font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Mate+SC&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="page-One">
+        <h1 class="hOne">ENJOY PROGRAMMING</h1>
+
+        <div>
+            <!-- buttons -->
+            <button onclick="formDisplay()">Student Data Entry</button>
+            <button onclick="listDisplay()">List Data Information</button>
         </div>
-        <script src="dataentry.js"></script>
-    </body>
+        <!-- form -->
+        <form>
+            <!-- fieldset -->
+            <fieldset>
+                <!-- legend -->
+                <legend>ENTER STUDENT DETAILS</legend>
+                <!-- first name -->
+                <label for="student">FIRST NAME :</label>
+                <input type="text" id="first-name" name="student" placeholder="Enter First Name" />
+                <br><br>
+                <!-- last name -->
+                <label for="student">LAST NAME :</label>
+                <input type="text" id="last-name" name="student" placeholder="Enter Last Name">
+                <br><br>
+                <!-- dob -->
+                <label for="birthdate">DOB :</label>
+                <input type="date" id="dob" name="birthdate" placeholder="Date Of Birth">
+                <br><br>
+                <!-- contact -->
+                <label for="cont">CONTACT NO. :</label>
+                <input type="number" id="contact" name="cont" pattern="[0,9]{10}">
+                <br><br>
+                <!-- education -->
+                <label for="education">EDUCATION : </label>
+                <input class="text" id="edu-details" type="radio" name="education">
+                <label> Graduate </label>
+                <input class="text" class="text" type="radio" name="education">
+                <label> Graduate</label>
+                <input class="text" type="radio" name="education">
+                <label>Post Graduate.</label>
+                <br><br>
+                <!-- address -->
+                <label for="address">ADDRESS :</label>
+                <!-- city -->
+                <label for="city">City :</label>
+                <input type="text" id="address" name="address">
+                <!-- dist -->
+                <label for="dist">Dist :</label>
+                <select>
+                    <option value="dist">Nagpur</option>
+                    <option value="dist">Amravati</option>
+                    <option value="dist">Gondia</option>
+                </select>
+                <br>
+                <!-- state -->
+                <label>State :</label>
+                <select>
+                    <option value="state">Maharashtra</option>
+                    <option value="state">Pune</option>
+                    <option value="state">Nashik</option>
+                </select>
+                <br><br>
+                <!-- email -->
+                <label for="email">EMAIL ID :</label>
+                <input type="email" id="email-id" name="email" placeholder="Enter Email id">
+                <br><br>
+                <!-- password -->
+                <label for="password">PASSWORD :</label>
+                <input type="password" name="password" placeholder="Enter Password">
+                <br><br>
+                <button id="inputData" type="submit">SUBMIT</button>
+            </fieldset>
+        </form>
+    </div>
+    <!-- list data -->
+    <div id="page-Two">
+        <div>
+            <!-- buttons -->
+            <button onclick="formDisplay()">Student Data Entry</button>
+            <button onclick="listDisplay()">List Data Information</button>
+        </div>
+        <div>
+            <table>
+                <legend>Student data Information</legend>
+                <!-- heading row -->
+                <tr>
+                    <th>Sr No</th>
+                    <th>Roll No</th>
+                    <th>Student Name</th>
+                    <th>Contact No</th>
+                    <th>DOB</th>
+                    <th>Email </th>
+                    <th>Education Details</th>
+                    <th>Address</th>
+
+                </tr>
+                <!-- first row -->
+                <tr>
+                    <td id="sr-no">1</td>
+                    <td id="roll-no">001</td>
+                    <td id="name"></td>
+                    <td id="number"></td>
+                    <td id="date"></td>
+                    <td id="mail-id"></td>
+                    <td id="education"></td>
+                    <td id="add"></td>
+                </tr>
+                <!-- sec row -->
+                <!-- <tr>
+                    <td>2</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                third row
+                <tr>
+                    <td>3</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <! forth row -->
+                <!-- <tr>
+                    <td>4</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr> -->
+                <!-- fifth row -->
+                <!-- <tr>
+                    <td>5</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>  -->
+            </table>
+        </div>
+    </div>
+    <script src="dataentry.js"></script>
+</body>
+
 </html>
