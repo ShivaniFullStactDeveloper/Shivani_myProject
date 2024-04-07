@@ -1,5 +1,15 @@
+let currentCount = 1;
 // array
-let student =[];
+let student =[ <tr>
+    <td id="sr-no">1</td>
+    <td id="roll-no">001</td>
+    <td id="name"></td>
+    <td id="number"></td>
+    <td id="date"></td>
+    <td id="mail-id"></td>
+    <td id="education"></td>
+    <td id="add"></td>
+</tr>];
 
 // first page show
 function formDisplay(){
@@ -7,9 +17,12 @@ function formDisplay(){
     document.getElementById("page-Two").hidden=true;
 }
 
-// 
+// inputing data
 function inputData(){
     // dictionary
+    currentCount++;
+
+    console.log("inputdata");
     let information = {};
     // inputs
     information["firstName"] = document.getElementById("first-name").value;
@@ -22,21 +35,27 @@ function inputData(){
 
     // push 
     student.push(information);
-    console.log(student,information);
+    student.push('')
+    
+
+    for(let i=0; i < student.length; i++){
+        let output = student[i];
+        
+        console.log(student,information);
+
+        document.getElementById("name").innerHTML= output.firstName + output.lastName; 
+        document.getElementById("number").innerHTML= output.contactNo;  
+        
+    }
 }
 
 // sec page show
 function listDisplay(){
+    console.log("listDisplay");
     document.getElementById("page-One").hidden=true;
     document.getElementById("page-Two").hidden=false;
 
-    for(i=0; i < student.length; i++){
-        let output = student[i];
-
-        document.getElementById("name").innerHTML= output.firstName + output.lastName; 
-        document.getElementById("number").innerHTML= output.contactNo;  
-        console.log( output.firstName + output.lastName ,output[i].contactNo );
-    }
+   
 }
 
 
