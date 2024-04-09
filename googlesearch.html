@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Search</title>
+    <style>
+        input {
+            height: 60px;
+            width: 700px;
+            border-radius: 30px;
+            margin-left: 200px;
+            margin-top: 200px;
+            font-size: 20px;
+            text-align: center;
+        }
+
+        button {
+            height: 40PX;
+            width: 60px;
+            margin-right: 150px;
+            padding: 10px;
+        }
+    </style>
+    <script>
+
+        function searchFunction() {
+            let studentsearch = ["Shivani", "Pooja", "Ayush", "Yash", "Nisha"];
+            let i = 0;
+            let output = false;
+            let foundAtPosition = 0;
+            let searchtext = document.getElementById("inputs-search").value;
+            console.log(searchtext);
+
+            while (i < studentsearch.length) {
+                let student = studentsearch[i];
+
+                if (student.toUpperCase() == searchtext.toUpperCase()) {
+                    output = true;
+                   
+                }
+                console.log(i);
+                i++;
+            }
+
+            if (output == true) {
+                document.getElementById("display").innerHTML = "Student Is Found At " +  foundAtPosition;
+            } else {
+                document.getElementById("display").innerHTML = "Student Is Not Found";
+            }
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <div id="display">fghfghfg</div>
+   <div> <input type="search" id="inputs-search" onclick="searchFunction()" placeholder="Search Google">
+    <button onclick="searchFunction()"></button>
+</div>
+
+</body>
+
+</html>
