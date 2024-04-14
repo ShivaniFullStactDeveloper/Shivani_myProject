@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            height: 40px;
+            width: 50vw;
+            border-style: solid;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 20px;
+        }
+
+        #section-one {
+            background-color: blue;
+        }
+
+        #section-two {
+            background-color: blueviolet;
+        }
+
+        #section-three {
+            background-color: chartreuse;
+        }
+
+        .display {
+            /* position: fixed; */
+            width: 100vw;
+            height: 100px;
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        a {
+            font-size: 22px;
+
+        }
+
+        html {
+            /* scroll-behavior: smooth; */
+        }
+
+        input {
+            height: 100%;
+            width: 49vw;
+            font-size: 22px;
+            border-color: black;
+            border-width: 10px;
+            padding: 10px;
+            margin: 20px;
+
+        }
+
+        .input-box {
+            border-color: rgb(28, 43, 83);
+        }
+    </style>
+    <script>
+        function process(x, y) {
+            // process
+            let z = x + y;
+            if (z % 2 == 0) {
+                output = "EVEN";
+            } else {
+                output = "ODD";
+            }
+            return output;
+        }
+
+        // Button First 
+        function problemOne() {
+            // input
+            let x = Number(prompt("Enter a value ="));
+            let y = Number(prompt("Enter a value ="));
+            //    output
+            alert(process(x, y));
+        }
+        // Button Second
+        function problemTwo() {
+            // input
+            let x = Number(1);
+            let y = Number(12);
+            // output
+            console.log(process(x, y));
+        }
+
+        // button Third
+        function problemThree() {
+            // input
+            let x = Number(document.getElementById("input-one").value);
+            let y = Number(document.getElementById("input-two").value);
+            // output
+            document.getElementById("display-Text").innerHTML = "The no is " + process(x, y);
+        }
+    </script>
+</head>
+
+<body style="margin: 0px;">
+    <div class="display" id="display-Text"></div>
+    <div class="input-box">
+        <input type="number" id="input-one">
+    </div>
+    <div class="input-box">
+        <input type="number" id="input-two">
+    </div>
+    <div id="section-one" class="box" onclick="problemOne()">
+        <h1>Button One</h1>
+    </div>
+    <div id="section-two" class="box" onclick="problemTwo()">
+        <h1>Button Two</h1>
+    </div>
+    <div id="section-three" class="box" onclick="problemThree()">
+        <h1>Button Three</h1>
+    </div>
+</body>
+
+</html>
