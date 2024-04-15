@@ -1,14 +1,17 @@
 body{
     background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-solid-color-background-beautiful-simple-wind-bannerpsd-image_183026.jpg);
-    font-family: "Mate SC", serif;
+    /* font-family: "Mate SC", serif; */
+    font-family: "Rubik", sans-serif;
 }
+
 
 button{
     height: 60px;
-    width: 260px;
+    width: 49.5%;
     background-color: #414449;
     font-size: 25px;
-    margin-left: 300px;
+    margin-left: 3px;
+    /* margin: 1px; */
     color: white;
 
 }
@@ -16,12 +19,14 @@ button{
 label{
     font-size: 23px;
     font-weight: bold;
+    
 }
 
 .hOne{
     font-size: 30PX;
     font-weight: bold;
-    font-family: "Rubik Doodle Shadow", system-ui;
+    /* font-family: "Rubik Doodle Shadow", system-ui; */
+    font-family: "Rubik Glitch Pop, system-ui;"
 }
 
 .text{
@@ -38,5 +43,19 @@ legend{
 table,th,td{
     border-style: solid;
     border-collapse: collapse;
+    height: 50px;
+    width: 1000px;
+    font-size: 20px;
 }
 
+.input-submit{
+    height: 40px;
+    width: 180px;
+    background-color: #414449;
+    display: block;
+    justify-content: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: white;
+    margin-left: 43%;
+}

@@ -9,123 +9,23 @@
     <!-- font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Mate+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+<!-- sec link -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch+Pop&display=swap" rel="stylesheet">
 </head>
-<script>
-    let currentCount = 1;
-    let student = [];
-    let students = ["<tr></tr>"];
-
-    // data entry function
-    function formDisplay() {
-        console.log("formDisplay");
-        document.getElementById("page-One").hidden = false;
-        document.getElementById("page-Two").hidden = true;
-    }
-
-    // inputing data
-    function showFunction() {
-        console.log("inputData");
-        currentCount++;
-        let information = {};
-        // inputs
-        information["firstName"] = document.getElementById("first-name").value;
-        information["lastName"] = document.getElementById("last-name").value;
-        information["contactNo"] = document.getElementById("contact-no").value;
-        information["birth"] = document.getElementById("birth-date").value;
-        information["email"] = document.getElementById("email-id").value;
-        // information["education"] = document.getElementById("edu-details").value;
-        information["address"] = document.getElementById("address-l").value;
-
-        //    let firstName = document.getElementById("first-name").value;
-        //    let lastName = document.getElementById("last-name").value;
-        //   let  contactNo = document.getElementById("contact-no").value;
-        //    let birth = document.getElementById("birth-date").value;
-        //   let email = document.getElementById("email-id").value;
-        //     // information["education"] = document.getElementById("edu-details").value;
-        //  let address = document.getElementById("address-l").value;
-
-        student.push(information);
-
-
-        for (let i = 0; i < student.length; i++) {
-            let output = student[i];
-
-
-            // student.push( '<tr></tr>');
-            console.log("student entry", student, information);
-
-
-
-            document.getElementById("create-table").innerHTML = student,information ;
-
-            // document.getElementById("name").innerHTML = output.firstName + output.lastName;
-
-            // document.getElementById("number").innerHTML = output.contactNo;
-            // document.getElementById("date").innerHTML = output.birth;
-            // document.getElementById("birth-date").value;
-            // document.getElementById("mail-id").innerHTML = output.email;
-            // information["education"] = document.getElementById("edu-details").value;
-            // document.getElementById("add").innerHTML = output.address;
-
-            document.getElementById("create-table").innerHTML = currentCount;
-
-            tableDislay();
-
-            document.getElementById("first-name").value = "";
-            document.getElementById("last-name").value = "";
-            document.getElementById("contact-no").value = "";
-            document.getElementById("birth-date").value = "";
-            document.getElementById("email-id").value = "";
-            document.getElementById("edu-details").value = "";
-            document.getElementById("address-l").value = "";
-
-
-        }
-    }
-
-    // sec page show
-    function listDisplay() {
-
-        console.log("listDisplay");
-        document.getElementById("page-One").hidden = true;
-        document.getElementById("page-Two").hidden = false;
-    }
-    // first page show
-    window.onload = function () {
-        formDisplay();
-    }
-
-    function tableDislay() {
-
-        students.push("<tr></tr>")
-        document.getElementById("create-table").innerHTML = students;
-        //     tableBody.innerHTML = "";
-        //     student.push(
-        //             <tr>
-        //                 <td id="sr-no">1</td>
-        //                 <td id="roll-no">001</td>
-        //                 <td id="name"></td>
-        //                 <td id="number"></td>
-        //                 <td id="date"></td>
-        //                 <td id="mail-id"></td>
-        //                 <td id="education"></td>
-        //                 <td id="add"></td>
-        //             </tr>);
-
-        //         document.getElementById("create-table").innerHTML = student;
-    }
-</script>
 
 <body>
 
     <h1 class="hOne">ENJOY PROGRAMMING</h1>
+
+    <div>
+        <!-- buttons -->
+        <button onclick="formDisplay()">Student Data Entry</button>
+        <button onclick="listDisplay()">List Data Information</button>
+    </div>
     <div id="page-One">
-        <div>
-            <!-- buttons -->
-            <button onclick="formDisplay()">Student Data Entry</button>
-            <button onclick="listDisplay()">List Data Information</button>
-        </div>
         <!-- form -->
         <form>
             <!-- fieldset -->
@@ -159,6 +59,7 @@
                 <br><br>
                 <!-- address -->
                 <label for="address">ADDRESS :</label>
+                <input type="text"/>
                 <!-- city -->
                 <label for="city">City :</label>
                 <input type="text" id="address-l" name="address">
@@ -186,90 +87,26 @@
                 <label for="password">PASSWORD :</label>
                 <input type="password" name="password" placeholder="Enter Password">
                 <br><br>
-
+                <!-- submit button -->
+                <input class="input-submit" type="button" value="Submit" onclick="addData()" />
             </fieldset>
+            
         </form>
-        <button type="submit" onclick="showFunction()">SUBMIT</button>
+        <!-- <button type="submit" onclick="addData()">SUBMIT</button> -->
     </div>
     <!-- list data -->
     <div id="page-Two">
-        <div>
-            <!-- buttons -->
-            <button onclick="formDisplay()">Student Data Entry</button>
-            <button onclick="listDisplay()">List Data Information</button>
-        </div>
+        <!-- <div> -->
+        <!-- buttons -->
+        <!-- <button onclick="formDisplay()">Student Data Entry</button> -->
+        <!-- <button onclick="listDisplay()">List Data Information</button> -->
+        <!-- </div> -->
         <h1>Student data Information</h1>
-        <table id="add-info">
-
-            <!-- heading row -->
-            <thead>
-                <tr>
-                    <th>Sr No</th>
-                    <th>Roll No</th>
-                    <th>Student Name</th>
-                    <th>Contact No</th>
-                    <th>DOB</th>
-                    <th>Email </th>
-                    <th>Education Details</th>
-                    <th>Address</th>
-
-                </tr>
-            </thead>
-            <!-- first row -->
-            <!-- <tbody id="create-table">
-                <tr>
-                    <td id="sr-no"></td>
-                    <td id="roll-no"></td>
-                    <td id="name"></td>
-                    <td id="number"></td>
-                    <td id="date"></td>
-                    <td id="mail-id"></td>
-                    <td id="education"></td>
-                    <td id="add"></td>
-                </tr>
-            </tbody> -->
-            <!-- sec row -->
-            <tbody id="create-table">
-                <tr>
-                </tr>
+        <table id="show-info">
             </tbody>
-            <!-- third row -->
-            <!-- <tr>
-                    <td>3</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr> -->
-            <!-- forth row -->
-            <!-- <tr>
-                    <td>4</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr> -->
-            <!-- fifth row -->
-            <!-- <tr>
-                    <td>5</td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>  -->
-        </table>
 
     </div>
-    <!-- <script src="dataentry.js"></script> -->
+    <script src="dataentry.js"></script>
 </body>
 
 </html>
