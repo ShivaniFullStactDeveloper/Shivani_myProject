@@ -18,6 +18,7 @@ function addData() {
     information["firstName"] = document.getElementById("first-name").value;
     information["lastName"] = document.getElementById("last-name").value;
     information["contactNo"] = document.getElementById("contact-no").value;
+    information["ageEnter"] = document.getElementById("age").value;
     information["birth"] = document.getElementById("birth-date").value;
     information["email"] = document.getElementById("email-id").value;
     
@@ -38,6 +39,7 @@ function addData() {
     document.getElementById("first-name").value = "";
     document.getElementById("last-name").value = "";
     document.getElementById("contact-no").value = "";
+    document.getElementById("age").value = "";
     document.getElementById("birth-date").value = "";
     document.getElementById("email-id").value = "";
     document.getElementById("edu-details").value = "";
@@ -57,21 +59,23 @@ function listDisplay() {
 function showData(){
     let tableOutput = "<table>";
 
-    tableOutput = ["<thead><tr><th>Student Name</th><th>Contact No</th><th>DOB</th><th>Email </th><th>Education Details</th><th>Address</th> </tr></thead>"]
+    tableOutput = ['<thead class="table-heading"><tr><th class="row">Student Name</th><th>Contact No</th><th>Age</th><th>DOB</th><th class="row">Email-Id </th><th>Education Details</th><th>Address</th> </tr></thead>']
     
     for (let i = 0; i < student.length; i++) {
         let output = student[i];
 
         let outputString =
-          '<tr><td class="name">' +
+          '<tr><td class="row">' +
           output.firstName +
           " " +
           output.lastName +
-          '</td><td class="mail-id">' +
+          '</td><td>' +
           output.contactNo +
           '</td><td>' +
+          output.ageEnter +
+          '</td><td>' +
           output.birth +
-          '</td><td>'+
+          '</td><td class="row">'+
           output.email +
           '</td><td>' +
           output.education +

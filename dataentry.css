@@ -1,9 +1,16 @@
 body{
-    background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-solid-color-background-beautiful-simple-wind-bannerpsd-image_183026.jpg);
+    /* background-image: url(https://png.pngtree.com/thumb_back/fw800/back_our/20190621/ourmid/pngtree-solid-color-background-beautiful-simple-wind-bannerpsd-image_183026.jpg); */
     /* font-family: "Mate SC", serif; */
     font-family: "Rubik", sans-serif;
+    background-color: #ADC4CE;
 }
 
+.input-box{
+    height: 20px;
+    width: 200px;
+    background-color: #D8D9DA;
+    
+}
 
 button{
     height: 60px;
@@ -13,6 +20,7 @@ button{
     margin-left: 3px;
     /* margin: 1px; */
     color: white;
+    font-weight: bold;
 
 }
 
@@ -23,7 +31,7 @@ label{
 }
 
 .hOne{
-    font-size: 30PX;
+    font-size: 35px;
     font-weight: bold;
     /* font-family: "Rubik Doodle Shadow", system-ui; */
     font-family: "Rubik Glitch Pop, system-ui;"
@@ -32,6 +40,9 @@ label{
 .text{
     font-size: 23px;
     font-weight: bold;
+    height: 20px;
+    width: 20px;
+    
 }
 
 legend{
@@ -44,8 +55,9 @@ table,th,td{
     border-style: solid;
     border-collapse: collapse;
     height: 50px;
-    width: 1000px;
+    width: 1200px;
     font-size: 20px;
+    margin-left: 120px;
 }
 
 .input-submit{
@@ -59,3 +71,31 @@ table,th,td{
     color: white;
     margin-left: 43%;
 }
+
+.table-heading{
+    background-color: cornflowerblue;
+}
+
+tr{
+    background-color: rgba(37, 40, 45, 0.2);
+    text-align: center;
+}
+
+h1{
+    text-align: center;
+}
+
+.row{
+    width: 2500px;
+}
+
+.option{
+    height: 20px;
+}
+
+.age{
+    height: 20px;
+    width: 150px;
+    background-color: #D8D9DA;
+}
+

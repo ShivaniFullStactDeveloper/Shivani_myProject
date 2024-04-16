@@ -9,16 +9,18 @@
     <!-- font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-<!-- sec link -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bree+Serif&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <!-- sec link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik+Glitch+Pop&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <h1 class="hOne">ENJOY PROGRAMMING</h1>
+    <h1 class="hOne"><u>ENJOY&nbsp; PROGRAMMING</u></h1>
 
     <div>
         <!-- buttons -->
@@ -32,65 +34,71 @@
             <fieldset>
                 <!-- legend -->
                 <legend>ENTER STUDENT DETAILS</legend>
+                <br>
                 <!-- first name -->
-                <label for="student">FIRST NAME :</label>
-                <input type="text" id="first-name" name="student" placeholder="Enter First Name" />
+                <label for="student">FIRST NAME &emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&emsp;&emsp;</label>
+                <input class="input-box" type="text" id="first-name" name="student" placeholder="Enter First Name" />
                 <br><br>
                 <!-- last name -->
-                <label for="student">LAST NAME :</label>
-                <input type="text" id="last-name" name="student" placeholder="Enter Last Name">
+                <label for="student">LAST NAME &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;:&emsp;&emsp;</label>
+                <input class="input-box" type="text" id="last-name" name="student" placeholder="Enter Last Name">
                 <br><br>
                 <!-- dob -->
-                <label for="birthdate">DOB :</label>
-                <input type="date" id="birth-date" name="birthdate" placeholder="Date Of Birth">
+                <label for="birthdate">DOB
+                    &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;&nbsp;&nbsp;:&emsp;&emsp;</label>
+                <input class="input-box" type="date" id="birth-date" name="birthdate" placeholder="Date Of Birth" required>
                 <br><br>
                 <!-- contact -->
-                <label for="cont">CONTACT NO. :</label>
-                <input type="number" id="contact-no" name="cont">
+                <label for="cont">CONTACT NO &emsp;&emsp;&emsp;&nbsp;&nbsp; :&emsp;&emsp;</label>
+                <input class="input-box" type="number" id="contact-no" name="cont">
                 <br><br>
+                <!-- age -->
+            <label for="age">Age &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;: </label>&emsp;&emsp;&nbsp;&nbsp;
+            <input class="age" style="width: 50px;" type="number" id="age" name="age" min="21" max="50" required /><br /><br />
                 <!-- education -->
-                <label for="education">EDUCATION : </label>
+                <label for="education">EDUCATION &emsp;&emsp;&emsp;&emsp;:&emsp;&emsp; </label>
                 <input class="text" id="edu-details" type="radio" name="education">
-                <label> Graduate </label>
+                <label>Under Graduate </label>
                 <input class="text" class="text" type="radio" name="education">
                 <label> Graduate</label>
                 <input class="text" type="radio" name="education">
                 <label>Post Graduate.</label>
                 <br><br>
                 <!-- address -->
-                <label for="address">ADDRESS :</label>
-                <input type="text"/>
+                <label for="address">ADDRESS &emsp;&emsp;&emsp;&emsp;&emsp;: &emsp;&emsp;</label>
+                <input class="input-box" type="text" id="address-l" name="address" />
+                <br><br>
                 <!-- city -->
-                <label for="city">City :</label>
-                <input type="text" id="address-l" name="address">
+                <!-- &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label for="city">City :</label>
+                <input class="input-box" type="text" id="address-l" name="address"> -->
                 <!-- dist -->
-                <label for="dist">Dist :</label>
-                <select>
+                
+                &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<label for="dist">Dist :</label>
+                <select class="input-box">
                     <option value="dist">Nagpur</option>
                     <option value="dist">Amravati</option>
                     <option value="dist">Gondia</option>
                 </select>
-                <br>
                 <!-- state -->
-                <label>State :</label>
-                <select>
-                    <option value="state">Maharashtra</option>
-                    <option value="state">Pune</option>
+                &emsp;<label>State :</label>
+                <select class="input-box option">
+                    <option class="option" value="state">Maharashtra</option>
+                    <option  value="state">Pune</option>
                     <option value="state">Nashik</option>
                 </select>
                 <br><br>
                 <!-- email -->
-                <label for="email">EMAIL ID :</label>
-                <input type="email" id="email-id" name="email" placeholder="Enter Email id">
+                <label for="email">EMAIL ID &emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;: &emsp;&emsp;</label>
+                <input class="input-box" type="email" id="email-id" name="email" placeholder="Enter Email id" required>
                 <br><br>
                 <!-- password -->
-                <label for="password">PASSWORD :</label>
-                <input type="password" name="password" placeholder="Enter Password">
+                <label for="password">PASSWORD &emsp;&emsp;&emsp;&emsp;: &emsp;&emsp;</label>
+                <input class="input-box" type="password" name="password" placeholder="Enter Password" required>
                 <br><br>
                 <!-- submit button -->
                 <input class="input-submit" type="button" value="Submit" onclick="addData()" />
             </fieldset>
-            
+
         </form>
         <!-- <button type="submit" onclick="addData()">SUBMIT</button> -->
     </div>
@@ -101,10 +109,9 @@
         <!-- <button onclick="formDisplay()">Student Data Entry</button> -->
         <!-- <button onclick="listDisplay()">List Data Information</button> -->
         <!-- </div> -->
-        <h1>Student data Information</h1>
+        <h1>Student Data Information</h1>
         <table id="show-info">
-            </tbody>
-
+        </table>
     </div>
     <script src="dataentry.js"></script>
 </body>
