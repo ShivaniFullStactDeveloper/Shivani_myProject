@@ -16,7 +16,7 @@
 
 function removeBrick(){
    
-    if(currentCount >=2){
+if(currentCount >=2){
     currentCount--;
 
     bricksArray.pop();

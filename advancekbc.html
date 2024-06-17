@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tittle -->
+    <title>KBC</title>
+    <!-- Style -->
+    <style>
+        body {
+            background-image: url(https://images.livemint.com/img/2022/07/12/1600x900/Kaun-Banega-Crorepati-1_1657603983822_1657604025637_1657604025637.webp);
+            height: 100%;
+            width: 100vw;
+            background-repeat: no-repeat;
+        }
+
+        /* main container */
+        .main-container {
+            /* background-color: #80B9AD; */
+            height: 100vh;
+            width: 98vw;
+            padding: 10px;
+        }
+
+        /* inner container */
+        .inner-container {
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+
+        /* start button */
+        .start-button {
+            height: 65px;
+            width: 170px;
+            background-color: #030637;
+            font-size: 20px;
+            color: white;
+            border-radius: 60%;
+            margin: 30px;
+
+        }
+
+        /* option buttons */
+        .button {
+            height: 70px;
+            width: 440px;
+            border-radius: 250px;
+            margin: 10px;
+            margin-left: 5%;
+            margin-top: 60px;
+            background-color: #0B60B0;
+            font-size: 30px;
+            color: white;
+            font-weight: bold;
+
+        }
+
+        /* left part */
+        .left-side {
+            /* background-color: rgb(56, 83, 83); */
+
+        }
+
+        /* right part */
+        .right-side {
+            background-color: rgba(41, 29, 115, 0.4);
+            height: 100vh;
+
+
+        }
+
+        /* display */
+        .display {
+            width: 90%;
+            height: 200px;
+            background-color: #030637;
+            margin-left: 5%;
+            border-radius: 50px;
+            /* margin-top: 100px; */
+            border-style: solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+        .text-display {
+            font-size: 44px;
+            color: white;
+
+        }
+
+        /* loader */
+        /* HTML: <div class="loader"></div> */
+        .loader {
+            width: 40px;
+            aspect-ratio: 1;
+            color: #f03355;
+            position: relative;
+            background:
+                conic-gradient(from 134deg at top, currentColor 92deg, #0000 0) top,
+                conic-gradient(from -46deg at bottom, currentColor 92deg, #0000 0) bottom;
+            background-size: 100% 50%;
+            background-repeat: no-repeat;
+        }
+
+        .loader:before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            --g: currentColor 14.5px, #0000 0 calc(100% - 14.5px), currentColor 0;
+            background:
+                linear-gradient(45deg, var(--g)),
+                linear-gradient(-45deg, var(--g));
+            animation: l7 1.5s infinite cubic-bezier(0.3, 1, 0, 1);
+        }
+
+        @keyframes l7 {
+            33% {
+                inset: -10px;
+                transform: rotate(0deg)
+            }
+
+            66% {
+                inset: -10px;
+                transform: rotate(90deg)
+            }
+
+            100% {
+                inset: 0;
+                transform: rotate(90deg)
+            }
+        }
+    </style>
+    <!-- Scripting -->
+    <script>
+        function doStart() {
+            document.getElementById("play-button").hidden = true;
+            document.getElementById("main-body").hidden = false;
+            // display que
+            displayQuestion();
+            resetcolor();
+        }
+
+
+        function startScreen() {
+            document.getElementById("play-button").hidden = false;
+            document.getElementById("main-body").hidden = true;
+        }
+
+
+        // first page show
+        window.onload = function () {
+            startScreen();
+        }
+
+        let questions = [
+            {
+                question: "Among the following, which is a network?",
+                answers: ["A) MAN", "B) WAN", "C) LAN", "D) All of these"],
+                correct: 4,
+            },
+            {
+                question: "What does Fn mean in Fn key of the computer keyboard?",
+                answers: ["A) Finish", "B) Function", "C) Final", "D) Fun"],
+                correct: 2,
+            },
+            {
+                question: "CPU is also referred to as?",
+                answers: ["A) Micro chip", "B) Microprocessor", "C) Decoder", "D) Coder"],
+                correct: 2,
+            },
+            {
+                question: "Current Railway Minister of India is?",
+                answers: ["A) Mamta Banarjee", "B) Ram Vilash", "C) Ashwini Vaishnaw", "D) Piyush Goyal"],
+                correct: 3,
+            },
+            {
+                question: "Which Indian currency note doesn't have a picture of Mahatma Gandhi?",
+                answers: ["A) 50 Rupee", "B) 1 Rupee ", "C) 5 Rupee", "D) 20 Rupee"],
+                correct: 2,
+            },
+            {
+                question: "What does not grow on tree according to a popular Hindi saying?",
+                answers: ["A) Money", "B) Flowers", "C) Leaves", "D) Fruits"],
+                correct: 1,
+            },
+            {
+                question: "Which city is known as Pink City in India?",
+                answers: ["A) Banglore", "B) Maysore", "C) Kochi", "D) Jaipur"],
+                correct: 4,
+            },
+            {
+                question: "Who wrote India's National Anthem?",
+                answers: ["A) RK Narayan", "B) Chetan Bhagat", "C) Rabindranath Tagore", "D) Lal Bahadur Shastri"],
+                correct: 3,
+            },
+            {
+                question: " How many religions are there in India?",
+                answers: ["A) 6", "B) 7", "C) 8", "D) 9"],
+                correct: 1,
+            },
+            {
+                question: "When is the National Hindi Diwas celebrated?",
+                answers: ["A) 13 Septembe", "B) 14 Septembe", "C) 14 July", "D) 15 August"],
+                correct: 2,
+            },
+            {
+                question: "Which of the following musical instruments is of Indian origin?",
+                answers: ["A) Tabla","B) Sitar","C) Violin","D) Flute"],
+                correct: 4,
+            },
+            {
+                question: "Which god is also known as 'Gauri Nandan' ?",
+                answers: ["A) Agni","B) Indra","C) Hanuman","D) Ganesha"],
+                correct: 4,
+            },
+            {
+                question:  "Which is the Heaviest snake?",
+                answers: ["A) Viper","B) Reticulated Python", "C) Anaconda"],
+                correct: 2,
+            },
+        ]
+
+        let correctQuestionIndex = 0;
+
+        function displayQuestion() {
+            document.getElementById("container").style.backgroundColor = "#030637";
+            resetcolor();
+            colorButton();
+
+
+            let q = questions[correctQuestionIndex];
+            // input question
+            document.getElementById("text-display").innerHTML = q.question;
+            // document.getElementById("").style.backgroundColor = "";
+            // input option one
+            document.getElementById("answer-one").innerHTML = q.answers[0];
+            // input option-two
+            document.getElementById("answer-two").innerHTML = q.answers[1];
+            // input option three
+            document.getElementById("answer-three").innerHTML = q.answers[2];
+            // input option four
+            document.getElementById("answer-four").innerHTML = q.answers[3];
+
+
+            
+        }
+
+        // correct or not
+        function answer(givenAnswer, correctAnswwerbutton, buttonClick) {
+
+            setTimeout(() => {
+                displayQuestion(correctQuestionIndex);
+            }, 3000);
+            if (questions[correctQuestionIndex].correct === givenAnswer) {
+                document.getElementById("text-display").innerHTML =
+                    "Bilkul Sahi Jawab";
+                document.getElementById("container").style.backgroundColor =
+                    "#004225";
+                colorButton();
+                correctQuestionIndex++;
+               
+                // if (correctQuestionIndex < questions.length) {
+                //     displayQuestion();
+                // } else {
+                //     document.getElementById("text-display").innerHTML = "MUBARAKHO AAP JIT CHUKE HAI PURE 7 CRORE RUPEES...";
+                // }
+            } else {
+                document.getElementById("text-display").innerHTML =
+                    " Galat Jawab.";
+                document.getElementById("container").style.backgroundColor =
+                    "#FF0000";
+                colorButton();
+                setTimeout(() => {
+                    startScreen();
+                    correctQuestionIndex = 0;
+                }, 2000);f
+            }
+        }
+
+        function lastStep() {
+            displayQuestion();
+        document.getElementById("text-display").innerHTML = "MUBARAKHO AAP JIT CHUKE HAI PURE 7 CRORE RUPEES...";
+            
+        }
+
+        // correct button color
+        function colorButton(correctbuttoncolor, wrongbuttoncolor) {
+            // if(correctbuttoncolor){
+            if (correctbuttoncolor == 1) {
+                document.getElementById("answer-one").style.backgroundColor = "#D04848";
+            } else if (correctbuttoncolor == 2) {
+                document.getElementById("answer-two").style.backgroundColor = "#D04848";
+            } else if (correctbuttoncolor == 3) {
+                document.getElementById("answer-three").style.backgroundColor = "#D04848";
+            } else if (correctbuttoncolor == 4) {
+                document.getElementById("answer-four").style.backgroundColor = "#D04848";
+            }
+            if (wrongbuttoncolor == 1) {
+                document.getElementById("answer-one").style.backgroundColor = "#87A922";
+            } else if (wrongbuttoncolor == 2) {
+                document.getElementById("answer-two").style.backgroundColor = "#87A922";
+            } else if (wrongbuttoncolor == 3) {
+                document.getElementById("answer-three").style.backgroundColor = "#87A922";
+            } else if (wrongbuttoncolor == 4) {
+                document.getElementById("answer-four").style.backgroundColor = "#87A922";
+            }
+
+        }
+        // resetcolor
+        function resetcolor() {
+            document.getElementById("answer-one").style.backgroundColor = "#0B60B0";
+            document.getElementById("answer-two").style.backgroundColor = "#0B60B0";
+            document.getElementById("answer-three").style.backgroundColor = "#0B60B0";
+            document.getElementById("answer-four").style.backgroundColor = "#0B60B0";
+        }
+
+    </script>
+
+</head>
+
+<body>
+    <!-- landing page -->
+    <div class="image">
+        <button class="start-button" id="play-button" onclick="doStart()">LET"S START
+        </button>
+    </div>
+    <!-- display -->
+    <div class="main-container" id="main-body">
+        <div class="inner-container">
+            <!-- left -->
+            <div class="left-side">
+                <div class="display" id="container">
+                    <h1 id="text-display" class="text-display"></h1>
+
+                </div>
+                <!-- buttons -->
+                <button class="button" id="answer-one" onclick="answer(1)"></button>
+                <button class="button" id="answer-two" onclick="answer(2)"></button>
+                <button class="button" id="answer-three" onclick="answer(3)"></button>
+                <button class="button" id="answer-four" onclick="answer(4)"></button>
+
+            </div>
+            <div class="right-side">rtyrtyrtyrtryrty</div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -101,24 +101,29 @@
             // array
             let studentsearch = ["Shivani", "Pooja", "Ayush", "Yash", "Nisha"];
             let i = 0;
+             // position or show index no
+             let foundAtPosition = 0;
+
             let output = false;
-            // position or show index no
-            let foundAtPosition = 0;
+           
             // input text
             let searchtext = document.getElementById("inputs-search").value;
             console.log(searchtext);
             // loop 
             while (i < studentsearch.length) {
                 let student = studentsearch[i];
+
                 // array and searchtext equal
                 if (student.toUpperCase() == searchtext.toUpperCase()) {
                     output = true;
-
+                  
                 }
                 console.log(i);
+              
                 i++;
+               
             }
-            // output
+        // output
             if (output == true) {
                 document.getElementById("display").innerHTML = "Student Is Found At " + foundAtPosition;
                 // found color

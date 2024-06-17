@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box{
+            height: 600px;
+            width: 100vw;
+            border-style: solid;
+        }
+
+        #section-one{
+            background-color: blue;
+        }
+
+        #section-two{
+            background-color: blueviolet;
+        }
+
+        #section-three{
+            background-color: chartreuse;
+        }
+
+        .menu{
+            position: fixed;
+            width: 100vw;
+            background-color: lightgray;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+        a{
+            font-size: 22px;
+            
+        }
+        html{
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body style="margin: 0px;">
+    <div class="menu">
+        <a href="#section-one">SECTION ONE</a>
+        <a href="#section-two">SECTION TWO</a>
+        <a href="#section-three">SECTION THREE</a>
+    </div>
+    <div id="section-one" class="box">
+        <h1>Section One</h1>
+    </div>
+    <div id="section-two" class="box">
+        <h1>Section Two</h1>
+    </div>
+    <div id="section-three" class="box">
+        <h1>Section Three</h1>
+    </div>
+</body>
+</html>
