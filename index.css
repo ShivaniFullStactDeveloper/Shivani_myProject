@@ -9,7 +9,7 @@ html {
 
 /* main container */
 .main-container {
-    height: 1762px;
+    height: 1780px;
     width: 98.8vw;
     background-color: black;
 
@@ -27,12 +27,12 @@ header {
     background-color: #272525;
     display: flex;
     justify-content: space-between;
-    max-width: 100vw;
+    width: 100vw;
     height: 2vh;
     margin: auto;
     align-items: center;
     /* background-color: transparent; */
-    /* position: fixed; */
+    position: fixed;
 }
 
 
@@ -83,7 +83,7 @@ nav a:hover {
 /* second box */
 .sec-section {
     background-color: black;
-    height: 930px;
+    height: 950px;
     width: 98.7vw;
     /* display: flex;
    flex-direction: row; */
@@ -177,7 +177,7 @@ button :hover {
     font-size: 44px;
     text-align: center;
     color: white;
-
+margin-top: 16px;
 
 }
 
@@ -220,8 +220,8 @@ button :hover {
 .images {
     border-radius: 20%;
     border: rgba(26, 25, 25, 0.897) solid 3px;
-    height: 200px;
-    width: 200px;
+    height: 60%;
+    width: 60%;
     box-shadow: 10px 10px 10px rgb(64, 79, 163);
     transition: all 0.3s ease;
     margin-top: 10px;
@@ -328,7 +328,7 @@ button :hover {
 /* next page styling */
 .sec-page {
     background-color: black;
-    height: 1600px;
+    height: 1672px;
     width: 98.7vw;
 }
 
@@ -363,6 +363,7 @@ button :hover {
     text-align: center;
     font-size: 25px;
     margin-bottom: 3px;
+ 
 }
 .sec-page p:hover{
     color: #69adf5;
