@@ -9,7 +9,7 @@ html {
 
 /* main container */
 .main-container {
-    height: 1780px;
+    height: 1748px;
     width: 98.8vw;
     background-color: black;
 
@@ -170,14 +170,16 @@ button :hover {
     color: #dcd9f1;
 }
 
-
+.proj{
+    margin-top: 16px;
+}
 
 /* project */
 .project {
     font-size: 44px;
     text-align: center;
     color: white;
-margin-top: 16px;
+
 
 }
 
