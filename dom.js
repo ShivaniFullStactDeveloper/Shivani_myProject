@@ -2,7 +2,7 @@
     // globle variable
     let currentCount = 1;
     let bricksArray = ['<div class="brick"></div>']
-// add bricks
+
     function addBrick(){
     
     currentCount++;
@@ -11,9 +11,9 @@
 
     document.getElementById("count").innerHTML= currentCount ;
     // COLOR CHANGE
-    document.getElementById("count").style.color= "#FFDB00";
+    document.getElementById("count").style.color= "green";
 }
-// remove bricks
+
 function removeBrick(){
    
 if(currentCount >=2){
@@ -26,6 +26,5 @@ if(currentCount >=2){
    
 
     document.getElementById("count").innerHTML= currentCount ;
-    // color
     document.getElementById("count").style.color= "red";
 }

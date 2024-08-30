@@ -4,27 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <!-- bootstrap css-->
+    <title>Shivani</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <!-- lin k of bootstap -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- portfolio font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&display=swap"
-        rel="stylesheet">
-    <!--css file link  -->
-    <link href="index.css" rel="stylesheet" />
-
-    <!-- script -->
+    <!-- js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        <!-- box icon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+<!-- css file -->
+<link rel="stylesheet" href="index.css">
+    <style>
+       
+    </style>
     <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.querySelector('.toggle-button');
+            const navLinks = document.querySelector('.nav-links');
+
+            toggleButton.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+
         // first page show
         function firstPage() {
             console.log("firstPage");
@@ -43,228 +48,76 @@
             firstPage();
         }
 
-        // JavaScript for search functionality
-        const projects = document.querySelectorAll('.project');
-        const searchInput = document.getElementById('searchInput');
-
-        searchInput.addEventListener('input', function () {
-            const inputValue = this.value.trim().toLowerCase();
-
-            projects.forEach(project => {
-                const title = project.querySelector('p').textContent.toLowerCase();
-                if (title.includes(inputValue)) {
-                    project.style.display = 'block';
-                } else {
-                    project.style.display = 'none';
-                }
-            });
-        });
-
-
     </script>
-    <!-- font link -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Platypi:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
 </head>
 
-<body style="margin: 0; font-family: Platypi, serif" ;>
-    <!-- main container -->
-    <div class="main-container" id="first-section">
-        <!-- header section -->
-        <header>
-            <!-- Header section with navigation -->
-            <input type="checkbox" id="click">
-            <label for="click" class="mainicon">
-                <div class="menu">
-                    <i class="bi bi-list"></i>
-                </div>
-            </label>
-            <nav>
-                <!-- Navigation links -->
-                <a href="#" class="active">Home</a>
-                <a href="createresume.html">About</a>
-                <a href="#section-two">Project</a>
-                <a href="#section-three">Contact</a>
-            </nav>
-        </header>
-
-
-        <!-- Home section -->
-        <div class="first-section" id="section-one">
-
-            <div class="content">
-           <br><br>
-                <p style="text-align: center; font-size: 35px; color:#3877ff; text-shadow: 0px  3px 3px rgba(10, 8, 8, 0.975);   font-family: DM Serif Display, serif;
-                font-weight: 400; font-style: normal; ">Welcome To My Portfolio</p>
-            
-                <p class="intro">Hi!<br> I'm <span>Shivani <br> &nbsp;&nbsp;&nbsp; Kharpuriya</span></p>
-
-                <h1>Full Stack Developer</h1>
-
-                <span style="color: #3877ff; font-size: 28px; font-weight: 1000;" id="typing-animation"></span>
-
-                <script>
-
-                    // Initialize the typing animation
-                    const typingAnimationElement = document.getElementById('typing-animation');
-
-                    // Create an array of typing text
-                    const typingTexts = [
-                        ' html ',
-                        ' css  ',
-                        '  js ',
-                    ];
-
-                    // Create a function to display the typing animation for a given text
-                    function playTypingAnimation(text) {
-                        // Loop through each character and add it to the element
-                        for (let i = 0; i < text.length; i++) {
-                            setTimeout(() => {
-                                typingAnimationElement.textContent += text[i];
-                            }, i * 200); // Increase the delay to slow down the typing animation
-                        }
-
-                        // Once the animation is complete, reset the text and start over
-                        setTimeout(() => {
-                            typingAnimationElement.textContent = '';
-                            playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-                        }, text.length * 200);
-                    }
-
-                    // Start the typing animation loop
-                    playTypingAnimation(typingTexts[0]);
-
-                </script>
-                <br>
-
-                <!-- buttons-->
-                <div>
-                    <!-- <p style="color: rgb(122, 126, 130);">click here to see my projects.</p> -->
-                    <button><a class="cv" href="createresume.html">Download cv</a></button>
-                </div>
-
-
-
-            </div>
-
-            <div id="section-two"></div>
+<body>
+    <div class="container-fluide contain-main" id="first-section">
+        <!-- header part -->
+        <div class="first-sec bottomLineSeparator" >
+            <header>
+                <!-- nav bar -->
+                <nav class="navbar">
+                    <div class="logo">
+                        <h1>Port<span style="color: #E4003A; font-weight: bold; ">folio</span></h1>
+                    </div>
+                    <!-- mobile responsive menu bar -->
+                    <button class="toggle-button" aria-label="Toggle navigation">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                    <div class="nav-links">
+                        <!-- home -->
+                        <a href="#home" style="color: #E4003A; font-weight: bold;">Home</a>
+                        <!-- project -->
+                        <a href="#" onclick="secondPage()">Project</a>
+                        <!-- about -->
+                        <a href="createresume.html">About</a>
+                        <!--  contact -->
+                        <a href="#contact">Contact</a>
+                    </div>
+                </nav>
+            </header>
         </div>
-        <!-- Project section -->
-        <div class="sec-section">
-            <div class="project proj">
-                <h1 class="pro-style">Projects</h1>
-            </div>
-            <p style="color: rgb(160, 155, 155); font-size: 23px;">Below Are The Project Of HTML , CSS , JS. </p>
-            <div class="grid-container">
-                <div class="grid-item">
-                    <p>Dom</p>
-                    <a href="dom.html"><img class="images"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRbfIFv8CbsTtp_yh-fg5q74UGZJkP5GMVRg&s"
-                            height="200px" width="200px" /></a>
+
+        <div class="sec-sec">
+            <section>
+                <!-- Main section of the webpage -->
+                <div class="main">
+                    <div class="detail">
+                        <h2>Hi!</h2>
+                        <h1> I'm <span style="color:#E4003A;">Shivani Kharpuriya</span></h1>
+                        <h3>Full Stack Developer </h3>
+                        <div class="social">
+
+                            <!-- Social media links -->
+                            <a href="https://github.com/ShivaniFullStactDeveloper/Shivani_myProject">
+                                <i class='bx bxl-github' ></i></a>
+
+                            <a href="https://web.skype.com/"><i class='bx bxl-skype'></i></a>
+                            <a
+                                href="https://www.linkedin.com/in/shivani-kharpuriya-089569249/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in">
+                                <i class='bx bxl-linkedin-square' ></i></a>
+
+                        </div>
+                        <div class="but-contain">
+                            <p style="color: rgb(122, 126, 130);">click here to see my CV.</p>
+                            <a href="createresume.html"><button class="button-cv">Download CV</button></a>
+                        </div>
+                    </div>
+                    <div>
+                        <!-- Placeholder for an image -->
+                        <img class="my-image" src="my_images/Chivu_processed1-removebg-preview.png" alt="">
+                    </div>
+
 
                 </div>
-                <div class="grid-item">
-                    <p>Chessboard</p>
-                    <a href="chessboardgrid.html"><img class="images"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtXwzPRxZ7pMpOJnzXYbwnAzAst5QNbzcVpQ&usqp=CAU"
-                            height="200px" width="200px" /></a>
-                </div>
-                <div class="grid-item">
-                    <p>Form</p>
-                    <a href="indextwo.html"><img class="images"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWAQJXdUZNCpRqCSb34YYt6PRHv4NG6z4ghw&s" /></a>
-                </div>
-                <div class="grid-item">
-                    <p>Google Search</p>
-                    <a href="googlesearch.html"><img class="images"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9dvBxaUaF57AbvceI7ccsY6s_fK6IaWzOpBI7Si_KnVd-ikJewnoIyFwJDXGdbtLKXo0&usqp=CAU" /></a>
-                </div>
-                <div class="grid-item">
-                    <p>KBC</p>
-                    <a href="kbcpagemain.html"><img class="images"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDqV5S6TgJ_OzpSpC9bCunvVfrCWNm7umJGw&s" /></a>
-                </div>
-                <div class="grid-item">
-                    <p>Calculator</p>
-                    <a href="calculatorgridone.html"><img class="images"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEaQKGbrluscSFv2ViKHHRoXxiAQQ1LfCl4g&usqp=CAU" /></a>
-                </div>
-                <div class="grid-item">
-                    <p>Electric Bill</p>
-                    <a href="electricbilljs.html"><img class="images"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQncGZdJp1gAuVGhj2YIgC2jlcHJqBcZW1uZA&s" /></a>
-                </div>
-                <div class="grid-item">
-                    <p>Data Entry</p>
-                    <a href="dataentry.html"><img class="images"
-                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi2Qey4j4CmMJicZ4T37LCs17yd2ytHHUetQ&usqp=CAU" /></a>
-                </div>
-
-            </div>
-            <h3 class="more-pro">See More Projects</h3>
-            <button class="custom-button" onclick="secondPage()">Click here</button>
-
-        </div>
-        <!-- contact section -->
-
-        <div class="third-section" id="section-three">
-            <h2 class="pro-style contact">Contact</h2>
-            <div class="cont-details">
-                <div>
-                    <i class="bi bi-house-door-fill"></i>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                        class="bi bi-house-door-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
-                    </svg>
-                    <h4>Address</h4>
-                    <p>Katol , India</p>
-                </div>
-                <div>
-                    <i class="bi bi-telephone-fill"></i>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                        class="bi bi-telephone-fill" viewBox="0 0 16 16">
-                        <path fill-rule="evenodd"
-                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
-                    </svg>
-                    <h4>Phone</h4>
-                    <p>9529443390</p>
-                </div>
-                <div>
-                    <i class="bi bi-envelope-fill"></i>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                        class="bi bi-envelope-fill" viewBox="0 0 16 16">
-                        <path
-                            d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
-                    </svg>
-                    <h4>Email</h4>
-                    <p>shivanikharpuriya123@gmail.com</p>
-                </div>
-            </div>
-            <div class="social-icons">
-
-                <a href="https://www.linkedin.com/in/shivani-kharpuriya-089569249/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in"
-                    class="social-button social-button--linkedin" aria-label="LinkedIn">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-
-                <a href="https://github.com/ShivaniFullStactDeveloper/Shivani_myProject"
-                    class="social-button social-button--github" aria-label="GitHub">
-                    <i class="fab fa-github"></i>
-                </a>
-
-                <a href="https://web.skype.com/" class="social-button social-button--skype" aria-label="skype">
-                    <i class="fab fa-skype"></i>
-                </a>
-            </div>
+            </section>
         </div>
     </div>
-
     <!-- next page -->
     <div class="sec-page" id="second-section">
-
         <button type="button" onclick="firstPage()">Back</button>
 
         <div class="project">
@@ -275,7 +128,7 @@
             <input type="text" id="searchInput" placeholder="Search projects..." class="search-container">
         </div>
         <!--  -->
-        <p style="color: #007bff; margin: 8px 0 20px 0;">HTML & CSS Projecs</p>
+        <p style="color: #E4003A; margin: 8px 0 20px 0;">HTML & CSS Projecs</p>
         <!-- <h4><u>Using Table Project</u></h4> -->
         <!-- youtube page -->
         <div class="grid-container">
