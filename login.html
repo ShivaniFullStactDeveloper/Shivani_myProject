@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Page</title>
+    <style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: rgb(150, 146, 146);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    height: 50%;
+    width: 100%;
+    max-width: 300px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+label {
+    text-align: left;
+    display: block;
+    margin: 10px 5px 5px;
+    color: #313030;
+}
+
+input, button {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 25px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+button {
+    margin: 15px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+#result {
+    font-size: 20px;
+    margin-top: 20px;
+
+}
+
+
+    </style>
+    <script>
+//         // globle variable
+//         let counter = 0;
+// //    declaratoin function
+// function loginFunction(){
+//     let user = document.getElementById("username").value;
+//     let pass = document.getElementById("password").value;
+
+// if(user == "admin"  && pass == "technology"){
+//         alert("Login Successfull");
+
+//     }else{
+//         if(counter >= 3){
+//             alert("You have reached  the number of attempts");
+//             // hidden
+//             let user = document.getElementById("username").hidden= true;
+//             let pass = document.getElementById("password").hidden = true;
+           
+//         }else{
+//         alert("Invalid Username or Password Please try again");
+//         }
+//         counter ++;
+       
+//     }
+    
+// }
+
+// LOCAL STORAGE
+function storeCounter(value){
+    sessionStorage.setItem("counter", value);
+}
+
+// get counter function
+function getCounter(){
+    return sessionStorage.getItem("counter")?
+    sessionStorage.getItem("counter") : 0;
+}
+
+// login function
+function loginFunction(){
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    let storeCounter = getCounter();
+
+    // processing
+    if(storeCounter >=3){
+           alert("You have reached  the number of attempts");
+            // hidden
+            let user = document.getElementById("username").hidden= true;
+            let pass = document.getElementById("password").hidden = true;
+    } else{
+        if(user == "admin"  && pass == "technology"){
+        alert("Login Successfull");
+        window.location.href = "dashboard.html";
+}else{
+    alert("Invalid Username or Password Please try again");
+}
+storeCounter++;
+storeCounter = sessionStorage.setItem("counter", storeCounter);
+
+
+}} 
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Login</h1>
+        <form>
+            <!-- Username -->
+            <label for="user">Username</label>
+            <input type="text" id="username" placeholder="Type your username" required>
+             <!-- Password -->
+             <label for="age">Password</label>
+             <input type="password" id="password" placeholder="Type your password" required>
+<!-- button -->
+            <button type="button" id="submitBtn" onclick="loginFunction()">Login</button>
+        </form>
+        
+    </div>
+
+</body>
+
+
+
+</html>
