@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trampoline Booking</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            background-image: url(https://imgproxy.natucate.com/4DIs4NfaO9PHuIGE_iCBRPrvXOnO1m0vwYAldSKjSe8/rs:fill/g:ce/w:3840/h:2160/aHR0cHM6Ly93d3cubmF0dWNhdGUuY29tL21lZGlhL3BhZ2VzL3JlaXNlYXJ0ZW4vNmMwODZlYmEtNzk3Yi00ZDVjLTk2YTItODhhNGM4OWUyODdlLzc1MWZiZjc0YmItMTY3OTQ4NjA5Mi8xMl9kYW5pZWxfY2FuX2JjLTIwNy5qcGc);
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background: rgba(198, 212, 234, 0.377);
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input,
+        textarea {
+            margin-bottom: 15px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Book Your Game</h1>
+        <form id="bookingForm">
+            <!-- name -->
+            <label for="fullName">Full Name:</label>
+            <input type="text" id="fullName" name="fullName" placeholder="Enter full name" required>
+            <!-- address -->
+            <label for="add">Address:</label>
+            <input type="text" id="address" name="add" placeholder="Full address" required>
+            <!-- contact no -->
+            <label for="phoneNumber">Phone Number:</label>
+            <input type="tel" id="phoneNumber" name="phoneNumber" placeholder="Contact no" required>
+            <!-- activity name -->
+            <label for="numTrampolines">Activiti Name : </label>
+            <input type="text" id="fullName" name="fullName" placeholder="Game name" required>
+            <!-- Preferred Date -->
+            <label for="bookingDate">Preferred Date:</label>
+            <input type="date" id="bookingDate" name="bookingDate" required>
+            <!-- Preferred Time -->
+            <label for="bookingTime">Preferred Time:</label>
+            <input type="time" id="bookingTime" name="bookingTime" required>
+            <!-- Additional Requests -->
+            <label for="additionalRequests">Additional Requests:</label>
+            <textarea id="additionalRequests" name="additionalRequests"></textarea>
+<!-- submit button -->
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
