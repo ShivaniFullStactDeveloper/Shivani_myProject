@@ -45,7 +45,8 @@ header {
 }
 
 .nav-links a:hover {
-    color: #E4003A;
+    /* color: #ff7d00; */
+    color: #ff7d00;
     font-weight: bold;
     text-decoration: underline 0.1rem white;
 
@@ -76,7 +77,7 @@ header {
 
 /* line */
 /* .bottomLineSeparator {
-    border-bottom: 0.01cm solid #E4003A;
+    border-bottom: 0.01cm solid #ff7d00;
 } */
 /* media quaries */
 @media (max-width: 768px) {
@@ -106,7 +107,7 @@ header {
     .images {
         width: 100%;
         height: 300px;
-        box-shadow: 10px 10px 10px 10px #E4003A;
+        box-shadow: 10px 10px 10px 10px #ff7d00;
     }
 
 
@@ -146,7 +147,7 @@ section {
     margin-top: 1rem;
     font-weight: 600;
     color: white;
-    text-shadow: 2px 2px #E4003A;
+    text-shadow: 2px 2px #ff7d00;
 }
 
 p {
@@ -167,9 +168,9 @@ p {
 }
 
 .social a {
-    color: #E4003A;
+    color: #ff7d00;
     font-size: 1rem;
-    border: 1.6px solid #E4003A;
+    border: 1.6px solid #ff7d00;
     border-radius: 50%;
     /* border-radius: 15px 50px; */
     padding: .35rem;
@@ -181,15 +182,15 @@ p {
 
 .social a:hover {
     color: #f6f7f9;
-    background-color: #E4003A;
-    box-shadow: 0 0 20px #E4003A;
+    background-color: #ff7d00;
+    box-shadow: 0 0 20px #ff7d00;
     transition: all .3s ease-in-out;
 }
 /* my image */
 .my-image {
     width: 90%;
     height: 500px;
-    box-shadow: 10px 10px 2px 10px #E4003A;
+    box-shadow: 10px 10px 2px 10px #ff7d00;
     /* width: 500px; */
 }
 
@@ -227,13 +228,13 @@ p {
 }
 /* cv */
 .button-cv {
-    /* border: .1rem solid #E4003A; */
+    /* border: .1rem solid #ff7d00; */
     border: .1rem solid;
     font-size: 1.1rem;
     padding: .8rem 1.2rem;
     border-radius: .5rem;
     /* background: transparent; */
-    background-color: #E4003A;
+    background-color: #ff7d00;
     color: rgb(214, 208, 208);
     margin: 1.5rem;
     /* margin-left: 1rem; */
@@ -244,75 +245,10 @@ p {
 
 .button-cv:hover {
     background: white;
-    color: #E4003A;
+    color: #ff7d00;
     font-weight: bold;
 }
 
-/* next page images */
-/* project images */
-.images {
-    border-radius: 20%;
-    border: rgba(26, 25, 25, 0.897) solid 3px;
-    height: 60%;
-    width: 60%;
-    box-shadow: 10px 10px 10px #E4003A;
-    transition: all 0.3s ease;
-    margin-top: 10px;
-    /* Added transition for smooth hover effect */
-}
-
-.images:hover {
-    border: #E4003A 3px solid;
-    transform: scale(1.1);
-    /* Scale up the image on hover */
-    box-shadow: 15px 15px 15px rgba(184, 25, 59, 0.6);
-    /* Adjusted box shadow on hover */
-}
-
-/* next page styling */
-.sec-page {
-    background-color: black;
-    height: 1672px;
-    width: 98.7vw;
-}
-
-/* project */
-.project {
-    font-size: 44px;
-    text-align: center;
-    color: white;
-}
-
-.pro-style {
-    font-size: 69px;
-    text-shadow: 2px 3px 5px #cb0f2b;
-
-}
-
-.sec-page .grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    row-gap: 10px;
-    column-gap: 10px;
-    /* width: 100vw; */
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
-    /* padding: 10px; */
-    /* background-color: black; */
-
-}
-
-.sec-page .grid-container div {
-    background-color: rgb(17, 17, 17);
-    border: 1px solid rgba(0, 0, 0, 0.8);
-    /* padding: 10px; */
-    font-size: 28px;
-    /* gap: 5px; */
-    text-align: center;
-    width: 24vw;
-    aspect-ratio: 1;
-    /* box-shadow: 10px 10px 10px  #4b6c70; */
-
-}
 
 /* project name */
 .sec-page p {
@@ -324,16 +260,16 @@ p {
 }
 
 .sec-page p:hover {
-    color: #E4003A;
+    color: #ff7d00;
 }
 
 .sec-page button {
-    border: .1rem solid #E4003A;
+    border: .1rem solid #ff7d00;
     font-size: 1.1rem;
     padding: .2rem 1rem;
     border-radius: .5rem;
     background: #262525;
-    color: #E4003A;
+    color: #ff7d00;
     margin: .1rem;
     cursor: pointer;
     transition: .5s ease-in-out;
@@ -344,37 +280,195 @@ p {
 }
 
 
-/* heading project */
-.sec-page h4 {
-    color: rgb(138, 135, 135);
+
+/* Project page */
+.sec-page{
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: space-around;
+    height: 80%;
+    padding: 20px;
+    margin-top: 6%;
+    display: flex;
+    flex-wrap: wrap; 
+    /* background-color: #f4f4f4; */
+}
+.box {
+    background-color: #121010;
+    border: 1px solid #3a3737;
+    border-radius: 8px;
+    padding: 20px;
+    height: 60%;
+    width: 30%;
     text-align: center;
-    font-size: 20px;
-    margin: 28px 5px 10px 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; /* Animation effect */
+}
+.box img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 15px;
 }
 
-.search-container {
+
+
+.box:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 5px 5px rgba(222, 148, 1, 0.1);
+}
+
+.box .img {
+    max-width: 300px; /*Limit image size*/
+
+    height: 100px; /* Maintain aspect ratio */
+    margin-bottom: 25px; /* Space between image and text */
+}
+
+.box h2 {
+    font-size: 1.5em; /* Size of the heading */
+    color: white; /* Darker text for contrast */
+    text-shadow: 2px 2px #ff7d00;
+    letter-spacing: 2px;
+    margin: 10px 0; /* Margin above and below the heading */
+}
+
+.box p {
+    font-size: 1em; /* Font size for paragraph */
+    color: white; /* Gray color for the text */
+    line-height: 1.5; /* Better line spacing */
+}
+
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+    .box {
+        flex: 0 0 100%; /* Each box takes full width */
+        margin-bottom: 20px; /* Optional: Adds space between rows */
+    }
+}
+
+/* contact page css */
+.third-section {
+    padding: 40px;
+    background-color: black;
     text-align: center;
-    margin: 10px 0 0 0;
-    color: gray;
-}
-
-input[type="text"] {
-    width: 50%;
-    padding: 12px;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    outline: none;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease;
-    background-color: #fff;
 
 }
 
-input[type="text"]:focus {
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+.third-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ff7d00;
 }
 
-::placeholder {
-    color: #999;
+.cont-details {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    margin-top:50px;
+}
+
+
+.cont-details div {
+    background:  rgb(17, 17, 17);;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+.cont-details div:hover{
+    box-shadow: 5px 4px 10px #ff7d00 ;
+}
+
+.cont-details h4 {
+    margin: 15px 0 10px;
+    font-size: 1.2em;
+    color: #9e9c9c;
+}
+
+.cont-details p {
+    margin: 0;
+    color: white;
+}
+
+.cont-details svg {
+    margin-bottom: 10px;
+    color: #ff7d00;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icons a {
+    text-decoration: none;
+    color: white;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: #ff7d00;
+    transition: background 0.3s;
+}
+
+.social-icons a:hover {
+    background: #ff7d00;
+    box-shadow: 2px 4px 8px  white;
+}
+
+.social-icons i {
+    font-size: 1.2em;
+}
+
+.pro-img{
+    width: 99%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    
+}
+
+/* Ensuring uniform size for all card images */
+.pro-img {
+    width: 100%;
+    height: 200px; /* Adjust height as needed for your design */
+    object-fit: cover; /* Ensures images fit within the box without distortion */
+}
+
+/* Card hover effect */
+.card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarges the card on hover */
+    box-shadow: 0 10px 15px rgba(175, 107, 4, 0.2); /* Adds a shadow for hover effect */
+}
+
+/* Card body text styling for consistency */
+.card-body h6 {
+    font-size: 1rem; /* Adjust font size as needed */
+    font-weight: bold;
+    margin: 10px 0;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.card:hover .card-body h6 {
+    color: #ff7d00; /* Changes text color on hover */
+}
+
+
+.pro-style {
+    font-size: 60px;
+    color: white;
+    text-shadow: 2px 3px 5px #ff7d00;
+
 }
