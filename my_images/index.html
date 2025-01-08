@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivani</title>
+    <link rel="stylesheet" href="styles.css">
+<!-- contact icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- css bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- js bootstrap link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- box icon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- css file -->
+    <link rel="stylesheet" href="index.css">
+    <style>
+
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const toggleButton = document.querySelector('.toggle-button');
+            const navLinks = document.querySelector('.nav-links');
+
+            toggleButton.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        });
+
+        // first page show
+        function firstPage() {
+            console.log("firstPage");
+            document.getElementById("first-section").hidden = false;
+            document.getElementById("second-section").hidden = true;
+            document.getElementById("third-section").hidden = true;
+            document.getElementById("contact-section").hidden = true;
+            document.getElementById("javascript-section").hidden = true;
+            document.getElementById("bootstrap-section").hidden = true;
+            
+
+        }
+        // second page show
+        function secondPage() {
+            console.log("secondPage");
+            document.getElementById("first-section").hidden = true;
+            document.getElementById("second-section").hidden = false;
+            document.getElementById("third-section").hidden = true;
+            document.getElementById("contact-section").hidden = true;
+            document.getElementById("javascript-section").hidden = true;
+            document.getElementById("bootstrap-section").hidden = true;
+
+
+        }
+// html css page
+        // third page show (html and css project)
+        function thirdPage() {
+            console.log("thirdPage");
+            document.getElementById("first-section").hidden = true;
+            document.getElementById("second-section").hidden = true;
+            document.getElementById("third-section").hidden = false;
+            document.getElementById("contact-section").hidden = true;
+            document.getElementById("javascript-section").hidden = true;
+            document.getElementById("bootstrap-section").hidden = true;
+
+        }
+// javascript page
+        function javaScript() {
+            console.log("thirdPage");
+            document.getElementById("first-section").hidden = true;
+            document.getElementById("second-section").hidden = true;
+            document.getElementById("third-section").hidden = true;
+            document.getElementById("contact-section").hidden = true;
+            document.getElementById("javascript-section").hidden = false;
+            document.getElementById("bootstrap-section").hidden = true;
+
+        }
+// bootstrap page
+        function bootStrap() {
+            console.log("thirdPage");
+            document.getElementById("first-section").hidden = true;
+            document.getElementById("second-section").hidden = true;
+            document.getElementById("third-section").hidden = true;
+            document.getElementById("contact-section").hidden = true;
+            document.getElementById("javascript-section").hidden = true;
+            document.getElementById("bootstrap-section").hidden = false;
+        }
+// contact page
+        function contactPage() {
+            console.log("thirdPage");
+            document.getElementById("first-section").hidden = true;
+            document.getElementById("second-section").hidden = true;
+            document.getElementById("third-section").hidden = true;
+            document.getElementById("javascript-section").hidden = true;
+            document.getElementById("contact-section").hidden = false;
+            document.getElementById("bootstrap-section").hidden = true;
+
+        }
+
+        // first page show
+        window.onload = function () {
+            firstPage();
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="container-fluide ">
+        <!-- header part -->
+        <div class="first-sec bottomLineSeparator">
+            <header>
+                <!-- nav bar -->
+                <nav class="navbar">
+                    <div class="logo">
+                        <h1>Port<span style="color: #ff7d00; font-weight: bold; ">folio</span></h1>
+                    </div>
+                    <!-- mobile responsive menu bar -->
+                    <button class="toggle-button" aria-label="Toggle navigation">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                    <div class="nav-links">
+                        <!-- home -->
+                        <a href="#first-section" onclick="firstPage()"
+                            style="color: #ff7d00; font-weight: bold;">Home</a>
+                        <!-- project -->
+                        <a href="#" onclick="secondPage()">Project</a>
+                        <!-- about -->
+                        <a href="createresume.html">About</a>
+                        <!--  contact -->
+                        <a href="#contact" onclick="contactPage()">Contact</a>
+                    </div>
+                </nav>
+            </header>
+        </div>
+    </div>
+    <div class="sec-sec" id="first-section">
+        <section>
+            <!-- Main section of the webpage -->
+            <div class="main">
+                <div class="detail">
+                    <h2>Hi!</h2>
+                    <h1> I'm <span style="color:#ff7d00;">Shivani Kharpuriya</span></h1>
+                    <h3>Full Stack Developer </h3>
+                    <div class="social">
+
+                        <!-- Social media links -->
+                        <a href="https://github.com/ShivaniFullStactDeveloper/Shivani_myProject">
+                            <i class='bx bxl-github'></i></a>
+
+                        <a href="https://web.skype.com/"><i class='bx bxl-skype'></i></a>
+                        <a
+                            href="https://www.linkedin.com/in/shivani-kharpuriya-089569249/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in">
+                            <i class='bx bxl-linkedin-square'></i></a>
+
+                    </div>
+                    <div class="but-contain">
+                        <p style="color: rgb(142, 145, 147);">Click here to see my cv.</p>
+                        <a href="createresume.html"><button class="button-cv">Download CV</button></a>
+                    </div>
+                </div>
+                <div>
+                    <!-- Placeholder for an image -->
+                    <img class="my-image" src="my_images/Chivu_processed1-removebg-preview.png" alt="">
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+    <!-- html css js -->
+    <!-- html and css project page -->
+
+    <div class="sec-page" id="second-section">
+<!-- html css box -->
+        <div class="box">
+            <img
+                src="data:image/png;base64,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 " />
+            <h2>HTML5 & CSS3</h2>
+            <p> Built responsive websites using HTML and CSS with clean and simple designs.</p>
+            <br>
+            <button class="button-cv" onclick="thirdPage()">see project</button>
+        </div>
+<!-- Javascript box -->
+        <div class="box">
+            <!-- <img
+                src="data:image/png;base64,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" /> -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="75" height="80" fill="currentColor" style=" color: yellow; margin:18px;"  class="bi bi-filetype-js" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H8v-1h4a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM3.186 15.29a1.2 1.2 0 0 1-.111-.449h.765a.58.58 0 0 0 .255.384q.105.073.249.114.143.041.319.041.246 0 .413-.07a.56.56 0 0 0 .255-.193.5.5 0 0 0 .085-.29.39.39 0 0 0-.153-.326q-.151-.12-.462-.193l-.619-.143a1.7 1.7 0 0 1-.539-.214 1 1 0 0 1-.351-.367 1.1 1.1 0 0 1-.123-.524q0-.366.19-.639.19-.272.528-.422.336-.15.776-.149.457 0 .78.152.324.153.5.41.18.255.2.566h-.75a.56.56 0 0 0-.12-.258.6.6 0 0 0-.247-.181.9.9 0 0 0-.369-.068q-.325 0-.513.152a.47.47 0 0 0-.184.384q0 .18.143.3a1 1 0 0 0 .405.175l.62.143q.327.075.566.211.24.136.375.358t.135.56q0 .37-.188.656a1.2 1.2 0 0 1-.539.439q-.351.158-.858.158-.381 0-.665-.09a1.4 1.4 0 0 1-.478-.252 1.1 1.1 0 0 1-.29-.375m-3.104-.033A1.3 1.3 0 0 1 0 14.791h.765a.6.6 0 0 0 .073.27.5.5 0 0 0 .454.246q.285 0 .422-.164.138-.165.138-.466v-2.745h.79v2.725q0 .66-.357 1.005-.354.345-.984.345a1.6 1.6 0 0 1-.569-.094 1.15 1.15 0 0 1-.407-.266 1.1 1.1 0 0 1-.243-.39"/>
+                  </svg>
+                <h2>Javascript</h2>
+            <p> Created interactive and dynamic applications using JavaScript to add functionality.</p>
+            <br>
+            <button class="button-cv" onclick="javaScript()">see project</button>
+
+        </div>
+<!-- Bootstrap box -->
+        <div class="box">
+           
+            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="80"  fill="currentColor" style=" color: rgb(12, 76, 214); margin:18px;"  class="bi bi-bootstrap-fill" viewBox="0 0 16 16">
+                <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z"/>
+                <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"/>
+              </svg>
+            <!-- <img style="height: 73px; width: 70px; margin-top: 20px;" src="my_images/jsimage.png" importance="" /> -->
+            <h2>Bootstrap</h2>
+            <p> Designed responsive websites using Bootstrap for a better user experience.</p>
+            <br>
+            <button class="button-cv" onclick="bootStrap()">see project</button>
+        </div>
+
+    </div>
+
+    <!-- html css project -->
+
+    <div class="container py-5" id="third-section">
+        <h2 class="text-center mb-5 text-bold pro-style">Projects</h2>
+        <div class="row text-center">
+            <!-- Box 1 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="tablethree.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVuLC2A5fymCkgcZB4zTp1SE57Gn0S55ZktA&usqp=CAU"
+                            class="card-img-top pro-img" alt="Activity 1" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Youtube Page Using Table.</h6>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="tableone.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnBtVh0DIX1TN2Xlv5OdGPbUVHFgolmJd1eA&usqp=CAU"
+                            class="card-img-top pro-img" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Quality Sheet Using Table.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="calendarone.html"> <img
+                            src="https://media.istockphoto.com/id/181866332/photo/red-wall-calendar.jpg?s=612x612&w=0&k=20&c=FpWwH-rY03pLmNsibkcJ_zbnqCIx1sbI5pRsQ9q5yLg="
+                            class="card-img-top pro-img" alt="Activity 3" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Calendar Using Table.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="dynamicone.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ8_1H0dgcJ0DKcUds135RHTUUOukgRNTD5A&s"
+                            class="card-img-top pro-img" alt="Activity 4" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Mobile Screen Using Media Query.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 1 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="flexone.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBFk9IAb5Pj2QPTzECTemI4l0l1WW7zwGkOQ&s"
+                            class="card-img-top pro-img" alt="Activity 1" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Youtube Page Using Flex.</h6>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="checkboxflextwo.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3jfFZQU2F2U2TqPLjsAcGYKfr_Ux6AhiJqw&s"
+                            class="card-img-top pro-img" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Layout Using Flex.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="checkboxgrid.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR48U5aRFmuCFVcmhvYJNuV-Hf9H9fw19AJQg&s"
+                            class="card-img-top pro-img" alt="Activity 3" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Layout Using Grid.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="keyboarddisplay.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfF1Xk2QrBZJh00fTC_I4WaurwP7dowD3ylg&s"
+                            class="card-img-top pro-img" alt="Activity 4" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Keyboard Using Grid.</h6>
+                    </div>
+                </div>
+            </div>
+             <!-- Box 1 -->
+             <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="chessboardgrid.html"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtXwzPRxZ7pMpOJnzXYbwnAzAst5QNbzcVpQ&usqp=CAU"
+                            class="card-img-top pro-img" alt="Activity 1" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Chessboard.</h6>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="indextwo.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWAQJXdUZNCpRqCSb34YYt6PRHv4NG6z4ghw&s"
+                            class="d-block mx-lg-auto img-fluid" class="card-img-top pro-img" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Form.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript project -->
+
+    <div class="container py-5" id="javascript-section">
+        <h2 class="text-center mb-5 text-bold pro-style">Projects</h2>
+        <div class="row text-center">
+            <!-- Box 1 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="halffullticketjs.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTosWNrkWtV1p_rJ2S_eOXMIJNOtNQwksmqvQ&s"
+                            class="card-img-top pro-img" alt="Activity 1" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Half Full Ticket.</h6>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="evenoroddjs.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs1y3MlMQxbbs9g4mHOiIiL8kKMmcZbRJS-A&s"
+                            class="card-img-top pro-img" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Even Or Odd.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="largestnojs.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ03ThklBfoPmuwN3aaM_T_i_OzyU-83DLVA&s"
+                            class="card-img-top pro-img" alt="Activity 3" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Largest No Of Element.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="positivenojs.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1mqsGhvrxi5NxTy8bynCQZPtoJzfBJ4t16A&s"
+                            class="card-img-top pro-img" alt="Activity 4" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Positive No Or Negative.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 1 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="vowelsjs.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBVL-3ff1o6ZoBYCGog6cdbQxmheo_mKmJCg&s"
+                            class="card-img-top pro-img" alt="Activity 1" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Vowels Or Consonants.</h6>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="weekdayjs.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwBYeZ5itoPHD_-dnl4ZUCeh6Lu2tZQxPpIA&s"
+                            class="card-img-top pro-img" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Week Days.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="whilelooptable.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNKLj-fV-ylpwfkgjHj-jorW6Dt7TLdPsBpg&s"
+                            class="card-img-top pro-img" alt="Activity 3" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Table Print.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="dom.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRbfIFv8CbsTtp_yh-fg5q74UGZJkP5GMVRg&s"
+                            class="card-img-top pro-img" alt="Activity 4" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Add Bricks.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 1 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="googlesearch.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9dvBxaUaF57AbvceI7ccsY6s_fK6IaWzOpBI7Si_KnVd-ikJewnoIyFwJDXGdbtLKXo0&usqp=CAU"
+                            class="card-img-top pro-img" alt="Activity 1" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Google Search.</h6>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="kbcpagemain.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDqV5S6TgJ_OzpSpC9bCunvVfrCWNm7umJGw&s"
+                            class="card-img-top pro-img" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">KBC Game.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="calculatorgridone.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEaQKGbrluscSFv2ViKHHRoXxiAQQ1LfCl4g&usqp=CAU"
+                            class="card-img-top pro-img" alt="Activity 3" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Calculator.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="electricbilljs.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQncGZdJp1gAuVGhj2YIgC2jlcHJqBcZW1uZA&s"
+                            class="card-img-top pro-img" alt="Activity 4" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Electric Bill.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="dataentry.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi2Qey4j4CmMJicZ4T37LCs17yd2ytHHUetQ&usqp=CAU"
+                            class="card-img-top pro-img" alt="Activity 4" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Student Data Entry Form.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstap project -->
+
+    <div class="container py-5" id="bootstrap-section">
+        <h2 class="text-center mb-5 text-bold pro-style">Projects</h2>
+        <div class="row text-center">
+            <!-- Box 1 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="w_Website/wanjari.html"> <img src="w_Website/IMG_20240807_225858.jpg"
+                            class="card-img-top pro-img" alt="Activity 1" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title"> Games & Adventure.</h6>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="bootstrapbookweb.html"><img
+                            src="https://www.vmtlib.michlibrary.org/images/library-books.jpg/@@images/image.jpeg"
+                            class="d-block mx-lg-auto img-fluid" class="card-img-top pro-img" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Book Store.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Contact Section -->
+    <div class="third-section" id="contact-section">
+        <h2>Contact</h2>
+        <div class="cont-details">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+                </svg>
+                <h4>Address</h4>
+                <p>Katol, India</p>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                </svg>
+                <h4>Phone</h4>
+                <p>9529443390</p>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                </svg>
+                <h4>Email</h4>
+                <p>shivanikharpuriya123@gmail.com</p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/shivani-kharpuriya-089569249/"
+                class="social-button social-button--linkedin" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/ShivaniFullStactDeveloper/Shivani_myProject"
+                class="social-button social-button--github" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://web.skype.com/" class="social-button social-button--skype" aria-label="Skype">
+                <i class="fab fa-skype"></i>
+            </a>
+        </div>
+    </div>
+
+</body>
+
+</html>
