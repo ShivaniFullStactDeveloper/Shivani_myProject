@@ -287,10 +287,10 @@ p {
     display: flex;
     justify-content: space-around;
     height: 80%;
-    padding: 20px;
-    margin-top: 6%;
-    display: flex;
+    padding: 10px;
+    margin-top: 20px;
     flex-wrap: wrap; 
+    gap: 20px;
     /* background-color: #f4f4f4; */
 }
 .box {
