@@ -42,6 +42,8 @@
             document.getElementById("contact-section").hidden = true;
             document.getElementById("javascript-section").hidden = true;
             document.getElementById("bootstrap-section").hidden = true;
+            document.getElementById("test-case-section").hidden = true;
+
             
 
         }
@@ -54,6 +56,8 @@
             document.getElementById("contact-section").hidden = true;
             document.getElementById("javascript-section").hidden = true;
             document.getElementById("bootstrap-section").hidden = true;
+            document.getElementById("test-case-section").hidden = true;
+
 
 
         }
@@ -67,6 +71,8 @@
             document.getElementById("contact-section").hidden = true;
             document.getElementById("javascript-section").hidden = true;
             document.getElementById("bootstrap-section").hidden = true;
+            document.getElementById("test-case-section").hidden = true;
+
 
         }
 // javascript page
@@ -78,6 +84,8 @@
             document.getElementById("contact-section").hidden = true;
             document.getElementById("javascript-section").hidden = false;
             document.getElementById("bootstrap-section").hidden = true;
+            document.getElementById("test-case-section").hidden = true;
+
 
         }
 // bootstrap page
@@ -89,7 +97,21 @@
             document.getElementById("contact-section").hidden = true;
             document.getElementById("javascript-section").hidden = true;
             document.getElementById("bootstrap-section").hidden = false;
+            document.getElementById("test-case-section").hidden = true;
         }
+
+        // Test cases page
+        function testCases() {
+            console.log("thirdPage");
+            document.getElementById("first-section").hidden = true;
+            document.getElementById("second-section").hidden = true;
+            document.getElementById("third-section").hidden = true;
+            document.getElementById("contact-section").hidden = true;
+            document.getElementById("javascript-section").hidden = true;
+            document.getElementById("bootstrap-section").hidden = true;
+            document.getElementById("test-case-section").hidden = false;
+        }
+
 // contact page
         function contactPage() {
             console.log("thirdPage");
@@ -99,6 +121,8 @@
             document.getElementById("javascript-section").hidden = true;
             document.getElementById("contact-section").hidden = false;
             document.getElementById("bootstrap-section").hidden = true;
+            document.getElementById("test-case-section").hidden = true;
+
 
         }
 
@@ -168,7 +192,7 @@
                 </div>
                 <div>
                     <!-- Placeholder for an image -->
-                    <img class="my-image" src="my_images/Chivu_processed1-removebg-preview.png" alt="">
+                    <img class="my-image" src="my_images/Shivani.jpg" alt="">
                 </div>
 
 
@@ -210,7 +234,7 @@
               </svg>
             <!-- <img style="height: 73px; width: 70px; margin-top: 20px;" src="my_images/jsimage.png" importance="" /> -->
             <h2>Bootstrap</h2>
-            <p> Designed responsive websites using Bootstrap for a better user experience.</p>
+            <p> Designed responsive and attractive websites using Bootstrap for a better user experience.</p>
             <br>
             <button class="button-cv" onclick="bootStrap()">See project</button>
         </div>
@@ -225,10 +249,10 @@
             <h2>React Js</h2>
             <p>Developed dynamic and interactive user interfaces using React.js. Utilized component-based architecture, state management, and hooks to build scalable and efficient web applications. </p>
             <br>
-            <button class="button-cv" onclick="bootStrap()">See project</button>
+            <button class="button-cv"><a style="text-decoration: none; color: #ff7d00;" href="https://peppy-taiyaki-b81606.netlify.app/">See project</a></button>
         </div>
 
-        <!-- Bootstrap box -->
+        <!-- Test cases box -->
         <div class="box">
            
             <!-- <svg xmlns="http://www.w3.org/2000/svg" width="75" height="80"  fill="currentColor" style=" color: rgb(12, 76, 214); margin:18px;"  class="bi bi-bootstrap-fill" viewBox="0 0 16 16">
@@ -236,11 +260,11 @@
                 <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"/>
               </svg> -->
 
-            <img style="height: 73px; width: 70px; margin-top: 20px;" src="https://cdn.iconscout.com/icon/premium/png-256-thumb/test-case-1686427-1431230.png" importance="" />
+            <img style="height: 73px; width: 70px; margin-top: 20px;" src="https://static.vecteezy.com/system/resources/previews/032/477/270/non_2x/green-badge-check-icon-ai-generative-free-png.png" importance="" />
             <h2>Testing</h2>
             <p>Implemented unit, integration, and end-to-end testing strategies to ensure software reliability and performance. Used tools like Jest, React Testing Library, and Cypress for automated testing.</p>
             <br>
-            <button class="button-cv" onclick="bootStrap()">See project</button>
+            <button class="button-cv" onclick="testCases()">See project</button>
         </div>
 
     </div>
@@ -533,7 +557,7 @@
             <!-- Box 1 -->
             <div class="col-md-3">
                 <div class="card mb-4">
-                    <a href="w_Website/wanjari.html"> <img src="w_Website/rider.jpg"
+                    <a href="w_Website/wanjari.html"> <img src="w_Website/rider.jpg" 
                             class="card-img-top pro-img" alt="Activity 1" /></a>
                     <div class="card-body">
                         <h6 class="card-title"> Games & Adventure.</h6>
@@ -555,6 +579,37 @@
             </div>
         </div>
     </div>
+
+    <!-- test cases page -->
+    <div class="container py-5" id="test-case-section">
+        <h2 class="text-center mb-5 text-bold pro-style">Test Cases</h2>
+        <div class="row text-center">
+            <!-- Box 1 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="https://docs.google.com/spreadsheets/d/1zGUP9bOUKJO-PPXDCCuETbaVi6ppKAqQ2kp4IBnNegM/edit?gid=0#gid=0"> <img src="https://png.pngtree.com/png-clipart/20220223/original/pngtree-calculator-png-image_7312212.png"
+                            class="card-img-top pro-img" alt="Activity 1" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Calclator</h6>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="https://docs.google.com/spreadsheets/d/1rija9yyn-x97FS4gkeot1kVrPqK0LDU4nXEZwyECKio/edit?gid=0#gid=0"><img
+                            src="https://www.jiomart.com/images/product/original/rvflqf7gua/standard-laptop-bag-for-men-and-women-waterproof-for-college-travel-office-black-product-images-orvflqf7gua-p591836106-0-202206021213.jpg?im=Resize=(1000,1000)"
+                            class="d-block mx-lg-auto img-fluid ard-img-top pro-img" style="height: 200px; object-fit: cover;" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Laptop Bag</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
     <!-- Contact Section -->
