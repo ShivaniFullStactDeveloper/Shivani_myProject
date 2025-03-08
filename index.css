@@ -173,6 +173,10 @@ p {
     margin-bottom: 0.5rem
 }
 
+.bx{
+    font-size: 24px;
+}
+
 .social a {
     color: #ff7d00;
     font-size: 1rem;
