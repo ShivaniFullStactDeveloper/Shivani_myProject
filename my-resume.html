@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        body {
+            background: rgb(204, 204, 204);
+            width: 21cm;
+            height: 29.7cm;
+            margin: 0 auto;
+        }
+
+        page {
+            background: white;
+            display: block;
+            margin: 0 auto;
+            margin-bottom: 0.5cm;
+            position: relative;
+        }
+
+        page[size="A4"] {
+            width: 21cm;
+            height: 29.7cm;
+        }
+
+        @page {
+            size: 21cm 29.7cm;
+            margin: 0mm;
+        }
+
+        /* main container */
+        .container {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+        }
+
+        /* left side */
+        .leftPanel {
+            width: 27%;
+            background-color: #484444;
+            padding: 0.7cm;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* right side */
+        .rightPanel {
+            width: 73%;
+            padding: 0.7cm;
+        }
+
+        .item {
+            padding-bottom: 0.7cm;
+            padding-top: 0.7cm;
+        }
+
+        .item h2 {
+            margin-top: 0;
+        }
+
+        /* line */
+        .bottomLineSeparator {
+            border-bottom: 0.05cm solid white;
+        }
+
+        /* contact skills education style */
+        h2 {
+            font-family: 'Archivo Narrow', sans-serif;
+        }
+
+        .leftPanel h2 {
+            color: white;
+        }
+
+        /* my image */
+        img {
+            width: 4cm;
+            height: 4cm;
+            margin-bottom: 0.7cm;
+            border-radius: 50%;
+            border: 0.15cm solid white;
+            object-fit: cover;
+            object-position: 50% 50%;
+        }
+
+        /* details */
+        .details {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .leftPanel .smallText,
+        .leftPanel .smallText,
+        .leftPanel .smallText span,
+        .leftPanel .smallText p,
+        .smallText a {
+            font-size: 0.45cm;
+        }
+
+        .smallText,
+        .smallText span,
+        .smallText p,
+        .smallText a {
+            font-family: 'Source Sans Pro', sans-serif;
+            text-align: justify;
+
+        }
+
+        .about-me {
+            line-height: 1.6;
+        }
+
+        /* contact icon */
+        .contactIcon {
+            width: 0.5cm;
+            text-align: center;
+        }
+
+        .leftPanel,
+        .leftPanel a {
+            color: #bebebe;
+            text-decoration: none;
+        }
+
+        /* education */
+        .bolded {
+            font-weight: bold;
+        }
+
+        .white {
+            color: white;
+        }
+
+        /* name section */
+        h1 {
+            font-family: 'Julius Sans One', sans-serif;
+        }
+
+        h1 {
+            font-weight: 600;
+            font-size: 1cm;
+            transform: scale(1, 1.15);
+            margin-bottom: 0.2cm;
+            margin-top: 0.2cm;
+            text-transform: uppercase;
+        }
+
+        h3 {
+            font-family: 'Open Sans', sans-serif;
+        }
+         /* line */
+         .bottomLineSeparatorone  {
+            border-bottom: 0.05cm solid black;
+        }
+
+        /* skills */
+        .skill {
+            /* font-size: 0.3cm; */
+            font-weight: bold;
+            color: black;
+            line-height: 2.1;
+        }
+
+        li {
+            line-height: 2.1;
+        }
+    </style>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Archivo+Narrow&family=Julius+Sans+One&family=Open+Sans&family=Source+Sans+Pro&display=swap"
+        rel="stylesheet">
+
+    <!-- bootstrap link -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- A4 page  -->
+    <page size="A4">
+        <!-- main container -->
+        <div class="container">
+            <!-- left part -->
+            <div class="leftPanel">
+                <!-- my image -->
+                <img src="my_images/shiv.jpg" />
+                <!-- start my details -->
+                <div class="details">
+                    <!-- contact section -->
+                    <div class="item bottomLineSeparator">
+                        <h2>
+                            CONTACT
+                        </h2>
+                        <div class="smallText">
+                            <!-- contact -->
+                            <p>
+                                <i class="fa fa-phone contactIcon" aria-hidden="true"></i>
+                                (+91) 9529443390
+                            </p>
+                            <!-- email -->
+                            <p>
+                                <i class="fa fa-envelope contactIcon" aria-hidden="true"></i>
+                                <!-- <a href="#"> -->
+                                shivanikharpuriya123<br>
+                                &emsp; @gmail.com
+                                <!-- </a> -->
+                            </p>
+                            <!-- location -->
+                            <p>
+                                <i class="fa fa-map-marker contactIcon" aria-hidden="true"></i>
+                                Katol
+                            </p>
+                            <!-- github -->
+                            <p>
+                                <i class="fa fa-github-square contactIcon" aria-hidden="true"></i>
+                                <a href="https://github.com/ShivaniFullStactDeveloper/Shivani_myProject">
+                                    Github
+                                </a>
+                            </p>
+                            <!-- linkdin -->
+                            <p>
+                                <i class="fa fa-linkedin-square contactIcon" aria-hidden="true"></i>
+                                <a
+                                    href="https://www.linkedin.com/in/shivani-kharpuriya-089569249/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in">
+                                    Linkedin
+                                </a>
+                            </p>
+                            <!-- skype -->
+                            <p class="lastParagrafNoMarginBottom">
+                                <i class="fa fa-skype contactIcon" aria-hidden="true"></i>
+                                <a href="https://web.skype.com/??inviteId=rEwDMd4mlLJS&correlationId=undefined">
+                                    Skype
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- education -->
+                    <div class="item bottomLineSeparator">
+                        <h2>
+                            EDUCATION
+                        </h2>
+                        <div class="smallText">
+                            <p class="bolded white">
+                                Bachelor of Science
+                            </p>
+                            <p>
+                                Electronics Computer Sci
+                                <!-- The University of Nagpur -->
+                            </p>
+                            <p>
+                                2019 - 2022
+                            </p>
+                        </div>
+                    </div>
+                    <!-- languages -->
+                    <div class="item bottomLineSeparator">
+                        <h2>
+                            LANGUAGE
+                        </h2>
+                        <div class="smallText">
+                            <p>English</p>
+                            <p>Marathi</p>
+                            <p>Hindi</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- right part -->
+            <div class="rightPanel">
+                <!-- name -->
+                <div class="bottomLineSeparatorone ">
+                    <h1>Shivani Kharpuriya</h1>
+                    <br>
+                    <div class="smallText">
+                        <h3>
+                            Full Stack Developer
+                        </h3>
+                    </div>
+                </div>
+                <!-- introduction -->
+                <div>
+                    <h2>
+                        About Me
+                    </h2>
+                    <div class="smallText">
+                        <p class="about-me">
+                            To obtain an entry level position as a developer that will allow me to utilised my coding
+                            skills and creativity to create user-friendly and responsive websites. Has the ability to
+                            work with focus with complete involvement and enthusiasm.
+                            Aspires to work in an environment that prioritised collaborative working amongst peers who
+                            motivate each other to achieve common goals. Determined to work at a small or medium-sized
+                            enterprise where value additions by candidates are openly recognized allowing more
+                            significant exposure to refine individualistic skills.
+                        </p>
+                    </div>
+                    <br>
+                    <div>
+                        <h2>Technical Skills</h2>
+                        <div class="smallText">
+                            <li><span class="skill">Web Development :</span> HTML ,CSS , Javascript , Java , Python , Web
+                                design , &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Web testing , Bootstrap.</li>
+                            <li><span class="skill">Language Known : </span>C , C++ , Javascript , Java , Python , SQL.</li>
+                            <li><span class="skill">Operating System : </span>Windows 10 , Mac.</li>
+                            <li><span class="skill">Tools Use For Development : </span>Github.</li>
+                            <li><span class="skill"3>IDE :</span> Visual studio code , Android studio code.</li>
+                        </div>
+                    </div>
+                    <br>
+                    <div>
+                        <h2>Personal Skills</h2>
+                        <div class="smallText">
+                            <li>Outside the box thinker, can come up with creative solution that can be &emsp; a real
+                                asset in any role. </li>
+                            <li>Have an ability to focus and pursue a goal or activity with ruthless drive.</li>
+                            <li>Ability to think rationally and thoughtfully.</li>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </page>
+
+</body>
+
+</html>

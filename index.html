@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivani</title>
-<!-- contact icon link -->
+    <title>Shivani Portfolio</title>
+    <!-- contact icon link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <!-- css bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -17,120 +17,10 @@
         crossorigin="anonymous"></script>
     <!-- box icon link -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <!-- css file -->
+    <!-- external css file -->
     <link rel="stylesheet" href="index.css">
-    <style>
-
-    </style>
-    <script>
-        document.addEventListener('DOMContentLoaded', () => {
-            const toggleButton = document.querySelector('.toggle-button');
-            const navLinks = document.querySelector('.nav-links');
-
-            toggleButton.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
-        });
-
-        // first page show
-        function firstPage() {
-            console.log("firstPage");
-            document.getElementById("first-section").hidden = false;
-            document.getElementById("second-section").hidden = true;
-            document.getElementById("third-section").hidden = true;
-            document.getElementById("contact-section").hidden = true;
-            document.getElementById("javascript-section").hidden = true;
-            document.getElementById("bootstrap-section").hidden = true;
-            document.getElementById("test-case-section").hidden = true;
-
-            
-
-        }
-        // second page show
-        function secondPage() {
-            console.log("secondPage");
-            document.getElementById("first-section").hidden = true;
-            document.getElementById("second-section").hidden = false;
-            document.getElementById("third-section").hidden = true;
-            document.getElementById("contact-section").hidden = true;
-            document.getElementById("javascript-section").hidden = true;
-            document.getElementById("bootstrap-section").hidden = true;
-            document.getElementById("test-case-section").hidden = true;
-
-
-
-        }
-// html css page
-        // third page show (html and css project)
-        function thirdPage() {
-            console.log("thirdPage");
-            document.getElementById("first-section").hidden = true;
-            document.getElementById("second-section").hidden = true;
-            document.getElementById("third-section").hidden = false;
-            document.getElementById("contact-section").hidden = true;
-            document.getElementById("javascript-section").hidden = true;
-            document.getElementById("bootstrap-section").hidden = true;
-            document.getElementById("test-case-section").hidden = true;
-
-
-        }
-// javascript page
-        function javaScript() {
-            console.log("thirdPage");
-            document.getElementById("first-section").hidden = true;
-            document.getElementById("second-section").hidden = true;
-            document.getElementById("third-section").hidden = true;
-            document.getElementById("contact-section").hidden = true;
-            document.getElementById("javascript-section").hidden = false;
-            document.getElementById("bootstrap-section").hidden = true;
-            document.getElementById("test-case-section").hidden = true;
-
-
-        }
-// bootstrap page
-        function bootStrap() {
-            console.log("thirdPage");
-            document.getElementById("first-section").hidden = true;
-            document.getElementById("second-section").hidden = true;
-            document.getElementById("third-section").hidden = true;
-            document.getElementById("contact-section").hidden = true;
-            document.getElementById("javascript-section").hidden = true;
-            document.getElementById("bootstrap-section").hidden = false;
-            document.getElementById("test-case-section").hidden = true;
-        }
-
-        // Test cases page
-        function testCases() {
-            console.log("thirdPage");
-            document.getElementById("first-section").hidden = true;
-            document.getElementById("second-section").hidden = true;
-            document.getElementById("third-section").hidden = true;
-            document.getElementById("contact-section").hidden = true;
-            document.getElementById("javascript-section").hidden = true;
-            document.getElementById("bootstrap-section").hidden = true;
-            document.getElementById("test-case-section").hidden = false;
-        }
-
-// contact page
-        function contactPage() {
-            console.log("thirdPage");
-            document.getElementById("first-section").hidden = true;
-            document.getElementById("second-section").hidden = true;
-            document.getElementById("third-section").hidden = true;
-            document.getElementById("javascript-section").hidden = true;
-            document.getElementById("contact-section").hidden = false;
-            document.getElementById("bootstrap-section").hidden = true;
-            document.getElementById("test-case-section").hidden = true;
-
-
-        }
-
-        // first page show
-        window.onload = function () {
-            firstPage();
-        }
-
-    </script>
+  
+    <script src="index.js"></script>
 </head>
 
 <body>
@@ -153,10 +43,12 @@
                         <!-- home -->
                         <a href="#first-section" onclick="firstPage()"
                             style="color: #ff7d00; font-weight: bold;">Home</a>
+                        <!-- about -->
+                        <a href="#" onclick="aboutPage()">About</a>
                         <!-- project -->
                         <a href="#" onclick="secondPage()">Project</a>
-                        <!-- about -->
-                        <a href="createresume.html">About</a>
+                        <!-- skills -->
+                        <a href="#" onclick="skillPage()">Skill</a>
                         <!--  contact -->
                         <a href="#contact" onclick="contactPage()">Contact</a>
                     </div>
@@ -169,9 +61,11 @@
             <!-- Main section of the webpage -->
             <div class="main">
                 <div class="detail">
-                    <h2>Hi!</h2>
+                    <h2>Hi !</h2>
                     <h1> I'm <span style="color:#ff7d00;">Shivani Kharpuriya</span></h1>
                     <h3>Full Stack Developer </h3>
+                    <p class="info">"Creative Full-Stack Developer crafting exceptional web solutions with <br> stunning
+                        UI and making responsive and powerful backend!"</p>
                     <div class="social">
 
                         <!-- Social media links -->
@@ -186,23 +80,38 @@
                     </div>
                     <div class="but-contain">
                         <p style="color: rgb(142, 145, 147);">Click here to see my cv.</p>
-                        <a href="createresume.html"><button class="button-cv">Download CV</button></a>
+                        <a href="my-resume.html" download><button class="button-cv">Download CV</button></a>
                     </div>
-                </div>
-                <div>
-                    <!-- Placeholder for an image -->
-                    <img class="my-image" src="my_images/Shivani.jpg" alt="">
                 </div>
 
 
             </div>
         </section>
     </div>
+
+    <!-- About section -->
+     <div id="about-section">
+        <h2 class="about-name">About Me</h2>
+        <div class="underline"></div>
+    <div  class="about-container">
+       
+        <div>
+        <img src="my_images/Shivani.jpg" alt="Profile Image" class="profile-img">
+    </div>
+        <div class="text-content">
+          
+            <p>Hi, I’m <span style="color: #ff7d00;"> Shivani Kharpuriya </span> , an aspiring <span style="color: #cc8848;">Full-Stack Developer  </span> with a passion for solving complex problems, building dynamic and mobile responsive web applications, and exploring the limitless potential of AI. <br>Also  I’m refining my skills in full-stack development—designing intuitive front-end interfaces, optimizing back-end systems, and enhancing user experiences. My technical expertise includes HTML5, CSS3, SASS Node.js, React.js, JavaScript, C, Python, Java, and Swift, along with a solid foundation in databases.</p>
+            <div class="buttons">
+                <a href="my-resume.html" download><button class="button-cv">Download CV</button></a>
+            </div>
+        </div>
+    </div>
+</div>
     <!-- html css js -->
     <!-- html and css project page -->
 
     <div class="sec-page" id="second-section">
-<!-- html css box -->
+        <!-- html css box -->
         <div class="box">
             <img
                 src="data:image/png;base64,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 " />
@@ -211,26 +120,31 @@
             <br>
             <button class="button-cv" onclick="thirdPage()">See project</button>
         </div>
-<!-- Javascript box -->
+        <!-- Javascript box -->
         <div class="box">
             <!-- <img
                 src="data:image/png;base64,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" /> -->
-                <svg xmlns="http://www.w3.org/2000/svg" width="75" height="80" fill="currentColor" style=" color: yellow; margin:18px;"  class="bi bi-filetype-js" viewBox="0 0 16 16">
-                    <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2H8v-1h4a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM3.186 15.29a1.2 1.2 0 0 1-.111-.449h.765a.58.58 0 0 0 .255.384q.105.073.249.114.143.041.319.041.246 0 .413-.07a.56.56 0 0 0 .255-.193.5.5 0 0 0 .085-.29.39.39 0 0 0-.153-.326q-.151-.12-.462-.193l-.619-.143a1.7 1.7 0 0 1-.539-.214 1 1 0 0 1-.351-.367 1.1 1.1 0 0 1-.123-.524q0-.366.19-.639.19-.272.528-.422.336-.15.776-.149.457 0 .78.152.324.153.5.41.18.255.2.566h-.75a.56.56 0 0 0-.12-.258.6.6 0 0 0-.247-.181.9.9 0 0 0-.369-.068q-.325 0-.513.152a.47.47 0 0 0-.184.384q0 .18.143.3a1 1 0 0 0 .405.175l.62.143q.327.075.566.211.24.136.375.358t.135.56q0 .37-.188.656a1.2 1.2 0 0 1-.539.439q-.351.158-.858.158-.381 0-.665-.09a1.4 1.4 0 0 1-.478-.252 1.1 1.1 0 0 1-.29-.375m-3.104-.033A1.3 1.3 0 0 1 0 14.791h.765a.6.6 0 0 0 .073.27.5.5 0 0 0 .454.246q.285 0 .422-.164.138-.165.138-.466v-2.745h.79v2.725q0 .66-.357 1.005-.354.345-.984.345a1.6 1.6 0 0 1-.569-.094 1.15 1.15 0 0 1-.407-.266 1.1 1.1 0 0 1-.243-.39"/>
-                  </svg>
-                <h2>Javascript</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="80" fill="currentColor"
+                style=" color: yellow; margin:18px;" class="bi bi-filetype-js" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M14 4.5V14a2 2 0 0 1-2 2H8v-1h4a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM3.186 15.29a1.2 1.2 0 0 1-.111-.449h.765a.58.58 0 0 0 .255.384q.105.073.249.114.143.041.319.041.246 0 .413-.07a.56.56 0 0 0 .255-.193.5.5 0 0 0 .085-.29.39.39 0 0 0-.153-.326q-.151-.12-.462-.193l-.619-.143a1.7 1.7 0 0 1-.539-.214 1 1 0 0 1-.351-.367 1.1 1.1 0 0 1-.123-.524q0-.366.19-.639.19-.272.528-.422.336-.15.776-.149.457 0 .78.152.324.153.5.41.18.255.2.566h-.75a.56.56 0 0 0-.12-.258.6.6 0 0 0-.247-.181.9.9 0 0 0-.369-.068q-.325 0-.513.152a.47.47 0 0 0-.184.384q0 .18.143.3a1 1 0 0 0 .405.175l.62.143q.327.075.566.211.24.136.375.358t.135.56q0 .37-.188.656a1.2 1.2 0 0 1-.539.439q-.351.158-.858.158-.381 0-.665-.09a1.4 1.4 0 0 1-.478-.252 1.1 1.1 0 0 1-.29-.375m-3.104-.033A1.3 1.3 0 0 1 0 14.791h.765a.6.6 0 0 0 .073.27.5.5 0 0 0 .454.246q.285 0 .422-.164.138-.165.138-.466v-2.745h.79v2.725q0 .66-.357 1.005-.354.345-.984.345a1.6 1.6 0 0 1-.569-.094 1.15 1.15 0 0 1-.407-.266 1.1 1.1 0 0 1-.243-.39" />
+            </svg>
+            <h2>Javascript</h2>
             <p> Created interactive and dynamic applications using JavaScript to add functionality.</p>
             <br>
             <button class="button-cv" onclick="javaScript()">See project</button>
 
         </div>
-<!-- Bootstrap box -->
+        <!-- Bootstrap box -->
         <div class="box">
-           
-            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="80"  fill="currentColor" style=" color: rgb(12, 76, 214); margin:18px;"  class="bi bi-bootstrap-fill" viewBox="0 0 16 16">
-                <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z"/>
-                <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"/>
-              </svg>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="80" fill="currentColor"
+                style=" color: rgb(12, 76, 214); margin:18px;" class="bi bi-bootstrap-fill" viewBox="0 0 16 16">
+                <path
+                    d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z" />
+                <path
+                    d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z" />
+            </svg>
             <!-- <img style="height: 73px; width: 70px; margin-top: 20px;" src="my_images/jsimage.png" importance="" /> -->
             <h2>Bootstrap</h2>
             <p> Designed responsive and attractive websites using Bootstrap for a better user experience.</p>
@@ -240,28 +154,36 @@
 
         <!-- React js box -->
         <div class="box">
-           
-            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="80"  fill="currentColor" style=" color: #98D8EF; margin:18px;" class="bi bi-filetype-jsx" viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM3.075 14.841a1.13 1.13 0 0 0 .401.823q.194.162.478.252.284.091.665.091.507 0 .858-.158.355-.158.54-.44a1.17 1.17 0 0 0 .187-.656q0-.336-.135-.56a1 1 0 0 0-.375-.357 2 2 0 0 0-.565-.21l-.621-.144a1 1 0 0 1-.405-.176.37.37 0 0 1-.143-.299q0-.234.184-.384.188-.152.513-.152.214 0 .37.068a.6.6 0 0 1 .245.181.56.56 0 0 1 .12.258h.75a1.1 1.1 0 0 0-.199-.566 1.2 1.2 0 0 0-.5-.41 1.8 1.8 0 0 0-.78-.152q-.44 0-.776.15-.337.149-.528.421-.19.273-.19.639 0 .302.123.524t.351.367q.229.143.54.213l.618.144q.31.073.462.193a.39.39 0 0 1 .153.326.5.5 0 0 1-.085.29.56.56 0 0 1-.255.193q-.167.07-.413.07-.176 0-.32-.04a.8.8 0 0 1-.248-.115.58.58 0 0 1-.255-.384zM0 14.791q0 .247.082.466.083.22.243.39.165.17.407.267.246.093.569.093.63 0 .984-.346.357-.345.358-1.004v-2.725h-.791v2.745q0 .302-.138.466t-.422.164a.5.5 0 0 1-.454-.246.6.6 0 0 1-.073-.27zm8.907-2.859H9.8l-1.274 2.007L9.78 15.93h-.908l-.85-1.415h-.035l-.853 1.415h-.861l1.24-2.016-1.228-1.983h.931l.832 1.438h.036l.823-1.438Z"/>
-              </svg>
+            <a style="text-decoration: none; color: #ff7d00;"
+            href="https://heroic-axolotl-16ad38.netlify.app/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="80" fill="currentColor"
+                style="color: aqua; margin:18px;" class="bi bi-filetype-jsx" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM3.075 14.841a1.13 1.13 0 0 0 .401.823q.194.162.478.252.284.091.665.091.507 0 .858-.158.355-.158.54-.44a1.17 1.17 0 0 0 .187-.656q0-.336-.135-.56a1 1 0 0 0-.375-.357 2 2 0 0 0-.565-.21l-.621-.144a1 1 0 0 1-.405-.176.37.37 0 0 1-.143-.299q0-.234.184-.384.188-.152.513-.152.214 0 .37.068a.6.6 0 0 1 .245.181.56.56 0 0 1 .12.258h.75a1.1 1.1 0 0 0-.199-.566 1.2 1.2 0 0 0-.5-.41 1.8 1.8 0 0 0-.78-.152q-.44 0-.776.15-.337.149-.528.421-.19.273-.19.639 0 .302.123.524t.351.367q.229.143.54.213l.618.144q.31.073.462.193a.39.39 0 0 1 .153.326.5.5 0 0 1-.085.29.56.56 0 0 1-.255.193q-.167.07-.413.07-.176 0-.32-.04a.8.8 0 0 1-.248-.115.58.58 0 0 1-.255-.384zM0 14.791q0 .247.082.466.083.22.243.39.165.17.407.267.246.093.569.093.63 0 .984-.346.357-.345.358-1.004v-2.725h-.791v2.745q0 .302-.138.466t-.422.164a.5.5 0 0 1-.454-.246.6.6 0 0 1-.073-.27zm8.907-2.859H9.8l-1.274 2.007L9.78 15.93h-.908l-.85-1.415h-.035l-.853 1.415h-.861l1.24-2.016-1.228-1.983h.931l.832 1.438h.036l.823-1.438Z" />
+            </svg>
             <!-- <img style="height: 73px; width: 70px; margin-top: 20px;" src="my_images/jsimage.png" importance="" /> -->
             <h2>React Js</h2>
-            <p> Utilized component-based architecture, state management, and hooks to build scalable and efficient web applications. </p>
+            <p> Utilized component-based architecture, state management, and hooks to build scalable and efficient web
+                applications. </p>
             <br>
-            <button class="button-cv"><a style="text-decoration: none; color: #ff7d00;" href="https://heroic-axolotl-16ad38.netlify.app/">See project</a></button>
+            <button class="button-cv">See project</button>
+        </a>
         </div>
 
         <!-- Test cases box -->
         <div class="box">
-           
+
             <!-- <svg xmlns="http://www.w3.org/2000/svg" width="75" height="80"  fill="currentColor" style=" color: rgb(12, 76, 214); margin:18px;"  class="bi bi-bootstrap-fill" viewBox="0 0 16 16">
                 <path d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z"/>
                 <path d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z"/>
               </svg> -->
 
-            <img style="height: 73px; width: 70px; margin-top: 20px;" src="https://static.vecteezy.com/system/resources/previews/032/477/270/non_2x/green-badge-check-icon-ai-generative-free-png.png" importance="" />
+            <img style="height: 73px; width: 70px; margin-top: 20px;"
+                src="https://static.vecteezy.com/system/resources/previews/032/477/270/non_2x/green-badge-check-icon-ai-generative-free-png.png"
+                importance="" />
             <h2>Testing</h2>
-            <p>Implemented unit, integration, and end-to-end testing strategies to ensure software reliability and performance. Used tools like Jest, React Testing Library, and Cypress for automated testing.</p>
+            <p>Implemented unit, integration, and end-to-end testing strategies to ensure software reliability and
+                performance. Used tools like Jest, React Testing Library, and Cypress for automated testing.</p>
             <br>
             <button class="button-cv" onclick="testCases()">See project</button>
         </div>
@@ -269,7 +191,7 @@
     </div>
 
     <!-- html css project -->
-     
+
 
     <div class="container py-5" id="third-section">
         <div class="social" style="margin-left: 75vw;">
@@ -278,7 +200,7 @@
             <a href="https://github.com/ShivaniFullStactDeveloper/Shivani_myProject">
                 <i class='bx bxl-github'></i></a>
         </div>
-       
+
         <h2 class="text-center mb-5 text-bold pro-style">Projects</h2>
 
         <div class="row text-center">
@@ -374,10 +296,11 @@
                     </div>
                 </div>
             </div>
-             <!-- Box 1 -->
-             <div class="col-md-3">
+            <!-- Box 1 -->
+            <div class="col-md-3">
                 <div class="card mb-4">
-                    <a href="chessboardgrid.html"> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtXwzPRxZ7pMpOJnzXYbwnAzAst5QNbzcVpQ&usqp=CAU"
+                    <a href="chessboardgrid.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtXwzPRxZ7pMpOJnzXYbwnAzAst5QNbzcVpQ&usqp=CAU"
                             class="card-img-top pro-img" alt="Activity 1" /></a>
                     <div class="card-body">
                         <h6 class="card-title">Chessboard.</h6>
@@ -572,7 +495,8 @@
             <!-- Box 1 -->
             <div class="col-md-3">
                 <div class="card mb-4">
-                    <a href="w_Website/wanjari.html"> <img src="w_Website/IMG_20240726_141510_611-removebg-preview-transformed.png" 
+                    <a href="w_Website/wanjari.html"> <img
+                            src="w_Website/IMG_20240726_141510_611-removebg-preview-transformed.png"
                             class="card-img-top pro-img" alt="Activity 1" /></a>
                     <div class="card-body">
                         <h6 class="card-title"> Games & Adventure.</h6>
@@ -602,7 +526,9 @@
             <!-- Box 1 -->
             <div class="col-md-3">
                 <div class="card mb-4">
-                    <a href="https://docs.google.com/spreadsheets/d/1yZVsbRpnJVaQ-656xcUDn-fe8xlm07yGCs0u70g4Gv4/edit?gid=0#gid=0"> <img src="https://5.imimg.com/data5/SELLER/Default/2023/3/294705392/PE/VA/HI/4707645/plain-white-board.jpg"
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/1yZVsbRpnJVaQ-656xcUDn-fe8xlm07yGCs0u70g4Gv4/edit?gid=0#gid=0">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2023/3/294705392/PE/VA/HI/4707645/plain-white-board.jpg"
                             class="card-img-top pro-img" alt="Activity 1" /></a>
                     <div class="card-body">
                         <h6 class="card-title">White Dashboard</h6>
@@ -611,21 +537,25 @@
 
                 </div>
             </div>
-                   <!-- Box 2 -->
-                   <div class="col-md-3">
-                    <div class="card mb-4">
-                        <a href="https://docs.google.com/spreadsheets/d/1CjBQVzEgYU8J4PgSTDpZIC4E4cEvW3mjxQ5hLzLawGs/edit?gid=1090217291#gid=1090217291"><img
-                                src="https://www.susanadamspsychotherapist.com/wp-content/uploads/2017/07/Marriage.jpg"
-                                class="d-block mx-lg-auto img-fluid ard-img-top pro-img" style="height: 200px; object-fit: cover;" alt="Activity 2" /></a>
-                        <div class="card-body">
-                            <h6 class="card-title">Marriage</h6>
-                        </div>
-                    </div>
-                </div>
             <!-- Box 2 -->
             <div class="col-md-3">
                 <div class="card mb-4">
-                    <a href="https://docs.google.com/spreadsheets/d/1zGUP9bOUKJO-PPXDCCuETbaVi6ppKAqQ2kp4IBnNegM/edit?gid=0#gid=0"> <img src="https://png.pngtree.com/png-clipart/20220223/original/pngtree-calculator-png-image_7312212.png"
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/1CjBQVzEgYU8J4PgSTDpZIC4E4cEvW3mjxQ5hLzLawGs/edit?gid=1090217291#gid=1090217291"><img
+                            src="https://www.susanadamspsychotherapist.com/wp-content/uploads/2017/07/Marriage.jpg"
+                            class="d-block mx-lg-auto img-fluid ard-img-top pro-img"
+                            style="height: 200px; object-fit: cover;" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Marriage</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/1zGUP9bOUKJO-PPXDCCuETbaVi6ppKAqQ2kp4IBnNegM/edit?gid=0#gid=0">
+                        <img src="https://png.pngtree.com/png-clipart/20220223/original/pngtree-calculator-png-image_7312212.png"
                             class="card-img-top pro-img" alt="Activity 1" /></a>
                     <div class="card-body">
                         <h6 class="card-title">Calclator</h6>
@@ -634,26 +564,76 @@
 
                 </div>
             </div>
-     <!-- Box 4 -->
-              <div class="col-md-3">
+            <!-- Box 4 -->
+            <div class="col-md-3">
                 <div class="card mb-4">
-                    <a href="https://docs.google.com/spreadsheets/d/1rija9yyn-x97FS4gkeot1kVrPqK0LDU4nXEZwyECKio/edit?gid=0#gid=0"><img
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/1rija9yyn-x97FS4gkeot1kVrPqK0LDU4nXEZwyECKio/edit?gid=0#gid=0"><img
                             src="https://www.jiomart.com/images/product/original/rvflqf7gua/standard-laptop-bag-for-men-and-women-waterproof-for-college-travel-office-black-product-images-orvflqf7gua-p591836106-0-202206021213.jpg?im=Resize=(1000,1000)"
-                            class="d-block mx-lg-auto img-fluid ard-img-top pro-img" style="height: 200px; object-fit: cover;" alt="Activity 2" /></a>
+                            class="d-block mx-lg-auto img-fluid ard-img-top pro-img"
+                            style="height: 200px; object-fit: cover;" alt="Activity 2" /></a>
                     <div class="card-body">
                         <h6 class="card-title">Laptop Bag</h6>
                     </div>
                 </div>
             </div>
-             
+
         </div>
     </div>
+    <!-- Skills -->
+    <div class="skill-section" id="skill-page">
+        <h2>Skills</h2>
+        <div class="underline"></div>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
 
-
+        <div class="skill">
+            <p>HTML 5 <span style="float:right;">95%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 95%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>CSS 3 <span style="float:right;">90%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 90%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>JavaScript <span style="float:right;">75%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 75%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Bootstrap <span style="float:right;">92%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 92%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>React.js <span style="float:right;">70%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Node.js <span style="float:right;">65%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 65%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>PostgreSQL <span style="float:right;">72%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 72%;"></div>
+            </div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <div class="third-section" id="contact-section">
         <h2>Contact</h2>
+        <div class="underline"></div>
         <div class="cont-details">
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
