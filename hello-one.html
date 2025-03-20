@@ -1,0 +1,1335 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivani Portfolio</title>
+    <!-- contact icon link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- css bootstrap link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-- js bootstrap link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <!-- box icon link -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- external css file -->
+    <link rel="stylesheet" href="index.css">
+  
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  /* background-color: black; */
+  background-image: url(https://img.freepik.com/premium-vector/modern-black-abstract-design-geometric-background_7112-598.jpg?w=996);
+  /* background-image: url(https://img.freepik.com/free-vector/circles-background-dark-tones_60389-166.jpg?ga=GA1.1.129012842.1708191891&semt=ais_hybrid); */
+  background-repeat: no-repeat;
+  background-size: cover;
+  object-fit: fill;
+  /* position: fixed; */
+}
+
+/* header */
+header {
+  /* background: rgba(20, 11, 139, 0.1); */
+  background: linear-gradient(to right, #000000, #14213d);
+  color: white;
+  position: fixed;
+  width: 100%;
+  height: 12vh;
+  z-index: 1;
+}
+
+/* / navbar / */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px;
+  margin-right: 5vw;
+}
+
+/* / portfolio / */
+.logo h1 {
+  font-size: 25px;
+  padding: 5px;
+  margin: 5px;
+  margin-left: 5px;
+  text-decoration: underline;
+}
+
+.nav-links {
+  display: flex;
+}
+
+.nav-links a {
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  padding: 20px;
+  transition: background 0.3s;
+  border: 1px solid none;
+  border-radius: 10px;
+  margin: 5px;
+}
+
+.nav-links a:hover {
+  /* color: #ff7d00; */
+  color: #ff7d00;
+  font-weight: bold;
+  text-decoration: underline 0.1rem white;
+  background-color: rgba(9, 3, 40, 0.874);
+}
+
+/* / menu button / */
+.toggle-button {
+  display: none;
+  flex-direction: column;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0px;
+}
+
+.toggle-button .bar {
+  width: 25px;
+  height: 3px;
+  background: #ff7d00;
+  margin: 4px 0;
+}
+
+.toggle-button .bar:hover {
+  width: 25px;
+  height: 3px;
+  margin: 4px 0;
+}
+
+/* / main container / */
+section {
+  margin: 0rem 8.5rem;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 86vh;
+  text-align: center;
+  /* / background: url('https://source.unsplash.com/1600x900/?workspace') no-repeat center; / */
+  background-size: cover;
+}
+
+.main h1 {
+  font-size: 2.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.main span {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+.main h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.main h3 {
+  font-size: 3rem;
+  margin-top: 1rem;
+  font-weight: 600;
+  color: white;
+  text-shadow: 2px 2px #ff7d00;
+}
+
+.main p {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-bottom: 0;
+  font-size: 0.98rem;
+  color: #fff;
+}
+
+.info {
+  margin-top: 2rem;
+  margin-left: 1rem;
+  margin-bottom: 0;
+  font-size: 0.98rem;
+  color: #fff;
+}
+
+/* / social buttons / */
+.social {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1.4rem;
+  margin-top: 1.7rem;
+  /* / margin-left: 5.7rem; / */
+  margin-bottom: 0.5rem;
+}
+
+.bx {
+  font-size: 24px;
+}
+
+.social a {
+  color: #ff7d00;
+  font-size: 1rem;
+  border: 1.6px solid #ff7d00;
+  border-radius: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.35rem;
+  text-align: center;
+  width: 43px;
+  height: 43px;
+}
+
+.social a:hover {
+  color: #f6f7f9;
+  background-color: #ff7d00;
+  box-shadow: 0 0 20px #ff7d00;
+  transition: all 0.3s ease-in-out;
+}
+
+/* / my image / */
+.my-image {
+  width: 100%;
+  height: 400px;
+  box-shadow: 10px 10px 3px 10px #ff7d00;
+  float: left;
+}
+
+@keyframes check {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.contain-main {
+  height: 100vh;
+  width: 100%;
+}
+
+.first-sec {
+  height: 15vh;
+  width: 100%;
+}
+
+.sec-sec {
+  height: 80vh;
+  width: 100%;
+}
+
+/* / cv / */
+.button-cv {
+  /* / border: .1rem solid #ff7d00; / */
+  border: 0.1rem solid;
+  font-size: 1.1rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 0.5rem;
+  /* / background: transparent; / */
+  background-color: #ff7d00;
+  color: rgb(214, 208, 208);
+  margin: 1.5rem;
+  /* / margin-left: 1rem; / */
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+
+.button-cv:hover {
+  background: white;
+  color: #ff7d00;
+  font-weight: bold;
+}
+
+/* project name */
+.sec-page p {
+  color: white;
+  text-align: center;
+  font-size: 25px;
+  margin-bottom: 3px;
+}
+
+.sec-page p:hover {
+  color: #ff7d00;
+}
+
+.sec-page button {
+  border: 0.1rem solid #ff7d00;
+  font-size: 1.1rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  background: #262525;
+  color: #ff7d00;
+  margin: 0.1rem;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+  /* margin-left: 15%; */
+  text-decoration: none;
+}
+
+/* Project page */
+.sec-page {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px; /* Added margin instead of centering body */
+  margin-bottom: 10px;
+}
+
+.box {
+  background: linear-gradient(to top, #000000, #14213d);
+  box-shadow: 0 2px 5px rgba(226, 150, 51, 0.1);
+  transition: transform 0.2s;
+  padding: 20px;
+  padding: 20px;
+  width: 300px;
+  /* height: 330px; */
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(255, 140, 0, 0.2);
+  color: white;
+}
+
+.box img {
+  width: 100px;
+  height: auto;
+  margin-bottom: 15px;
+
+}
+
+.box:hover {
+  transform: scale(1.05);
+  /* Slightly enlarge on hover */
+  box-shadow: 0 5px 5px rgba(222, 148, 1, 0.1);
+}
+
+.box .img {
+  max-width: 300px;
+  /*Limit image size*/
+  height: 100px;
+  /* Maintain aspect ratio */
+  margin-bottom: 25px;
+  /* Space between image and text */
+}
+
+.box h2 {
+  font-size: 1.5em;
+  color: white;
+  text-shadow: 2px 2px #ff7d00;
+  letter-spacing: 2px;
+  margin: 10px 0;
+}
+
+.box p {
+  font-size: 1em; /* Font size for paragraph */
+  color: white;
+  line-height: 1.5;
+  /* Better line spacing */
+}
+
+/* / Media query for mobile screens / */
+@media (max-width: 767px) {
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    /* background-color: rgb(16, 17, 29); */
+    background-color: #131b31;
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: fill;
+    height: 120vh;
+    /* position: fixed; */
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: linear-gradient(to right, #000000, #14213d);
+    position: absolute;
+    top: 50px;
+    right: 0;
+  }
+  .nav-links a {
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    transition: background 0.3s;
+    border: 1px solid none;
+    border-radius: 10px;
+    margin: 5px;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .toggle-button {
+    display: flex;
+  }
+
+  section {
+    margin: 1rem 1.5rem;
+    height: 80vh;
+  }
+
+  .images {
+    width: 100%;
+    height: 300px;
+    box-shadow: 10px 10px 10px 10px #ff7d00;
+  }
+
+  .main {
+    margin-top: 10vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 86vh;
+    text-align: center;
+    background-size: cover;
+  }
+
+  .main h1 {
+    font-size: 2.1rem;
+    font-weight: 600;
+    color: #fff;
+  }
+
+  .main h3 {
+    font-size: 2.8rem;
+    margin-top: 1rem;
+    font-weight: 600;
+    color: white;
+    text-shadow: 2px 2px #ff7d00;
+  }
+
+  .main p {
+    /* margin-top: 2rem; */
+    margin-left: 1rem;
+    margin-bottom: 0;
+    font-size: 0.98rem;
+    color: #fff;
+  }
+
+  .info {
+    /* margin-top: 2rem; */
+    margin-left: 1rem;
+    margin-bottom: 0;
+    font-size: 0.98rem;
+    color: #fff;
+  }
+
+  /* / social buttons / */
+  .social {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1.4rem; */
+    margin-top: 1.7rem;
+    /* / margin-left: 5.7rem; / */
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* contact page css */
+.third-section {
+  padding: 0px;
+  margin: 1vb;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* contact */
+.third-section h2 {
+  font-size: 2.8em;
+  margin-bottom: 10px;
+  color: #ff7d00;
+  font-weight: bold;
+}
+
+.cont-details {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  /* margin-top:30px; */
+}
+
+.cont-details div {
+  background: linear-gradient(to top, #000000, #14213d);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 300px;
+}
+
+.cont-details div:hover {
+  box-shadow: 5px 4px 10px #ff7d00;
+}
+
+.cont-details h4 {
+  margin: 15px 0 10px;
+  font-size: 1.2em;
+  color: #9e9c9c;
+}
+
+.cont-details p {
+  margin: 0;
+  color: white;
+}
+
+.cont-details svg {
+  margin-bottom: 10px;
+  color: #ff7d00;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+
+.social-icons a {
+  text-decoration: none;
+  color: white;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #ff7d00;
+  transition: background 0.3s;
+}
+
+.social-icons a:hover {
+  background: #ff7d00;
+  box-shadow: 2px 4px 8px white;
+}
+
+.social-icons i {
+  font-size: 1.2em;
+}
+/* all project page styles */
+.projects-section {
+  padding:0px;
+  color: white;
+  position: relative; /* For GitHub button positioning */
+}
+.projects-header {
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;
+margin-bottom: 20px;
+padding: 0 20px;
+}
+
+.projects-header h2 {
+font-size: 32px;
+color: #ff7700;
+text-align: center;
+flex: 1;
+}
+
+.github-button {
+position: absolute;
+right: 20px;
+top: 50%;
+transform: translateY(-50%);
+background-color: transparent;
+color: white;
+border: 2px solid #ff7700;
+padding: 10px 15px;
+border-radius: 5px;
+font-size: 16px;
+cursor: pointer;
+transition: 0.3s;
+text-decoration: none;
+}
+
+.github-button:hover {
+background-color: #ff7700;
+color: black;
+}
+
+.projects-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.project-box {
+  background-color: white;
+  width: 250px;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+.project-box img {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid black;
+}
+.project-box p {
+  padding: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: black;
+}
+.highlight {
+  color: #ff7700;
+}
+
+.pro-img {
+  width: 100%;
+  height: 200px;
+  /* Adjust height as needed for your design */
+  object-fit: cover;
+  /* Ensures images fit within the box without distortion */
+  border-radius: 10px;
+}
+
+/* Card hover effect */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  /* Slightly enlarges the card on hover */
+  box-shadow: 0 10px 15px rgba(175, 107, 4, 0.2);
+  /* Adds a shadow for hover effect */
+}
+
+/*Card body text styling for consistency */
+.card-body h6 {
+  font-size: 1rem;
+  /* Adjust font size as needed*/
+  font-weight: bold;
+  margin: 10px 0;
+  color: #333;
+  transition: color 0.3s ease;
+}
+
+.card:hover .card-body h6 {
+  color: #ff7d00;
+  /*Changes text color on hover */
+}
+
+.pro-style {
+  margin: 1px;
+  font-size: 60px;
+  color: white;
+  text-shadow: 2px 3px 5px #ff7d00;
+}
+
+/* skill section */
+.skill-section {
+  width: 60%;
+  margin: auto;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.skill-section h2 {
+  font-size: 2.8em;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 10px;
+  color: #ff7d00;
+}
+.underline {
+  width: 80px;
+  height: 3px;
+  background-color: wheat;
+  margin: 10px auto;
+}
+.skill {
+  text-align: left;
+  margin: 20px 0;
+}
+.skill p {
+  margin: 0;
+  font-weight: bold;
+  color: white;
+}
+.progress-bar {
+  height: 8px;
+  background: lightgray;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 5px;
+}
+.progress {
+  height: 8px;
+  background: #ff7d00;
+  width: 0;
+  transition: width 1s ease-in-out;
+}
+
+/* about section */
+
+.about-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 50px;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  max-width: 80vw;
+  width: 100%;
+  margin-left: 10vw;
+}
+.profile-img {
+  width: 280px;
+  height: 400px;
+  margin-right: 30px;
+  /* box-shadow: 0px 5px 5px 0px ; */
+  box-shadow: 10px 10px #ff7d00;
+}
+.text-content {
+  max-width: 400px;
+  color: white;
+}
+.about-name {
+  font-size: 2.6em;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #ff7d00;
+  text-align: center;
+}
+
+.about-container p {
+  font-size: 1em;
+}
+
+    </style>
+    
+</head>
+
+<body>
+    <div class="container-fluide ">
+        <!-- header part -->
+        <div class="first-sec bottomLineSeparator">
+            <header>
+                <!-- nav bar -->
+                <nav class="navbar">
+                    <div class="logo">
+                        <h1>Port<span style="color: #ff7d00; font-weight: bold; ">folio</span></h1>
+                    </div>
+                    <!-- mobile responsive menu bar -->
+                    <button class="toggle-button" aria-label="Toggle navigation">
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                        <span class="bar"></span>
+                    </button>
+                    <div class="nav-links">
+                        <!-- home -->
+                        <a href="#first-section" onclick="firstPage()"
+                            style="color: #ff7d00; font-weight: bold;">Home</a>
+                        <!-- about -->
+                        <a href="#" onclick="aboutPage()">About</a>
+                        <!-- project -->
+                        <a href="#" onclick="secondPage()">Project</a>
+                        <!-- skills -->
+                        <a href="#" onclick="skillPage()">Skill</a>
+                        <!--  contact -->
+                        <a href="#contact" onclick="contactPage()">Contact</a>
+                    </div>
+                </nav>
+            </header>
+        </div>
+    </div>
+    <div class="sec-sec" id="first-section">
+        <section>
+            <!-- Main section of the webpage -->
+            <div class="main">
+                <div class="detail">
+                    <h2>Hi !</h2>
+                    <h1> I'm <span style="color:#ff7d00;">Shivani Kharpuriya</span></h1>
+                    <h3>Full Stack Developer </h3>
+                    <p class="info">"Creative Full-Stack Developer crafting exceptional web solutions with <br> stunning
+                        UI and making responsive and powerful backend!"</p>
+                    <div class="social">
+
+                        <!-- Social media links -->
+                        <a href="https://github.com/ShivaniFullStactDeveloper/Shivani_myProject">
+                            <i class='bx bxl-github'></i></a>
+
+                        <a href="https://web.skype.com/"><i class='bx bxl-skype'></i></a>
+                        <a
+                            href="https://www.linkedin.com/in/shivani-kharpuriya-089569249/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=in">
+                            <i class='bx bxl-linkedin-square'></i></a>
+
+                    </div>
+                    <div class="but-contain">
+                        <p style="color: rgb(142, 145, 147);">Click here to see my cv.</p>
+                        <a href="my-resume.html" download><button class="button-cv">Download CV</button></a>
+                    </div>
+                </div>
+
+
+            </div>
+        </section>
+    </div>
+
+    <!-- About section -->
+     <div id="about-section">
+        <h2 class="about-name">About Me</h2>
+        <div class="underline"></div>
+    <div  class="about-container">
+       
+        <div>
+        <img src="my_images/Shivani.jpg" alt="Profile Image" class="profile-img">
+    </div>
+        <div class="text-content">
+          
+            <p>Hi, I’m <span style="color: #ff7d00;"> Shivani Kharpuriya </span> , an aspiring <span style="color: #cc8848;">Full-Stack Developer  </span> with a passion for solving complex problems, building dynamic and mobile responsive web applications, and exploring the limitless potential of AI. <br>Also  I’m refining my skills in full-stack development—designing intuitive front-end interfaces, optimizing back-end systems, and enhancing user experiences. My technical expertise includes HTML5, CSS3, SASS Node.js, React.js, JavaScript, C, Python, Java, and Swift, along with a solid foundation in databases.</p>
+            <div class="buttons">
+                <a href="my-resume.html" download><button class="button-cv">Download CV</button></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- html css js react.js -->
+  <div class="sec-page" id="second-section">
+        <!-- html css box -->
+        <div class="box">
+            <img
+                src="data:image/png;base64,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 " />
+            <h2>HTML5 & CSS3</h2>
+            <p> Built responsive websites using HTML and CSS with clean and simple designs.</p>
+            <br>
+            <button class="button-cv" onclick="thirdPage()">See project</button>
+        </div>
+        <!-- Javascript box -->
+        <div class="box">
+            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="80" fill="currentColor"
+                style=" color: yellow; margin:18px;" class="bi bi-filetype-js" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M14 4.5V14a2 2 0 0 1-2 2H8v-1h4a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM3.186 15.29a1.2 1.2 0 0 1-.111-.449h.765a.58.58 0 0 0 .255.384q.105.073.249.114.143.041.319.041.246 0 .413-.07a.56.56 0 0 0 .255-.193.5.5 0 0 0 .085-.29.39.39 0 0 0-.153-.326q-.151-.12-.462-.193l-.619-.143a1.7 1.7 0 0 1-.539-.214 1 1 0 0 1-.351-.367 1.1 1.1 0 0 1-.123-.524q0-.366.19-.639.19-.272.528-.422.336-.15.776-.149.457 0 .78.152.324.153.5.41.18.255.2.566h-.75a.56.56 0 0 0-.12-.258.6.6 0 0 0-.247-.181.9.9 0 0 0-.369-.068q-.325 0-.513.152a.47.47 0 0 0-.184.384q0 .18.143.3a1 1 0 0 0 .405.175l.62.143q.327.075.566.211.24.136.375.358t.135.56q0 .37-.188.656a1.2 1.2 0 0 1-.539.439q-.351.158-.858.158-.381 0-.665-.09a1.4 1.4 0 0 1-.478-.252 1.1 1.1 0 0 1-.29-.375m-3.104-.033A1.3 1.3 0 0 1 0 14.791h.765a.6.6 0 0 0 .073.27.5.5 0 0 0 .454.246q.285 0 .422-.164.138-.165.138-.466v-2.745h.79v2.725q0 .66-.357 1.005-.354.345-.984.345a1.6 1.6 0 0 1-.569-.094 1.15 1.15 0 0 1-.407-.266 1.1 1.1 0 0 1-.243-.39" />
+            </svg>
+            <h2>Javascript</h2>
+            <p> Created interactive and dynamic applications using JavaScript to add functionality.</p>
+            <br>
+            <button class="button-cv" onclick="javaScript()">See project</button>
+
+        </div>
+        <!-- Bootstrap box -->
+        <div class="box">
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="80" fill="currentColor"
+                style=" color: rgb(12, 76, 214); margin:18px;" class="bi bi-bootstrap-fill" viewBox="0 0 16 16">
+                <path
+                    d="M6.375 7.125V4.658h1.78c.973 0 1.542.457 1.542 1.237 0 .802-.604 1.23-1.764 1.23zm0 3.762h1.898c1.184 0 1.81-.48 1.81-1.377 0-.885-.65-1.348-1.886-1.348H6.375z" />
+                <path
+                    d="M4.002 0a4 4 0 0 0-4 4v8a4 4 0 0 0 4 4h8a4 4 0 0 0 4-4V4a4 4 0 0 0-4-4zm1.06 12V3.545h3.399c1.587 0 2.543.809 2.543 2.11 0 .884-.65 1.675-1.483 1.816v.1c1.143.117 1.904.931 1.904 2.033 0 1.488-1.084 2.396-2.888 2.396z" />
+            </svg>
+            <h2>Bootstrap</h2>
+            <p> Designed responsive and attractive websites using Bootstrap for a better user experience.</p>
+            <br>
+            <button class="button-cv" onclick="bootStrap()">See project</button>
+        </div>
+
+        <!-- React js box -->
+        <div class="box">
+            <a style="text-decoration: none; color: #ff7d00;"
+            href="https://heroic-axolotl-16ad38.netlify.app/">
+            <svg xmlns="http://www.w3.org/2000/svg" width="75" height="80" fill="currentColor"
+                style="color: aqua; margin:18px;" class="bi bi-filetype-jsx" viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M14 4.5V14a2 2 0 0 1-2 2h-1v-1h1a1 1 0 0 0 1-1V4.5h-2A1.5 1.5 0 0 1 9.5 3V1H4a1 1 0 0 0-1 1v9H2V2a2 2 0 0 1 2-2h5.5zM3.075 14.841a1.13 1.13 0 0 0 .401.823q.194.162.478.252.284.091.665.091.507 0 .858-.158.355-.158.54-.44a1.17 1.17 0 0 0 .187-.656q0-.336-.135-.56a1 1 0 0 0-.375-.357 2 2 0 0 0-.565-.21l-.621-.144a1 1 0 0 1-.405-.176.37.37 0 0 1-.143-.299q0-.234.184-.384.188-.152.513-.152.214 0 .37.068a.6.6 0 0 1 .245.181.56.56 0 0 1 .12.258h.75a1.1 1.1 0 0 0-.199-.566 1.2 1.2 0 0 0-.5-.41 1.8 1.8 0 0 0-.78-.152q-.44 0-.776.15-.337.149-.528.421-.19.273-.19.639 0 .302.123.524t.351.367q.229.143.54.213l.618.144q.31.073.462.193a.39.39 0 0 1 .153.326.5.5 0 0 1-.085.29.56.56 0 0 1-.255.193q-.167.07-.413.07-.176 0-.32-.04a.8.8 0 0 1-.248-.115.58.58 0 0 1-.255-.384zM0 14.791q0 .247.082.466.083.22.243.39.165.17.407.267.246.093.569.093.63 0 .984-.346.357-.345.358-1.004v-2.725h-.791v2.745q0 .302-.138.466t-.422.164a.5.5 0 0 1-.454-.246.6.6 0 0 1-.073-.27zm8.907-2.859H9.8l-1.274 2.007L9.78 15.93h-.908l-.85-1.415h-.035l-.853 1.415h-.861l1.24-2.016-1.228-1.983h.931l.832 1.438h.036l.823-1.438Z" />
+            </svg>
+            <h2>React Js</h2>
+            <p> Utilized component-based architecture, state management, and hooks to build scalable and efficient web
+                applications. </p>
+            <br>
+            <button class="button-cv">See project</button>
+        </a>
+        </div>
+
+        <!-- Test cases box -->
+        <div class="box">
+            <img style="height: 73px; width: 70px; margin-top: 20px;"
+                src="https://static.vecteezy.com/system/resources/previews/032/477/270/non_2x/green-badge-check-icon-ai-generative-free-png.png"
+                importance="" />
+            <h2>Testing</h2>
+            <p>Implemented unit, integration, and end-to-end testing strategies to ensure software reliability and
+                performance. Used tools like Jest, React Testing Library, and Cypress for automated testing.</p>
+            <br>
+            <button class="button-cv" onclick="testCases()">See project</button>
+        </div>
+ </div>
+
+    <!-- html css project -->
+    <div id="third-section" class="projects-section">
+        <div class="projects-header">
+            <h2>Projects</h2>
+            <a href="https://github.com/yourgithubprofile" class="github-button" target="_blank">GitHub</a>
+        </div>
+        <div class="projects-container">
+            <!-- YouTube Page -->
+            <div class="project-box">
+                <a href="tablethree.html">
+                <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSVuLC2A5fymCkgcZB4zTp1SE57Gn0S55ZktA&usqp=CAU" alt="YouTube Project">
+                <p>YouTube Page Using Table.</p>
+            </a>
+            </div>
+            <!-- Quality Sheet -->
+            <div class="project-box">
+                <a href="tableone.html">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTnBtVh0DIX1TN2Xlv5OdGPbUVHFgolmJd1eA&usqp=CAU" alt="Quality Sheet Project">
+                <p>Quality Sheet Using Table.</p>
+            </a>
+            </div>
+            <!-- Calendar -->
+            <div class="project-box">
+                <a href="calendarone.html">
+                <img  src="https://media.istockphoto.com/id/181866332/photo/red-wall-calendar.jpg?s=612x612&w=0&k=20&c=FpWwH-rY03pLmNsibkcJ_zbnqCIx1sbI5pRsQ9q5yLg=" alt="Calendar Project">
+                <p>Calendar Using Table.</p>
+            </a>
+            </div>
+            <!-- Mobile Screen  -->
+            <div class="project-box">
+                <a href="dynamicone.html">
+                <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRQ8_1H0dgcJ0DKcUds135RHTUUOukgRNTD5A&s" alt="Media Query Project">
+                <p>Mobile Screen Using Media Query.</p>
+                </a>
+            </div>
+            <!-- Youtube Page  -->
+            <div class="project-box">
+            <a href="flexone.html">
+                <img src="media-query.jpg" alt="Media Query Project">
+                <p>Youtube Page Using Flex.</p>
+                </a>
+            </div>
+            <!-- Layout Using Flex -->
+            <div class="project-box">
+                <a href="checkboxflextwo.html">
+                <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT3jfFZQU2F2U2TqPLjsAcGYKfr_Ux6AhiJqw&s" alt="Media Query Project">
+                <p>Layout Using Flex.</p>
+                </a>
+            </div>
+              <!-- Layout Using Grid -->
+              <div class="project-box">
+                <a href="checkboxgrid.html">
+                <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR48U5aRFmuCFVcmhvYJNuV-Hf9H9fw19AJQg&s" alt="Media Query Project">
+                <p>Layout Using Grid.</p>
+                </a>
+            </div>
+              <!-- Keyboard Using Grid.  -->
+              <div class="project-box">
+                <a href="keyboarddisplay.html">
+                <img src="media-query.jpg" alt="Media Query Project">
+                <p>Keyboard Using Grid.</p>
+                </a>
+            </div>
+              <!-- Chessboard. -->
+              <div class="project-box">
+                <a href="chessboardgrid.html">
+                <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRtXwzPRxZ7pMpOJnzXYbwnAzAst5QNbzcVpQ&usqp=CAU" alt="Media Query Project">
+                <p>Chessboard.</p>
+                </a>
+            </div>
+              <!-- Form -->
+              <div class="project-box">
+                <a href="indextwo.html">
+                <img src="media-query.jpg" alt="Media Query Project">
+                <p>Form.</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript project -->
+
+    <div class="container py-5" id="javascript-section">
+        <div class="social" style="margin-left: 75vw;">
+
+            <!-- Social media links -->
+            <a href="https://github.com/ShivaniFullStactDeveloper/Shivani_myProject">
+                <i class='bx bxl-github'></i></a>
+        </div>
+        <!-- heading -->
+        <h2 class="text-center mb-5 text-bold pro-style">Projects</h2>
+        <div class="row text-center">
+            <!-- Box 1 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="halffullticketjs.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTosWNrkWtV1p_rJ2S_eOXMIJNOtNQwksmqvQ&s"
+                            class="card-img-top pro-img" alt="Activity 1" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Half Full Ticket.</h6>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="evenoroddjs.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRs1y3MlMQxbbs9g4mHOiIiL8kKMmcZbRJS-A&s"
+                            class="card-img-top pro-img" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Even Or Odd.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="largestnojs.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSJ03ThklBfoPmuwN3aaM_T_i_OzyU-83DLVA&s"
+                            class="card-img-top pro-img" alt="Activity 3" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Largest No Of Element.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="positivenojs.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1mqsGhvrxi5NxTy8bynCQZPtoJzfBJ4t16A&s"
+                            class="card-img-top pro-img" alt="Activity 4" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Positive No Or Negative.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 1 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="vowelsjs.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSBVL-3ff1o6ZoBYCGog6cdbQxmheo_mKmJCg&s"
+                            class="card-img-top pro-img" alt="Activity 1" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Vowels Or Consonants.</h6>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="weekdayjs.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSwBYeZ5itoPHD_-dnl4ZUCeh6Lu2tZQxPpIA&s"
+                            class="card-img-top pro-img" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Week Days.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="whilelooptable.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNKLj-fV-ylpwfkgjHj-jorW6Dt7TLdPsBpg&s"
+                            class="card-img-top pro-img" alt="Activity 3" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Table Print.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="dom.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRbfIFv8CbsTtp_yh-fg5q74UGZJkP5GMVRg&s"
+                            class="card-img-top pro-img" alt="Activity 4" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Add Bricks.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 1 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="googlesearch.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9dvBxaUaF57AbvceI7ccsY6s_fK6IaWzOpBI7Si_KnVd-ikJewnoIyFwJDXGdbtLKXo0&usqp=CAU"
+                            class="card-img-top pro-img" alt="Activity 1" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Google Search.</h6>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="kbcpagemain.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDqV5S6TgJ_OzpSpC9bCunvVfrCWNm7umJGw&s"
+                            class="card-img-top pro-img" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">KBC Game.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 3 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="calculatorgridone.html"> <img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEaQKGbrluscSFv2ViKHHRoXxiAQQ1LfCl4g&usqp=CAU"
+                            class="card-img-top pro-img" alt="Activity 3" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Calculator.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="electricbilljs.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQncGZdJp1gAuVGhj2YIgC2jlcHJqBcZW1uZA&s"
+                            class="card-img-top pro-img" alt="Activity 4" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Electric Bill.</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="dataentry.html"><img
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTi2Qey4j4CmMJicZ4T37LCs17yd2ytHHUetQ&usqp=CAU"
+                            class="card-img-top pro-img" alt="Activity 4" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Student Data Entry Form.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstap project -->
+
+    <div class="container py-5" id="bootstrap-section">
+        <h2 class="text-center mb-5 text-bold pro-style">Projects</h2>
+        <div class="row text-center">
+            <!-- Box 1 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="w_Website/wanjari.html"> <img
+                            src="w_Website/IMG_20240726_141510_611-removebg-preview-transformed.png"
+                            class="card-img-top pro-img" alt="Activity 1" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title"> Games & Adventure.</h6>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a href="bootstrapbookweb.html"><img
+                            src="https://static.vecteezy.com/system/resources/previews/003/147/304/non_2x/book-store-vector.jpg"
+                            class="d-block mx-lg-auto img-fluid" class="card-img-top pro-img" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Book Store.</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- test cases page -->
+    <div class="container py-5" id="test-case-section">
+        <h2 class="text-center mb-5 text-bold pro-style">Test Cases</h2>
+        <div class="row text-center">
+            <!-- Box 1 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/1yZVsbRpnJVaQ-656xcUDn-fe8xlm07yGCs0u70g4Gv4/edit?gid=0#gid=0">
+                        <img src="https://5.imimg.com/data5/SELLER/Default/2023/3/294705392/PE/VA/HI/4707645/plain-white-board.jpg"
+                            class="card-img-top pro-img" alt="Activity 1" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">White Dashboard</h6>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/1CjBQVzEgYU8J4PgSTDpZIC4E4cEvW3mjxQ5hLzLawGs/edit?gid=1090217291#gid=1090217291"><img
+                            src="https://www.susanadamspsychotherapist.com/wp-content/uploads/2017/07/Marriage.jpg"
+                            class="d-block mx-lg-auto img-fluid ard-img-top pro-img"
+                            style="height: 200px; object-fit: cover;" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Marriage</h6>
+                    </div>
+                </div>
+            </div>
+            <!-- Box 2 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/1zGUP9bOUKJO-PPXDCCuETbaVi6ppKAqQ2kp4IBnNegM/edit?gid=0#gid=0">
+                        <img src="https://png.pngtree.com/png-clipart/20220223/original/pngtree-calculator-png-image_7312212.png"
+                            class="card-img-top pro-img" alt="Activity 1" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Calclator</h6>
+
+                    </div>
+
+                </div>
+            </div>
+            <!-- Box 4 -->
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <a
+                        href="https://docs.google.com/spreadsheets/d/1rija9yyn-x97FS4gkeot1kVrPqK0LDU4nXEZwyECKio/edit?gid=0#gid=0"><img
+                            src="https://www.jiomart.com/images/product/original/rvflqf7gua/standard-laptop-bag-for-men-and-women-waterproof-for-college-travel-office-black-product-images-orvflqf7gua-p591836106-0-202206021213.jpg?im=Resize=(1000,1000)"
+                            class="d-block mx-lg-auto img-fluid ard-img-top pro-img"
+                            style="height: 200px; object-fit: cover;" alt="Activity 2" /></a>
+                    <div class="card-body">
+                        <h6 class="card-title">Laptop Bag</h6>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- Skills -->
+    <div class="skill-section" id="skill-page">
+        <h2>Skills</h2>
+        <div class="underline"></div>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+
+        <div class="skill">
+            <p>HTML 5 <span style="float:right;">95%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 95%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>CSS 3 <span style="float:right;">90%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 90%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>JavaScript <span style="float:right;">75%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 75%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Bootstrap <span style="float:right;">92%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 92%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>React.js <span style="float:right;">70%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 70%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>Node.js <span style="float:right;">65%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 65%;"></div>
+            </div>
+        </div>
+        <div class="skill">
+            <p>PostgreSQL <span style="float:right;">72%</span></p>
+            <div class="progress-bar">
+                <div class="progress" style="width: 72%;"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact Section -->
+    <div class="third-section" id="contact-section">
+        <h2>Contact</h2>
+        <div class="underline"></div>
+        <div class="cont-details">
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-house-door-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M6.5 14.5v-3.505c0-.245.25-.495.5-.495h2c.25 0 .5.25.5.5v3.5a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293L8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4a.5.5 0 0 0 .5-.5" />
+                </svg>
+                <h4>Address</h4>
+                <p>Katol, India</p>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd"
+                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                </svg>
+                <h4>Phone</h4>
+                <p>9529443390</p>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                    class="bi bi-envelope-fill" viewBox="0 0 16 16">
+                    <path
+                        d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414zM0 4.697v7.104l5.803-3.558zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586zm3.436-.586L16 11.801V4.697z" />
+                </svg>
+                <h4>Email</h4>
+                <p>shivanikharpuriya123@gmail.com</p>
+            </div>
+        </div>
+        <div class="social-icons">
+            <a href="https://www.linkedin.com/in/shivani-kharpuriya-089569249/"
+                class="social-button social-button--linkedin" aria-label="LinkedIn">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/ShivaniFullStactDeveloper/Shivani_myProject"
+                class="social-button social-button--github" aria-label="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://web.skype.com/" class="social-button social-button--skype" aria-label="Skype">
+                <i class="fab fa-skype"></i>
+            </a>
+        </div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+
+</html>
