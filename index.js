@@ -19,6 +19,7 @@ function firstPage() {
     document.getElementById("test-case-section").hidden = true;
     document.getElementById("skill-page").hidden = true;
     document.getElementById("about-section").hidden = true;
+    document.getElementById("syntax-section").hidden = true;
 }
 
 // about page show
@@ -32,6 +33,7 @@ function aboutPage() {
     document.getElementById("bootstrap-section").hidden = true;
     document.getElementById("test-case-section").hidden = true;
     document.getElementById("skill-page").hidden = true;
+    document.getElementById("syntax-section").hidden = true;
 }
 
 // Skills page show
@@ -46,6 +48,7 @@ function skillPage() {
     document.getElementById("test-case-section").hidden = true;
     document.getElementById("skill-page").hidden = false;
     document.getElementById("about-section").hidden = true;
+    document.getElementById("syntax-section").hidden = true;
 }
 // second page show
 function secondPage() {
@@ -59,6 +62,7 @@ function secondPage() {
     document.getElementById("test-case-section").hidden = true;
     document.getElementById("skill-page").hidden = true;
     document.getElementById("about-section").hidden = true;
+    document.getElementById("syntax-section").hidden = true;
 
 }
 // html css page
@@ -74,6 +78,7 @@ function thirdPage() {
     document.getElementById("test-case-section").hidden = true;
     document.getElementById("skill-page").hidden = true;
     document.getElementById("about-section").hidden = true;
+    document.getElementById("syntax-section").hidden = true;
 }
 // javascript page
 function javaScript() {
@@ -87,6 +92,7 @@ function javaScript() {
     document.getElementById("test-case-section").hidden = true;
     document.getElementById("skill-page").hidden = true;
     document.getElementById("about-section").hidden = true;
+    document.getElementById("syntax-section").hidden = true;
 }
 // bootstrap page
 function bootStrap() {
@@ -100,6 +106,7 @@ function bootStrap() {
     document.getElementById("test-case-section").hidden = true;
     document.getElementById("skill-page").hidden = true;
     document.getElementById("about-section").hidden = true;
+    document.getElementById("syntax-section").hidden = true;
 }
 
 // Test cases page
@@ -114,7 +121,23 @@ function testCases() {
     document.getElementById("test-case-section").hidden = false;
     document.getElementById("skill-page").hidden = true;
     document.getElementById("about-section").hidden = true;
+    document.getElementById("syntax-section").hidden = true;
 }
+// contact page
+function ProgrammingSyntax() {
+    console.log("Syntax");
+    document.getElementById("first-section").hidden = true;
+    document.getElementById("second-section").hidden = true;
+    document.getElementById("third-section").hidden = true;
+    document.getElementById("javascript-section").hidden = true;
+    document.getElementById("contact-section").hidden = true;
+    document.getElementById("bootstrap-section").hidden = true;
+    document.getElementById("test-case-section").hidden = true;
+    document.getElementById("skill-page").hidden = true;
+   document.getElementById("syntax-section").hidden = false;
+
+}
+
 
 // contact page
 function contactPage() {
@@ -128,6 +151,7 @@ function contactPage() {
     document.getElementById("test-case-section").hidden = true;
     document.getElementById("skill-page").hidden = true;
     document.getElementById("about-section").hidden = true;
+    document.getElementById("syntax-section").hidden = true;
 
 }
 

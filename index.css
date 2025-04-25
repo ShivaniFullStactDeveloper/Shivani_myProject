@@ -285,6 +285,7 @@ section {
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(255, 140, 0, 0.2);
   color: white;
+  cursor: pointer;
 }
 
 .box img {
