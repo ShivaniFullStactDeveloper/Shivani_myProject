@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #EAEFEF;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        /* main container */
+        .container {
+            width: 100%;
+            height: auto;
+
+        }
+
+        /* header */
+        header {
+            height: 7.5vh;
+            padding: 5px;
+            margin: 10px;
+            border-radius: 8px;
+            background-color: #0E2148;
+            display: grid;
+            grid-template-columns: 3fr 1fr;
+        }
+
+        /* navbar */
+        .navbar {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            text-align: center;
+            margin-top: 2vh;
+            color: white;
+        }
+
+        /* Information container */
+        .first-cont {
+            height: auto;
+            padding: 5px;
+            display: grid;
+            grid-template-columns: 2fr 2fr;
+            /* background-color: antiquewhite; */
+            margin: 10px;
+
+        }
+
+        .info {
+            margin: 20px 10px 0 0;
+        }
+
+        .info p {
+            color: #363637;
+        }
+
+        /* start button */
+        .start-button {
+            height: 5vh;
+            width: 10vw;
+            border-radius: 8px;
+            background-color: #344CB7;
+            border: none;
+            color: white;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+
+        /* second container */
+        .sec-cont {
+            height: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            justify-content: center;
+            align-items: center;
+            margin: 0px;
+            padding: 5px;
+
+        }
+
+        .box {
+            height: auto;
+            width: 31.5vw;
+            background-color: white;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: #303031;
+            margin-left: 6px;
+        }
+
+        .box:hover {
+            box-shadow: #717172;
+        }
+
+        /* three-container  */
+        .three-container {
+            height: 24vh;
+            padding: 30px;
+            display: grid;
+            border-radius: 8px;
+            background-color: green;
+            margin: 10px;
+            text-align: center;
+
+
+        }
+
+        /* footer */
+        footer {
+            background-color: lightgrey;
+            height: 7vh;
+            padding: 5px;
+            margin: 10px;
+            text-align: center;
+            color: #262627;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+
+        /* image */
+        img {
+            height: 100%;
+            width: 50%;
+            border-radius: 8px;
+            margin-left: 50%;
+        }
+
+        /* sing- up -button  */
+        .sing-button {
+            height: auto;
+            width: 10vw;
+            border-radius: 8px;
+            background-color: #309e1d;
+            margin-left: 45%;
+            border: none;
+            color: white;
+            font-size: 15px;
+
+        }
+
+        /* logo */
+        .logo {
+            font-size: 24px;
+            color: white;
+            margin-top: 10px;
+        }
+
+        /* span */
+        span {
+            padding: 10px;
+
+        }
+
+        h3 {
+            font-size: 24px;
+            color: white;
+        }
+
+        .text {
+            color: wheat;
+
+        }
+        @media (max-width: 768px) {
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- header -->
+        <header>
+            <div class="logo"><span>🌐 BrandName</span></div>
+            <!-- nav bar -->
+            <div class="navbar">
+                <div>Home</div>
+                <div>Features</div>
+                <div>Pricing</div>
+                <div>Contact</div>
+            </div>
+        </header>
+        <!-- information -->
+        <div class="first-cont">
+            <div class="info">
+                <h1>Build Smarter, Faster</h1>
+                <p>Modern web solusion for creators and businesses.</p>
+                <button class="start-button">Get Started</button>
+            </div>
+            <!-- image -->
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRofv_S2W3n0T-cmG__OcGwpzW6fIJ8AN-Zlg&s" />
+        </div>
+        <!-- boxes -->
+        <div class="sec-cont">
+            <div class="box">
+                <p>🚀 Fast Performance</p>
+            </div>
+            <div class="box">
+                <p>🏠 Secure</p>
+            </div>
+            <div class="box">
+                <p> ⏱️ Easy Integration</p>
+            </div>
+        </div>
+        <!-- sing container -->
+        <div class="three-container">
+            <div>
+                <h3>Ready to Launch ? </h3>
+                <p class="text">Join thousands of creators using brandname.</p>
+            </div>
+            <button class="sing-button">Sing Up Free</button>
+        </div>
+        <!-- footer -->
+        <footer>
+            <p>@ 2025 brandName | Tears | Privacy</p>
+        </footer>
+    </div>
+</body>
+
+</html>
